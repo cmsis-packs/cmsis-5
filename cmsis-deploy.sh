@@ -1,9 +1,9 @@
 #!/bin/bash
 
-name=cmsis-dfp-template
-vendor=template
-version=0.0
-source_url=
+name=cmsis-5
+vendor=ARM
+version=5.1.0
+source_url=https://github.com/ARM-software/CMSIS_5/releases/download/$version/ARM.CMSIS.$version.pack
 
 build_dir=cmsis_build
 deploy_dir=cmsis_deploy
@@ -51,7 +51,7 @@ prepare() {
 
 download() {
     echo "downloading..."
-    curl -o $build_dir/pack-src.pack $source_url
+    curl -L -o $build_dir/pack-src.pack $source_url
 }
 
 extract() {
@@ -61,10 +61,9 @@ extract() {
 
 deploy() {
     echo "deploying..."
+    cp -r $build_dir/CMSIS $deploy_dir
     cp -r $build_dir/Device $deploy_dir
-    cp -r $build_dir/Documents $deploy_dir
-    cp -r $build_dir/Flash $deploy_dir
-    cp -r $build_dir/SVD $deploy_dir
+    cp $build_dir/LICENSE.txt $deploy_dir
 }
 
 prepare
