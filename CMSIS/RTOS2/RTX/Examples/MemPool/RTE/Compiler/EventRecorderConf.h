@@ -1,10 +1,10 @@
 /*------------------------------------------------------------------------------
  * MDK - Component ::Event Recorder
- * Copyright (c) 2016 ARM Germany GmbH. All rights reserved.
+ * Copyright (c) 2016-2019 ARM Germany GmbH. All rights reserved.
  *------------------------------------------------------------------------------
  * Name:    EventRecorderConf.h
  * Purpose: Event Recorder Configuration
- * Rev.:    V1.0.0
+ * Rev.:    V1.0.1
  *----------------------------------------------------------------------------*/
 
 //-------- <<< Use Configuration Wizard in Context Menu >>> --------------------
@@ -24,7 +24,7 @@
 //      <0=> DWT Cycle Counter  <1=> SysTick
 //      <3=> User Timer (Normal Reset)  <4=> User Timer (Power-On Reset)
 //   <i>Selects source for 32-bit time stamp
-#define EVENT_TIMESTAMP_SOURCE  0
+#define EVENT_TIMESTAMP_SOURCE  2
 
 //   <h>SysTick Configuration
 //   <i>Configure values when Time Stamp Source is set to SysTick

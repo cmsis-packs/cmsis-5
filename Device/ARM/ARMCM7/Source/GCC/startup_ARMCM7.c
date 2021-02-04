@@ -2,11 +2,11 @@
  * @file     startup_ARMCM7.c
  * @brief    CMSIS Core Device Startup File for
  *           ARMCM7 Device
- * @version  V5.3.1
- * @date     09. July 2018
+ * @version  V1.1.0
+ * @date     23. January 2019
  ******************************************************************************/
 /*
- * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
+ * Copyright (c) 2009-2019 Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -120,7 +120,7 @@ void Interrupt9_Handler     (void) __attribute__ ((weak, alias("Default_Handler"
   Exception / Interrupt Vector table
  *----------------------------------------------------------------------------*/
 extern const pFunc __Vectors[240];
-       const pFunc __Vectors[240] __attribute__ ((section(".vectors"))) = {
+       const pFunc __Vectors[240] __attribute__((used, section(".vectors"))) = {
   (pFunc)(&__StackTop),                     /*     Initial Stack Pointer */
   Reset_Handler,                            /*     Reset Handler */
   NMI_Handler,                              /* -14 NMI Handler */
@@ -159,6 +159,8 @@ extern const pFunc __Vectors[240];
 void Reset_Handler(void) {
   uint32_t *pSrc, *pDest;
   uint32_t *pTable __attribute__((unused));
+
+  SystemInit();                             /* CMSIS System Initialization */
 
 /* Firstly it copies data from read only memory to RAM.
  * There are two schemes to copy. One can copy more than one sections.
@@ -247,7 +249,6 @@ void Reset_Handler(void) {
   }
 #endif /* __STARTUP_CLEAR_BSS_MULTIPLE || __STARTUP_CLEAR_BSS */
 
-  SystemInit();                             /* CMSIS System Initialization */
   _start();                                 /* Enter PreeMain (C library entry point) */
 }
 
