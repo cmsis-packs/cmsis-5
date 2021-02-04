@@ -2,11 +2,11 @@
 
 name=cmsis-5
 vendor=ARM
-version=5.1.0
+version=5.2.0
 source_url=https://github.com/ARM-software/CMSIS_5/releases/download/$version/ARM.CMSIS.$version.pack
 
-build_dir=cmsis_build
-deploy_dir=cmsis_deploy
+build_dir='cmsis_build'
+deploy_dir='cmsis_deploy'
 
 prepare() {
     echo "preparing..." 
@@ -36,12 +36,6 @@ prepare() {
         echo "Directory $deploy_dir is not Empty"
         echo "Running \"rm -rf $deploy_dir/*\""
         rm -rf $deploy_dir/*
-    fi
-    
-    if [ -f "$build_dir/version" ]; then
-        echo "File \"$build_dir/version\"  already exists"
-        echo "Running \"rm $build_dir/version\""
-        rm $build_dir/versionname
     fi
 
     touch $build_dir/version
