@@ -2,7 +2,7 @@
 
 name=cmsis-5
 vendor=ARM
-version=5.5.1
+version=5.6.0
 source_url=https://github.com/ARM-software/CMSIS_5/releases/download/$version/ARM.CMSIS.$version.pack
 
 build_dir='cmsis_build'
