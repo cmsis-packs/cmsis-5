@@ -1,11 +1,10 @@
 var element_cprj =
 [
     [ "/cprj/created", "element_created.html", null ],
-    [ "/cprj/info", "element_info.html", [
-      [ "/cprj/info/url", "element_info.html#element_url", null ]
-    ] ],
+    [ "/cprj/info", "element_info.html", null ],
     [ "/cprj/layers", "element_layers.html", [
-      [ "/cprj/layers/layer", "element_layers.html#element_layer", null ]
+      [ "/cprj/layers/layer", "element_layers.html#element_layer", null ],
+      [ "/cprj/layers/layer/interfaces", "element_layers.html#element_interfaces", null ]
     ] ],
     [ "/cprj/packages", "element_packages.html", null ],
     [ "/cprj/compilers", "element_compilers.html", [
@@ -13,6 +12,8 @@ var element_cprj =
     ] ],
     [ "/cprj/target", "element_target.html", [
       [ "/cprj/target/output", "element_target.html#element_output", null ],
+      [ "/cprj/target/includes", "element_target.html#element_includes", null ],
+      [ "/cprj/target/defines", "element_target.html#element_defines", null ],
       [ "/cprj/target/ldflags", "element_target.html#element_ldflags", null ],
       [ "/cprj/target/arflags", "element_target.html#element_arflags", null ],
       [ "/cprj/target/cflags", "element_target.html#element_target_cflags", null ],

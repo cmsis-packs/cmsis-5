@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -107,22 +108,66 @@ $(document).ready(function(){initNavTree('Source_2StatisticsFunctions_2CMakeList
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">CMakeLists.txt File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a5fa3e709672208af725e1b5cd41331fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2StatisticsFunctions_2CMakeLists_8txt.html#a5fa3e709672208af725e1b5cd41331fd">cmake_minimum_required</a> (VERSION 3.14) project(CMSISDSPStatistics) <a class="el" href="Source_2CMakeLists_8txt.html#abe658af24e68335d143536fb31fa1158">include</a>(configLib) <a class="el" href="Source_2CMakeLists_8txt.html#abe658af24e68335d143536fb31fa1158">include</a>(<a class="el" href="Source_2TransformFunctions_2CMakeLists_8txt.html#ac32ee0604a14505ba8a92b6eeac0b9aa">configDsp</a>) add_library(CMSISDSPStatistics STATIC) target_sources(CMSISDSPStatistics PRIVATE arm_entropy_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_entropy_f64.c) target_sources(CMSISDSPStatistics PRIVATE arm_kullback_leibler_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_kullback_leibler_f64.c) target_sources(CMSISDSPStatistics PRIVATE arm_logsumexp_dot_prod_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_logsumexp_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_max_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_max_no_idx_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_max_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_max_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_max_q7.c) target_sources(CMSISDSPStatistics PRIVATE arm_mean_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_mean_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_mean_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_mean_q7.c) target_sources(CMSISDSPStatistics PRIVATE arm_min_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_min_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_min_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_min_q7.c) target_sources(CMSISDSPStatistics PRIVATE arm_power_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_power_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_power_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_power_q7.c) target_sources(CMSISDSPStatistics PRIVATE arm_rms_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_rms_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_rms_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_std_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_std_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_std_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_var_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_var_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_var_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmax_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmax_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmax_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmax_q7.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmin_f32.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmin_q15.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmin_q31.c) target_sources(CMSISDSPStatistics PRIVATE arm_absmin_q7.c) configLib(CMSISDSPStatistics $</td></tr>
+<tr class="separator:a5fa3e709672208af725e1b5cd41331fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a1e8f9f1c355e967a0285140cae53cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2StatisticsFunctions_2CMakeLists_8txt.html#a9a1e8f9f1c355e967a0285140cae53cc">configDsp</a> (CMSISDSPStatistics ${ROOT}) target_include_directories(CMSISDSPStatistics PUBLIC&quot;$</td></tr>
+<tr class="separator:a9a1e8f9f1c355e967a0285140cae53cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a5fa3e709672208af725e1b5cd41331fd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cmake_minimum_required </td>
+          <td>(</td>
+          <td class="paramtype">VERSION 3.&#160;</td>
+          <td class="paramname"><em>14</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9a1e8f9f1c355e967a0285140cae53cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">configDsp </td>
+          <td>(</td>
+          <td class="paramtype">CMSISDSPStatistics ${ROOT}&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="Source_2StatisticsFunctions_2CMakeLists_8txt.html">CMakeLists.txt</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:36 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

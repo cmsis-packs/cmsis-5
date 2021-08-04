@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -152,7 +153,7 @@ $(document).ready(function(){initNavTree('startup_c_pg.html','');});
 <div class="line">  0,                                        <span class="comment">/*     Reserved */</span></div>
 <div class="line">  0,                                        <span class="comment">/*     Reserved */</span></div>
 <div class="line">  0,                                        <span class="comment">/*     Reserved */</span></div>
-<div class="line">  SVC_Handler,                              <span class="comment">/*  -5 SVCall Handler */</span></div>
+<div class="line">  SVC_Handler,                              <span class="comment">/*  -5 SVC Handler */</span></div>
 <div class="line">  DebugMon_Handler,                         <span class="comment">/*  -4 Debug Monitor Handler */</span></div>
 <div class="line">  0,                                        <span class="comment">/*     Reserved */</span></div>
 <div class="line">  PendSV_Handler,                           <span class="comment">/*  -2 PendSV Handler */</span></div>
@@ -180,13 +181,14 @@ startup_Device.c Template File</h1>
 <li><a class="el" href="group__compiler__conntrol__gr.html#ga4f65c96effa79fbd610fea43ee7d745b">__VECTOR_TABLE_ATTRIBUTE</a></li>
 </ul>
 <pre class="fragment">/******************************************************************************
- * @file     startup_Device.c
- * @brief    CMSIS-Core(M) Device Startup File for &lt;Device&gt;
- * @version  V2.0.0
- * @date     20. May 2019
+ * @file     startup_&lt;Device&gt;.c
+ * @brief    CMSIS-Core(M) Device Startup File for
+ *           Device &lt;Device&gt;
+ * @version  V1.0.0
+ * @date     20. January 2021
  ******************************************************************************/
 /*
- * Copyright (c) 2009-2019 Arm Limited. All rights reserved.
+ * Copyright (c) 2009-2021 Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -205,114 +207,169 @@ startup_Device.c Template File</h1>
 
 #include "&lt;Device&gt;.h"
 
-/*----------------------------------------------------------------------------
-  Exception / Interrupt Handler Function Prototype
- *----------------------------------------------------------------------------*/
-typedef void( *pFunc )( void );
-
-/*----------------------------------------------------------------------------
+/*---------------------------------------------------------------------------
   External References
- *----------------------------------------------------------------------------*/
+ *---------------------------------------------------------------------------*/
 extern uint32_t __INITIAL_SP;
+extern uint32_t __STACK_LIMIT;
+#if defined (__ARM_FEATURE_CMSE) &amp;&amp; (__ARM_FEATURE_CMSE == 3U)
+extern uint32_t __STACK_SEAL;
+#endif
 
 extern __NO_RETURN void __PROGRAM_START(void);
 
-/*----------------------------------------------------------------------------
+/*---------------------------------------------------------------------------
   Internal References
- *----------------------------------------------------------------------------*/
-void __NO_RETURN Default_Handler(void);
-void __NO_RETURN Reset_Handler  (void);
+ *---------------------------------------------------------------------------*/
+__NO_RETURN void Reset_Handler  (void);
+__NO_RETURN void Default_Handler(void);
 
-/*----------------------------------------------------------------------------
+/* ToDo: Add Cortex exception handler according the used Cortex-Core */
+/*---------------------------------------------------------------------------
   Exception / Interrupt Handler
- *----------------------------------------------------------------------------*/
+ *---------------------------------------------------------------------------*/
 /* Exceptions */
 void NMI_Handler            (void) __attribute__ ((weak, alias("Default_Handler")));
-void HardFault_Handler      (void) __attribute__ ((weak, alias("Default_Handler")));
+void HardFault_Handler      (void) __attribute__ ((weak));
 void MemManage_Handler      (void) __attribute__ ((weak, alias("Default_Handler")));
 void BusFault_Handler       (void) __attribute__ ((weak, alias("Default_Handler")));
 void UsageFault_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
+void SecureFault_Handler    (void) __attribute__ ((weak, alias("Default_Handler")));
 void SVC_Handler            (void) __attribute__ ((weak, alias("Default_Handler")));
 void DebugMon_Handler       (void) __attribute__ ((weak, alias("Default_Handler")));
 void PendSV_Handler         (void) __attribute__ ((weak, alias("Default_Handler")));
 void SysTick_Handler        (void) __attribute__ ((weak, alias("Default_Handler")));
 
-void Interrupt0_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt1_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt2_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt3_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt4_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt5_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt6_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt7_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt8_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
-void Interrupt9_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
+/* ToDo: Add your device specific interrupt handler */
+void &lt;DeviceInterrupt first&gt;_Handler     (void) __attribute__ ((weak, alias("Default_Handler")));
+...
+void &lt;DeviceInterrupt last&gt;_Handler      (void) __attribute__ ((weak, alias("Default_Handler")));
 
 
 /*----------------------------------------------------------------------------
   Exception / Interrupt Vector table
  *----------------------------------------------------------------------------*/
-extern const pFunc __VECTOR_TABLE[240];
-       const pFunc __VECTOR_TABLE[240] __VECTOR_TABLE_ATTRIBUTE = {
-  (pFunc)(&amp;__INITIAL_SP),                   /*     Initial Stack Pointer */
-  Reset_Handler,                            /*     Reset Handler */
-  NMI_Handler,                              /* -14 NMI Handler */
-  HardFault_Handler,                        /* -13 Hard Fault Handler */
-  MemManage_Handler,                        /* -12 MPU Fault Handler */
-  BusFault_Handler,                         /* -11 Bus Fault Handler */
-  UsageFault_Handler,                       /* -10 Usage Fault Handler */
-  0,                                        /*     Reserved */
-  0,                                        /*     Reserved */
-  0,                                        /*     Reserved */
-  0,                                        /*     Reserved */
-  SVC_Handler,                              /*  -5 SVCall Handler */
-  DebugMon_Handler,                         /*  -4 Debug Monitor Handler */
-  0,                                        /*     Reserved */
-  PendSV_Handler,                           /*  -2 PendSV Handler */
-  SysTick_Handler,                          /*  -1 SysTick Handler */
 
+#if defined ( __GNUC__ )
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpedantic"
+#endif
+
+/* ToDo: Add Cortex exception vectors according the used Cortex-Core */
+extern const VECTOR_TABLE_Type __VECTOR_TABLE[&lt;Device vector table entries&gt;];
+       const VECTOR_TABLE_Type __VECTOR_TABLE[&lt;Device vector table entries&gt;] __VECTOR_TABLE_ATTRIBUTE = {
+  (VECTOR_TABLE_Type)(&amp;__INITIAL_SP),  /*     Initial Stack Pointer */
+  Reset_Handler,                       /*     Reset Handler */
+  NMI_Handler,                         /* -14 NMI Handler */
+  HardFault_Handler,                   /* -13 Hard Fault Handler */
+  MemManage_Handler,                   /* -12 MPU Fault Handler */
+  BusFault_Handler,                    /* -11 Bus Fault Handler */
+  UsageFault_Handler,                  /* -10 Usage Fault Handler */
+  SecureFault_Handler,                 /*  -9 Secure Fault Handler */
+  0,                                   /*     Reserved */
+  0,                                   /*     Reserved */
+  0,                                   /*     Reserved */
+  SVC_Handler,                         /*  -5 SVCall Handler */
+  DebugMon_Handler,                    /*  -4 Debug Monitor Handler */
+  0,                                   /*     Reserved */
+  PendSV_Handler,                      /*  -2 PendSV Handler */
+  SysTick_Handler,                     /*  -1 SysTick Handler */
+
+/* ToDo: Add your device specific interrupt vectors */
   /* Interrupts */
-  Interrupt0_Handler,                       /*   0 Interrupt 0 */
-  Interrupt1_Handler,                       /*   1 Interrupt 1 */
-  Interrupt2_Handler,                       /*   2 Interrupt 2 */
-  Interrupt3_Handler,                       /*   3 Interrupt 3 */
-  Interrupt4_Handler,                       /*   4 Interrupt 4 */
-  Interrupt5_Handler,                       /*   5 Interrupt 5 */
-  Interrupt6_Handler,                       /*   6 Interrupt 6 */
-  Interrupt7_Handler,                       /*   7 Interrupt 7 */
-  Interrupt8_Handler,                       /*   8 Interrupt 8 */
-  Interrupt9_Handler                        /*   9 Interrupt 9 */
-                                            /* Interrupts 10 .. 223 are left out */
+  &lt;DeviceInterrupt first&gt;_Handler,     /* first Device Interrupt */
+  ...
+  &lt;DeviceInterrupt last&gt;_Handler       /* last Device Interrupt */
 };
 
-/*----------------------------------------------------------------------------
+#if defined ( __GNUC__ )
+#pragma GCC diagnostic pop
+#endif
+
+/*---------------------------------------------------------------------------
   Reset Handler called on controller reset
- *----------------------------------------------------------------------------*/
-void Reset_Handler(void)
+ *---------------------------------------------------------------------------*/
+__NO_RETURN void Reset_Handler(void)
 {
-  SystemInit();                             /* CMSIS System Initialization */
-  __PROGRAM_START();                        /* Enter PreMain (C library entry point) */
+  __set_PSP((uint32_t)(&amp;__INITIAL_SP));
+
+/* ToDo: Initialize stack limit register for Armv8-M Main Extension based processors*/
+  __set_MSPLIM((uint32_t)(&amp;__STACK_LIMIT));
+  __set_PSPLIM((uint32_t)(&amp;__STACK_LIMIT));
+
+/* ToDo: Add stack sealing for Armv8-M based processors */
+#if defined (__ARM_FEATURE_CMSE) &amp;&amp; (__ARM_FEATURE_CMSE == 3U)
+  __TZ_set_STACKSEAL_S((uint32_t *)(&amp;__STACK_SEAL));
+#endif
+
+  SystemInit();                    /* CMSIS System Initialization */
+  __PROGRAM_START();               /* Enter PreMain (C library entry point) */
 }
 
-/*----------------------------------------------------------------------------
+
+#if defined(__ARMCC_VERSION) &amp;&amp; (__ARMCC_VERSION &gt;= 6010050)
+  #pragma clang diagnostic push
+  #pragma clang diagnostic ignored "-Wmissing-noreturn"
+#endif
+
+/*---------------------------------------------------------------------------
+  Hard Fault Handler
+ *---------------------------------------------------------------------------*/
+void HardFault_Handler(void)
+{
+  while(1);
+}
+
+/*---------------------------------------------------------------------------
   Default Handler for Exceptions / Interrupts
- *----------------------------------------------------------------------------*/
+ *---------------------------------------------------------------------------*/
 void Default_Handler(void)
 {
   while(1);
 }
-</pre> </div></div><!-- contents -->
+
+#if defined(__ARMCC_VERSION) &amp;&amp; (__ARMCC_VERSION &gt;= 6010050)
+  #pragma clang diagnostic pop
+#endif
+</pre> <h1><a class="anchor" id="startup_c_sec_v8"></a>
+startup_Device.c Template File (Armv8-M/v8.1-M)</h1>
+<p>The C-startup file for an Armv8-M/v8.1-M processor is similar to the one for an Armv7-M processor except that it offers the possibility of stack sealing for the Main Stack Pointer (MSP). The following preprocessor defines and CMSIS functions are used:</p>
+<ul>
+<li><a class="el" href="group__stacksealing__support__trustzone__functions.html#gacc36ddac1642fe80a690364911542d79">__STACK_SEAL</a></li>
+<li><a class="el" href="group__stacksealing__support__trustzone__functions.html#ga87d2473a3adebb73941065366feec690">__TZ_set_STACKSEAL_S</a></li>
+</ul>
+<p>The stack sealing and the initialization fof the Stack Limit register is done in function <b>void Reset_Handler(void)</b>:</p>
+<div class="fragment"><div class="line"><span class="comment">/*----------------------------------------------------------------------------</span></div>
+<div class="line"><span class="comment">  Reset Handler called on controller reset</span></div>
+<div class="line"><span class="comment"> *----------------------------------------------------------------------------*/</span></div>
+<div class="line"><a class="code" href="group__compiler__conntrol__gr.html#ga153a4a31b276a9758959580538720a51">__NO_RETURN</a> <span class="keywordtype">void</span> Reset_Handler(<span class="keywordtype">void</span>)</div>
+<div class="line">{</div>
+<div class="line">  <a class="code" href="group__Core__Register__gr.html#ga48e5853f417e17a8a65080f6a605b743">__set_PSP</a>((uint32_t)(&amp;<a class="code" href="group__compiler__conntrol__gr.html#ga1002e751427b1189f92787d4e4eef965">__INITIAL_SP</a>));</div>
+<div class="line"></div>
+<div class="line">  <a class="code" href="group__Core__Register__gr.html#ga6809a07c5cb7410e361f3fba57f72172">__set_MSPLIM</a>((uint32_t)(&amp;<a class="code" href="group__compiler__conntrol__gr.html#ga84b0bad4aa39632d3faea46aa1e102a8">__STACK_LIMIT</a>));</div>
+<div class="line">  <a class="code" href="group__Core__Register__gr.html#ga4348d14fc5eefbfd34ab8c51be44a81b">__set_PSPLIM</a>((uint32_t)(&amp;<a class="code" href="group__compiler__conntrol__gr.html#ga84b0bad4aa39632d3faea46aa1e102a8">__STACK_LIMIT</a>));</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#if defined (__ARM_FEATURE_CMSE) &amp;&amp; (__ARM_FEATURE_CMSE == 3U)</span></div>
+<div class="line"><span class="preprocessor"></span>  <a class="code" href="group__stacksealing__support__trustzone__functions.html#ga87d2473a3adebb73941065366feec690">__TZ_set_STACKSEAL_S</a>((uint32_t *)(&amp;<a class="code" href="group__stacksealing__support__trustzone__functions.html#gacc36ddac1642fe80a690364911542d79">__STACK_SEAL</a>));</div>
+<div class="line"><span class="preprocessor">#endif</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line">  <a class="code" href="group__system__init__gr.html#ga93f514700ccf00d08dbdcff7f1224eb2">SystemInit</a>();                             <span class="comment">/* CMSIS System Initialization */</span></div>
+<div class="line">  <a class="code" href="group__compiler__conntrol__gr.html#ga72db8b026c5e100254080fefabd9fd88">__PROGRAM_START</a>();                        <span class="comment">/* Enter PreMain (C library entry point) */</span></div>
+<div class="line">}</div>
+</div><!-- fragment --><dl class="section note"><dt>Note</dt><dd>Stack Sealing also requires the application project to use a scatter file (or a linker script) as explained in <a class="el" href="using_TrustZone_pg.html#RTOS_TrustZone_stacksealing">Stack Sealing</a> section. </dd></dl>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="templates_pg.html">CMSIS-Core Device Templates</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

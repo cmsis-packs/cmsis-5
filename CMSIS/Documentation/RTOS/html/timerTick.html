@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -192,7 +193,7 @@ Usage of an Alternate Timer as RTX Kernel Timer</h1>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     0                         ; Reserved</div>
-<div class="line">                DCD     SVC_Handler               ; SVCall Handler</div>
+<div class="line">                DCD     SVC_Handler               ; SVC Handler</div>
 <div class="line">                DCD     DebugMon_Handler          ; Debug Monitor Handler</div>
 <div class="line">                DCD     0                         ; Reserved</div>
 <div class="line">                DCD     PendSV_Handler            ; PendSV Handler</div>
@@ -213,12 +214,13 @@ Usage of an Alternate Timer as RTX Kernel Timer</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="rtxImplementation.html">RTX Implementation</a></li><li class="navelem"><a class="el" href="configure.html">Configure RTX</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:04 for CMSIS-RTOS Version 1.03 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

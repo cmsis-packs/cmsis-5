@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -237,7 +238,7 @@ Enumerations</h2></td></tr>
 <br/>
 &#160;&#160;<a class="el" href="group__CMSIS__RTOS__KernelCtrl.html#ga08326469274b668140ca934b168a5ad4a0545c92c18ce8e6b24e82a0d694a0b4a">osKernelError</a> = -1, 
 <br/>
-&#160;&#160;<a class="el" href="group__CMSIS__RTOS__KernelCtrl.html#ga08326469274b668140ca934b168a5ad4ab0a47576defa29396a649d9173d4bc4b">osKernelReserved</a> = 0x7FFFFFFFU
+&#160;&#160;<a class="el" href="group__CMSIS__RTOS__KernelCtrl.html#ga08326469274b668140ca934b168a5ad4ab0a47576defa29396a649d9173d4bc4b">osKernelReserved</a> = 0x7FFFFFFF
 <br/>
  }</td></tr>
 <tr class="memdesc:ga08326469274b668140ca934b168a5ad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kernel state.  <a href="group__CMSIS__RTOS__KernelCtrl.html#ga08326469274b668140ca934b168a5ad4">More...</a><br/></td></tr>
@@ -627,7 +628,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:gac24f87d4f395e9e9c900c320e45ade8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum number of messages in a Message Queue.  <a href="group__CMSIS__RTOS__Message.html#gac24f87d4f395e9e9c900c320e45ade8a">More...</a><br/></td></tr>
 <tr class="separator:gac24f87d4f395e9e9c900c320e45ade8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga96d3d84069b20359de48109e28a1a89e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CMSIS__RTOS__Message.html#ga96d3d84069b20359de48109e28a1a89e">osMessageQueueGetMsgSize</a> (<a class="el" href="cmsis__os2_8h.html#a206dbc05367e03c39fc6d4d1ebcff317">osMessageQueueId_t</a> mq_id)</td></tr>
-<tr class="memdesc:ga96d3d84069b20359de48109e28a1a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum message size in a Memory Pool.  <a href="group__CMSIS__RTOS__Message.html#ga96d3d84069b20359de48109e28a1a89e">More...</a><br/></td></tr>
+<tr class="memdesc:ga96d3d84069b20359de48109e28a1a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get maximum message size in a Message Queue.  <a href="group__CMSIS__RTOS__Message.html#ga96d3d84069b20359de48109e28a1a89e">More...</a><br/></td></tr>
 <tr class="separator:ga96d3d84069b20359de48109e28a1a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6a32ac394fcff568b251c160cc3014b2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__CMSIS__RTOS__Message.html#ga6a32ac394fcff568b251c160cc3014b2">osMessageQueueGetCount</a> (<a class="el" href="cmsis__os2_8h.html#a206dbc05367e03c39fc6d4d1ebcff317">osMessageQueueId_t</a> mq_id)</td></tr>
 <tr class="memdesc:ga6a32ac394fcff568b251c160cc3014b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get number of queued messages in a Message Queue.  <a href="group__CMSIS__RTOS__Message.html#ga6a32ac394fcff568b251c160cc3014b2">More...</a><br/></td></tr>
@@ -712,12 +713,13 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_a43355fbfff7212ac2193223a73d577c.html">RTOS2</a></li><li class="navelem"><a class="el" href="dir_f5870d36a7061bb81e1a64a750696f2d.html">Include</a></li><li class="navelem"><a class="el" href="cmsis__os2_8h.html">cmsis_os2.h</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:07 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

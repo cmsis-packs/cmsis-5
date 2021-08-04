@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['make_3a_20gnu_20make',['make: GNU Make',['../Make.html',1,'CmdLineBuild']]]
+  ['make_3a_20gnu_20make',['Make: GNU Make',['../make.html',1,'CmdLineBuild']]]
 ];

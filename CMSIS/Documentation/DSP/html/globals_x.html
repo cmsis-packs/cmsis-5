@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -152,16 +153,16 @@ $(document).ready(function(){initNavTree('globals_x.html','');});
 
 <h3><a class="anchor" id="index_x"></a>- x -</h3><ul>
 <li>arm_xor_u16()
-: <a class="el" href="group__Xor.html#ga5048ed05ab7821cdb5118d7c410c6db7">arm_math.h</a>
+: <a class="el" href="group__Xor.html#ga5048ed05ab7821cdb5118d7c410c6db7">basic_math_functions.h</a>
 , <a class="el" href="group__Xor.html#ga5048ed05ab7821cdb5118d7c410c6db7">arm_xor_u16.c</a>
 </li>
 <li>arm_xor_u32()
-: <a class="el" href="group__Xor.html#gab009f33485bd79c752561a65552b0f77">arm_math.h</a>
+: <a class="el" href="group__Xor.html#gab009f33485bd79c752561a65552b0f77">basic_math_functions.h</a>
 , <a class="el" href="group__Xor.html#gab009f33485bd79c752561a65552b0f77">arm_xor_u32.c</a>
 </li>
 <li>arm_xor_u8()
 : <a class="el" href="group__Xor.html#gaae18d7ea4f37e37ad094ece610bab3dd">arm_xor_u8.c</a>
-, <a class="el" href="group__Xor.html#gaae18d7ea4f37e37ad094ece610bab3dd">arm_math.h</a>
+, <a class="el" href="group__Xor.html#gaae18d7ea4f37e37ad094ece610bab3dd">basic_math_functions.h</a>
 </li>
 <li>X_f32
 : <a class="el" href="arm__matrix__example__f32_8c.html#a98c67c0fc0cb5f2df51b21482d31d21c">arm_matrix_example_f32.c</a>
@@ -178,12 +179,13 @@ $(document).ready(function(){initNavTree('globals_x.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

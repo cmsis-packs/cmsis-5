@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -114,26 +115,27 @@ $(document).ready(function(){initNavTree('pages.html','');});
 <div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span><span onclick="javascript:toggleLevel(3);">3</span>]</div><table class="directory">
 <tr id="row_0_" class="even"><td class="entry"><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="build_revisionHistory.html" target="_self">Revision history</a></td><td class="desc"></td></tr>
 <tr id="row_1_"><td class="entry"><img id="arr_1_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('1_')"/><a class="el" href="CmdLineBuild.html" target="_self">Command Line Build</a></td><td class="desc"></td></tr>
-<tr id="row_1_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cbuild_install.html" target="_self">Setup Build Environment</a></td><td class="desc"></td></tr>
-<tr id="row_1_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cbuild.html" target="_self">cbuild.sh: Build Invocation</a></td><td class="desc"></td></tr>
-<tr id="row_1_2_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cp_init.html" target="_self">cp_init.sh: Setup Pack Directory</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cbuild_install.html" target="_self">Setup Script for the Build Environment</a></td><td class="desc"></td></tr>
+<tr id="row_1_1_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cp_init.html" target="_self">cp_init.sh: Setup Pack Directory</a></td><td class="desc"></td></tr>
+<tr id="row_1_2_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cbuild.html" target="_self">cbuild.sh: Build Invocation</a></td><td class="desc"></td></tr>
 <tr id="row_1_3_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cbuildgen.html" target="_self">cbuildgen: Build Process Manager</a></td><td class="desc"></td></tr>
-<tr id="row_1_4_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="Make.html" target="_self">make: GNU Make</a></td><td class="desc"></td></tr>
-<tr id="row_1_5_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cp_install.html" target="_self">cp_install.sh: Install Packs</a></td><td class="desc"></td></tr>
-<tr id="row_1_6_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="ccmerge.html" target="_self">ccmerge: Config File Updater</a></td><td class="desc"></td></tr>
-<tr id="row_1_7_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="cbuild_uv.html" target="_self">cbuild_uv.sh: Build MDK project</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><img id="arr_2_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('2_')"/><a class="el" href="cprjFormat_pg.html" target="_self">Project Description (*.cprj) Format</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img id="arr_2_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('2_0_')"/><a class="el" href="element_cprj.html" target="_self">/cprj</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_0_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_created.html" target="_self">/cprj/created</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_1_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_info.html" target="_self">/cprj/info</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_2_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_layers.html" target="_self">/cprj/layers</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_3_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_packages.html" target="_self">/cprj/packages</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_4_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_compilers.html" target="_self">/cprj/compilers</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_5_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_target.html" target="_self">/cprj/target</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_6_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_components.html" target="_self">/cprj/components</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_7_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_files.html" target="_self">/cprj/files</a></td><td class="desc"></td></tr>
-<tr id="row_2_0_8_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="cprj_types.html" target="_self">cprj specific types</a></td><td class="desc"></td></tr>
-<tr id="row_2_1_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="projectDescriptionSchema.html" target="_self">Project Description Schema</a></td><td class="desc"></td></tr>
+<tr id="row_1_4_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="make.html" target="_self">Make: GNU Make</a></td><td class="desc"></td></tr>
+<tr id="row_1_5_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cmake.html" target="_self">CMake</a></td><td class="desc"></td></tr>
+<tr id="row_1_6_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="cp_install.html" target="_self">cp_install.sh: Install Packs</a></td><td class="desc"></td></tr>
+<tr id="row_1_7_"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="ccmerge.html" target="_self">ccmerge: Config File Updater</a></td><td class="desc"></td></tr>
+<tr id="row_1_8_" class="even"><td class="entry"><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="cbuild_uv.html" target="_self">cbuild_uv.sh: Export MDK projects to CMSIS-Build</a></td><td class="desc"></td></tr>
+<tr id="row_2_"><td class="entry"><img id="arr_2_" src="ftv2mlastnode.png" alt="\" width="16" height="22" onclick="toggleFolder('2_')"/><a class="el" href="cprjFormat_pg.html" target="_self">Project Description (*.cprj) Format</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img id="arr_2_0_" src="ftv2mnode.png" alt="o" width="16" height="22" onclick="toggleFolder('2_0_')"/><a class="el" href="element_cprj.html" target="_self">/cprj</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_0_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_created.html" target="_self">/cprj/created</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_1_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_info.html" target="_self">/cprj/info</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_2_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_layers.html" target="_self">/cprj/layers</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_3_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_packages.html" target="_self">/cprj/packages</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_4_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_compilers.html" target="_self">/cprj/compilers</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_5_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_target.html" target="_self">/cprj/target</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_6_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_components.html" target="_self">/cprj/components</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_7_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2node.png" alt="o" width="16" height="22" /><a class="el" href="element_files.html" target="_self">/cprj/files</a></td><td class="desc"></td></tr>
+<tr id="row_2_0_8_"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2vertline.png" alt="|" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="cprj_types.html" target="_self">cprj specific types</a></td><td class="desc"></td></tr>
+<tr id="row_2_1_" class="even"><td class="entry"><img src="ftv2blank.png" alt="&#160;" width="16" height="22" /><img src="ftv2lastnode.png" alt="\" width="16" height="22" /><a class="el" href="projectDescriptionSchema.html" target="_self">Project Description Schema</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -141,12 +143,13 @@ $(document).ready(function(){initNavTree('pages.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

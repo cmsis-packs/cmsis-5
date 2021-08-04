@@ -1,7 +1,7 @@
 var structarm__iir__lattice__instance__q15 =
 [
-    [ "numStages", "structarm__iir__lattice__instance__q15.html#a96fbed313bef01070409fa182d26ba3f", null ],
-    [ "pkCoeffs", "structarm__iir__lattice__instance__q15.html#a41c214a1ec38d4a82fae8899d715dd29", null ],
-    [ "pState", "structarm__iir__lattice__instance__q15.html#afd0136ab917b529554d93f41a5e04618", null ],
-    [ "pvCoeffs", "structarm__iir__lattice__instance__q15.html#a4c4f57f45b223abbe2a9fb727bd2cad9", null ]
+    [ "numStages", "structarm__iir__lattice__instance__q15.html#a4cceb90547b3e585d4c7aabaa8057212", null ],
+    [ "pkCoeffs", "structarm__iir__lattice__instance__q15.html#a12497c299b0341c18d497f8ab3465084", null ],
+    [ "pState", "structarm__iir__lattice__instance__q15.html#ae29dfdb736374fcddaeaec4b7770170c", null ],
+    [ "pvCoeffs", "structarm__iir__lattice__instance__q15.html#a52866ed127c7b2a8a102e2ed1a2ebab8", null ]
 ];

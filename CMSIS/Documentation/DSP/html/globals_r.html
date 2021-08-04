@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -151,8 +152,14 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>arm_radix2_butterfly_f16()
+: <a class="el" href="arm__cfft__radix2__f16_8c.html#a0a1d2084105ef07e9d4b58c8bd834185">arm_cfft_radix2_f16.c</a>
+</li>
 <li>arm_radix2_butterfly_f32()
 : <a class="el" href="arm__cfft__radix2__f32_8c.html#aa0577fd1717a219c08235967d877731d">arm_cfft_radix2_f32.c</a>
+</li>
+<li>arm_radix2_butterfly_inverse_f16()
+: <a class="el" href="arm__cfft__radix2__f16_8c.html#a1294811616d42c13af3ea865939441ed">arm_cfft_radix2_f16.c</a>
 </li>
 <li>arm_radix2_butterfly_inverse_f32()
 : <a class="el" href="arm__cfft__radix2__f32_8c.html#abab72ded0de6645d6977cdb0e61b3a3b">arm_cfft_radix2_f32.c</a>
@@ -169,16 +176,23 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <li>arm_radix2_butterfly_q31()
 : <a class="el" href="arm__cfft__radix2__q31_8c.html#a36c1ec7fd1c2aa80d50979b6bf2a55ef">arm_cfft_radix2_q31.c</a>
 </li>
+<li>arm_radix4_butterfly_f16()
+: <a class="el" href="arm__cfft__f16_8c.html#adfa030f0e596e01eae4a1519c608e696">arm_cfft_f16.c</a>
+, <a class="el" href="arm__cfft__radix4__f16_8c.html#adfa030f0e596e01eae4a1519c608e696">arm_cfft_radix4_f16.c</a>
+</li>
 <li>arm_radix4_butterfly_f32()
-: <a class="el" href="arm__rfft__f32_8c.html#ac00819467b00656801a5f6a9a5e6d824">arm_rfft_f32.c</a>
-, <a class="el" href="arm__cfft__radix4__f32_8c.html#ac00819467b00656801a5f6a9a5e6d824">arm_cfft_radix4_f32.c</a>
+: <a class="el" href="arm__cfft__radix4__f32_8c.html#ac00819467b00656801a5f6a9a5e6d824">arm_cfft_radix4_f32.c</a>
+, <a class="el" href="arm__rfft__f32_8c.html#ac00819467b00656801a5f6a9a5e6d824">arm_rfft_f32.c</a>
 </li>
 <li>arm_radix4_butterfly_f64()
 : <a class="el" href="arm__cfft__f64_8c.html#a4be5ba27c195eb0dc5150625346e9f63">arm_cfft_f64.c</a>
 </li>
+<li>arm_radix4_butterfly_inverse_f16()
+: <a class="el" href="arm__cfft__radix4__f16_8c.html#a1010d9a3eb42c73222b1e5318ff0558e">arm_cfft_radix4_f16.c</a>
+</li>
 <li>arm_radix4_butterfly_inverse_f32()
-: <a class="el" href="arm__cfft__radix4__f32_8c.html#ab3c001e14852633e343079f97cd96f44">arm_cfft_radix4_f32.c</a>
-, <a class="el" href="arm__rfft__f32_8c.html#ab3c001e14852633e343079f97cd96f44">arm_rfft_f32.c</a>
+: <a class="el" href="arm__rfft__f32_8c.html#ab3c001e14852633e343079f97cd96f44">arm_rfft_f32.c</a>
+, <a class="el" href="arm__cfft__radix4__f32_8c.html#ab3c001e14852633e343079f97cd96f44">arm_cfft_radix4_f32.c</a>
 </li>
 <li>arm_radix4_butterfly_inverse_q15()
 : <a class="el" href="arm__cfft__q15_8c.html#a9c0708cce16e3f17a5a616c71fd17ec5">arm_cfft_q15.c</a>
@@ -196,34 +210,45 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 : <a class="el" href="arm__cfft__q31_8c.html#af4d3481332146c3c703bf494baf23c45">arm_cfft_q31.c</a>
 , <a class="el" href="arm__cfft__radix4__q31_8c.html#af4d3481332146c3c703bf494baf23c45">arm_cfft_radix4_q31.c</a>
 </li>
+<li>arm_radix8_butterfly_f16()
+: <a class="el" href="arm__cfft__radix8__f16_8c.html#a820ac2cee4c6d8b6d129a21360946997">arm_cfft_radix8_f16.c</a>
+</li>
 <li>arm_radix8_butterfly_f32()
 : <a class="el" href="arm__cfft__f32_8c.html#a72350c6eaa1eef8796ab43c1497c6b9c">arm_cfft_f32.c</a>
 , <a class="el" href="arm__cfft__radix8__f32_8c.html#a72350c6eaa1eef8796ab43c1497c6b9c">arm_cfft_radix8_f32.c</a>
 </li>
 <li>arm_recip_q15()
-: <a class="el" href="arm__math_8h.html#a1e370c58e45bbe92bb7763fe59cf5e57">arm_math.h</a>
+: <a class="el" href="utils_8h.html#a1e370c58e45bbe92bb7763fe59cf5e57">utils.h</a>
 </li>
 <li>arm_recip_q31()
-: <a class="el" href="arm__math_8h.html#a3cedcf5a91d6c722c64330ec97e0853e">arm_math.h</a>
+: <a class="el" href="utils_8h.html#a3cedcf5a91d6c722c64330ec97e0853e">utils.h</a>
 </li>
 <li>arm_rfft_f32()
-: <a class="el" href="group__RealFFT.html#ga3df1766d230532bc068fc4ed69d0fcdc">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga3df1766d230532bc068fc4ed69d0fcdc">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#ga3df1766d230532bc068fc4ed69d0fcdc">arm_rfft_f32.c</a>
 </li>
+<li>arm_rfft_fast_f16()
+: <a class="el" href="group__RealFFT.html#gaf018157c88626e83de3d9143f5273d18">transform_functions_f16.h</a>
+, <a class="el" href="group__RealFFT.html#gaf018157c88626e83de3d9143f5273d18">arm_rfft_fast_f16.c</a>
+</li>
 <li>arm_rfft_fast_f32()
-: <a class="el" href="group__RealFFT.html#ga5d2ec62f3e35575eba467d09ddcd98b5">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga5d2ec62f3e35575eba467d09ddcd98b5">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#ga5d2ec62f3e35575eba467d09ddcd98b5">arm_rfft_fast_f32.c</a>
 </li>
 <li>arm_rfft_fast_f64()
-: <a class="el" href="group__RealFFT.html#gae3b00f039305039732f7364171da89fb">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#gae3b00f039305039732f7364171da89fb">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#gae3b00f039305039732f7364171da89fb">arm_rfft_fast_f64.c</a>
 </li>
+<li>arm_rfft_fast_init_f16()
+: <a class="el" href="group__RealFFT.html#gacc1c721dd5a690a4c90cfb0264058659">transform_functions_f16.h</a>
+, <a class="el" href="group__RealFFT.html#gacc1c721dd5a690a4c90cfb0264058659">arm_rfft_fast_init_f16.c</a>
+</li>
 <li>arm_rfft_fast_init_f32()
-: <a class="el" href="group__RealFFT.html#gac5fceb172551e7c11eb4d0e17ef15aa3">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#gac5fceb172551e7c11eb4d0e17ef15aa3">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#gac5fceb172551e7c11eb4d0e17ef15aa3">arm_rfft_fast_init_f32.c</a>
 </li>
 <li>arm_rfft_fast_init_f64()
-: <a class="el" href="group__RealFFT.html#ga51ca806ce1aa56a231684add8d2820bb">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga51ca806ce1aa56a231684add8d2820bb">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#ga51ca806ce1aa56a231684add8d2820bb">arm_rfft_fast_init_f64.c</a>
 </li>
 <li>arm_rfft_fast_sR_f32_len1024
@@ -275,23 +300,23 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 : <a class="el" href="arm__const__structs_8c.html#a4c4f9d4e592db301ecb2ea42df563d7e">arm_const_structs.c</a>
 </li>
 <li>arm_rfft_init_f32()
-: <a class="el" href="group__RealFFT.html#ga10717ee326bf50832ef1c25b85a23068">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga10717ee326bf50832ef1c25b85a23068">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#ga10717ee326bf50832ef1c25b85a23068">arm_rfft_init_f32.c</a>
 </li>
 <li>arm_rfft_init_q15()
-: <a class="el" href="group__RealFFT.html#ga053450cc600a55410ba5b5605e96245d">arm_rfft_init_q15.c</a>
-, <a class="el" href="group__RealFFT.html#ga053450cc600a55410ba5b5605e96245d">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga053450cc600a55410ba5b5605e96245d">transform_functions.h</a>
+, <a class="el" href="group__RealFFT.html#ga053450cc600a55410ba5b5605e96245d">arm_rfft_init_q15.c</a>
 </li>
 <li>arm_rfft_init_q31()
-: <a class="el" href="group__RealFFT.html#ga5abde938abbe72e95c5bab080eb33c45">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga5abde938abbe72e95c5bab080eb33c45">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#ga5abde938abbe72e95c5bab080eb33c45">arm_rfft_init_q31.c</a>
 </li>
 <li>arm_rfft_q15()
-: <a class="el" href="group__RealFFT.html#ga00e615f5db21736ad5b27fb6146f3fc5">arm_rfft_q15.c</a>
-, <a class="el" href="group__RealFFT.html#ga00e615f5db21736ad5b27fb6146f3fc5">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#ga00e615f5db21736ad5b27fb6146f3fc5">transform_functions.h</a>
+, <a class="el" href="group__RealFFT.html#ga00e615f5db21736ad5b27fb6146f3fc5">arm_rfft_q15.c</a>
 </li>
 <li>arm_rfft_q31()
-: <a class="el" href="group__RealFFT.html#gabaeab5646aeea9844e6d42ca8c73fe3a">arm_math.h</a>
+: <a class="el" href="group__RealFFT.html#gabaeab5646aeea9844e6d42ca8c73fe3a">transform_functions.h</a>
 , <a class="el" href="group__RealFFT.html#gabaeab5646aeea9844e6d42ca8c73fe3a">arm_rfft_q31.c</a>
 </li>
 <li>arm_rfft_sR_q15_len1024
@@ -348,64 +373,72 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <li>arm_rfft_sR_q31_len8192
 : <a class="el" href="arm__const__structs_8c.html#ab0a47bce71cb6654702e52b166738af9">arm_const_structs.c</a>
 </li>
+<li>arm_rms_f16()
+: <a class="el" href="group__RMS.html#gae256dfcb1a1e5e696f17d4068575c7cd">statistics_functions_f16.h</a>
+, <a class="el" href="group__RMS.html#gae256dfcb1a1e5e696f17d4068575c7cd">arm_rms_f16.c</a>
+</li>
 <li>arm_rms_f32()
-: <a class="el" href="group__RMS.html#gaeb487e726e3755a7614a29c9d16a93e7">arm_math.h</a>
+: <a class="el" href="group__RMS.html#gaeb487e726e3755a7614a29c9d16a93e7">statistics_functions.h</a>
 , <a class="el" href="group__RMS.html#gaeb487e726e3755a7614a29c9d16a93e7">arm_rms_f32.c</a>
 </li>
 <li>arm_rms_q15()
-: <a class="el" href="group__RMS.html#ga8be796318d41c7cbb68f8f3c0b96020f">arm_math.h</a>
+: <a class="el" href="group__RMS.html#ga8be796318d41c7cbb68f8f3c0b96020f">statistics_functions.h</a>
 , <a class="el" href="group__RMS.html#ga8be796318d41c7cbb68f8f3c0b96020f">arm_rms_q15.c</a>
 </li>
 <li>arm_rms_q31()
-: <a class="el" href="group__RMS.html#ga20586bc59cabbfc38a935c2448833dd2">arm_math.h</a>
+: <a class="el" href="group__RMS.html#ga20586bc59cabbfc38a935c2448833dd2">statistics_functions.h</a>
 , <a class="el" href="group__RMS.html#ga20586bc59cabbfc38a935c2448833dd2">arm_rms_q31.c</a>
 </li>
 <li>arm_rogerstanimoto_distance()
-: <a class="el" href="group__BoolDist.html#gafc18d71e2a85fe37b97103e8a604c15f">arm_math.h</a>
+: <a class="el" href="group__BoolDist.html#gafc18d71e2a85fe37b97103e8a604c15f">distance_functions.h</a>
 , <a class="el" href="group__BoolDist.html#gafc18d71e2a85fe37b97103e8a604c15f">arm_rogerstanimoto_distance.c</a>
+</li>
+<li>arm_rotation2quaternion_f32()
+: <a class="el" href="group__RotQuat.html#gadbb6d70a0619ba5fa864d8fab76a2936">arm_rotation2quaternion_f32.c</a>
+, <a class="el" href="group__RotQuat.html#gadbb6d70a0619ba5fa864d8fab76a2936">quaternion_math_functions.h</a>
 </li>
 <li>arm_russellrao_distance()
 : <a class="el" href="group__BoolDist.html#gad53bfa83ebfe63852e6a065d87d02881">arm_russellrao_distance.c</a>
-, <a class="el" href="group__BoolDist.html#gad53bfa83ebfe63852e6a065d87d02881">arm_math.h</a>
+, <a class="el" href="group__BoolDist.html#gad53bfa83ebfe63852e6a065d87d02881">distance_functions.h</a>
 </li>
 <li>read_q15x2()
-: <a class="el" href="arm__math_8h.html#a1eba08f198f867711068918c45026564">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a1eba08f198f867711068918c45026564">arm_math_memory.h</a>
 </li>
 <li>read_q15x2_da()
-: <a class="el" href="arm__math_8h.html#ae7ddd4049745db9c70a5cd7e8068d1bb">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#ae7ddd4049745db9c70a5cd7e8068d1bb">arm_math_memory.h</a>
 </li>
 <li>read_q15x2_ia()
-: <a class="el" href="arm__math_8h.html#a63675cbbd75b0ba77f5bb21c3b808095">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a63675cbbd75b0ba77f5bb21c3b808095">arm_math_memory.h</a>
 </li>
 <li>read_q7x4_da()
-: <a class="el" href="arm__math_8h.html#a57dbc6933462fd03c5345c660e0b9e78">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a57dbc6933462fd03c5345c660e0b9e78">arm_math_memory.h</a>
 </li>
 <li>read_q7x4_ia()
-: <a class="el" href="arm__math_8h.html#a969ec542d2035cd9289f68f932cb626a">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a969ec542d2035cd9289f68f932cb626a">arm_math_memory.h</a>
 </li>
 <li>realCoefA
-: <a class="el" href="group__RealFFT__Table.html#ga8b1ad947c470596674fa3364e16045c6">arm_common_tables.c</a>
-, <a class="el" href="group__RealFFT__Table.html#ga8b1ad947c470596674fa3364e16045c6">arm_common_tables.h</a>
+: <a class="el" href="group__RealFFT__Table.html#ga8b1ad947c470596674fa3364e16045c6">arm_common_tables.h</a>
+, <a class="el" href="group__RealFFT__Table.html#ga8b1ad947c470596674fa3364e16045c6">arm_common_tables.c</a>
 </li>
 <li>realCoefAQ15
-: <a class="el" href="group__RealFFT__Table.html#gaf8699e77c7774359b96ef388efa7d453">arm_common_tables.h</a>
-, <a class="el" href="group__RealFFT__Table.html#gaf8699e77c7774359b96ef388efa7d453">arm_common_tables.c</a>
+: <a class="el" href="group__RealFFT__Table.html#gaf8699e77c7774359b96ef388efa7d453">arm_common_tables.c</a>
+, <a class="el" href="group__RealFFT__Table.html#gaf8699e77c7774359b96ef388efa7d453">arm_common_tables.h</a>
 </li>
 <li>realCoefAQ31
 : <a class="el" href="group__RealFFT__Table.html#gaf1592a6cf0504675205074a43c3728a2">arm_common_tables.h</a>
 , <a class="el" href="group__RealFFT__Table.html#gaf1592a6cf0504675205074a43c3728a2">arm_common_tables.c</a>
 </li>
 <li>realCoefB
-: <a class="el" href="group__RealFFT__Table.html#gac52f98b52a1f03bfac8b57a67ba07397">arm_common_tables.c</a>
-, <a class="el" href="group__RealFFT__Table.html#gac52f98b52a1f03bfac8b57a67ba07397">arm_common_tables.h</a>
+: <a class="el" href="group__RealFFT__Table.html#gac52f98b52a1f03bfac8b57a67ba07397">arm_common_tables.h</a>
+, <a class="el" href="group__RealFFT__Table.html#gac52f98b52a1f03bfac8b57a67ba07397">arm_common_tables.c</a>
 </li>
 <li>realCoefBQ15
 : <a class="el" href="group__RealFFT__Table.html#ga3b12ecbb17514304c09f90d26cada4cd">arm_common_tables.c</a>
 , <a class="el" href="group__RealFFT__Table.html#ga3b12ecbb17514304c09f90d26cada4cd">arm_common_tables.h</a>
 </li>
 <li>realCoefBQ31
-: <a class="el" href="group__RealFFT__Table.html#ga1eb5745728a61c3715755f5d69a4a960">arm_common_tables.c</a>
-, <a class="el" href="group__RealFFT__Table.html#ga1eb5745728a61c3715755f5d69a4a960">arm_common_tables.h</a>
+: <a class="el" href="group__RealFFT__Table.html#ga1eb5745728a61c3715755f5d69a4a960">arm_common_tables.h</a>
+, <a class="el" href="group__RealFFT__Table.html#ga1eb5745728a61c3715755f5d69a4a960">arm_common_tables.c</a>
 </li>
 <li>refDotProdOut
 : <a class="el" href="arm__dotproduct__example__f32_8c.html#ad57c1f9ad68d098d79b15ec6844a26fc">arm_dotproduct_example_f32.c</a>
@@ -414,14 +447,17 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 : <a class="el" href="arm__fft__bin__example__f32_8c.html#aec50b0f697fd9e7e7e244487a4bd57e4">arm_fft_bin_example_f32.c</a>
 </li>
 <li>refOutput
-: <a class="el" href="arm__fir__data_8c.html#aa7570f8c2e7a3c929d9d32a14a51389f">arm_fir_data.c</a>
-, <a class="el" href="arm__fir__example__f32_8c.html#a12d0acaa028f1dcd964d2d188e7df331">arm_fir_example_f32.c</a>
+: <a class="el" href="arm__fir__example__f32_8c.html#a12d0acaa028f1dcd964d2d188e7df331">arm_fir_example_f32.c</a>
+, <a class="el" href="arm__fir__data_8c.html#aa7570f8c2e7a3c929d9d32a14a51389f">arm_fir_data.c</a>
 </li>
 <li>refVarianceOut
 : <a class="el" href="arm__variance__example__f32_8c.html#a26cbbfe2a7905669e8440159465050df">arm_variance_example_f32.c</a>
 </li>
-<li>rel_entr()
-: <a class="el" href="group__FloatDist.html#ga9fa028dcb0439f9b00522a514a39f478">arm_jensenshannon_distance_f32.c</a>
+<li>RI
+: <a class="el" href="arm__rotation2quaternion__f32_8c.html#a0671bc9d0dfb2fb2926884f1d70c4673">arm_rotation2quaternion_f32.c</a>
+</li>
+<li>ROUND_UP
+: <a class="el" href="utils_8h.html#ad87787b5538eaab218a223b037413930">utils.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -429,12 +465,13 @@ $(document).ready(function(){initNavTree('globals_r.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

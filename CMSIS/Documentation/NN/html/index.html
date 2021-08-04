@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-NN
-   &#160;<span id="projectnumber">Version 1.3.0</span>
+   &#160;<span id="projectnumber">Version 3.0.0</span>
    </div>
    <div id="projectbrief">CMSIS NN Software Library</div>
   </td>
@@ -97,7 +98,7 @@ $(document).ready(function(){initNavTree('index.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -118,6 +119,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>Convolution Functions</li>
 <li>Activation Functions</li>
 <li>Fully-connected Layer Functions</li>
+<li>SVDF Layer Functions</li>
 <li>Pooling Functions</li>
 <li>Softmax Functions</li>
 <li>Basic math Functions</li>
@@ -156,94 +158,24 @@ $(document).ready(function(){initNavTree('index.html','');});
 <li>ARM_NN_TRUNCATE:</li>
 </ul>
 <p>Define macro ARM_NN_TRUNCATE to use floor instead of round-to-the-nearest-int for the computation.</p>
-<h2>Upcoming Interface Change </h2>
-<p>Starting from the 1.4.0 next release, CMSIS-NN will gradually switch to a new API interface to:</p>
-<ol type="1">
-<li>have a stable API</li>
-<li>avoid passing many variables by value</li>
-<li>improve security</li>
-<li>improve validation</li>
-<li>improve code readability</li>
-</ol>
-<p>The upcoming API interface change will be based on "struct" and only affect the TensorFlowLite micro compliant APIs [4] (functions with _s8 suffix)</p>
-<p>Below you can find a snapshot of how the new API interface will look like (names can change)</p>
-<p>i.e. arm_convolve_1x1_s8_fast</p>
-<table class="doxtable">
-<tr>
-<th>Current API interface </th><th>New API interface proposal  </th></tr>
-<tr>
-<td>const q7_t *input </td><td>const cmsis_nn_context &amp;ctx </td></tr>
-<tr>
-<td>const uint16_t input_x </td><td>const cmsis_nn_conv_params &amp;params </td></tr>
-<tr>
-<td>const uint16_t input_y </td><td>const cmsis_nn_dims &amp;input_dims </td></tr>
-<tr>
-<td>const uint16_t input_ch </td><td>const q7_t *input_data </td></tr>
-<tr>
-<td>const uint16_t input_batches </td><td>const cmsis_nn_dims &amp;filter_dims </td></tr>
-<tr>
-<td>const q7_t *kernel </td><td>const q7_t *filter_data </td></tr>
-<tr>
-<td>const uint16_t output_ch </td><td>const cmsis_nn_dims &amp;bias_dims </td></tr>
-<tr>
-<td>const uint16_t pad_x </td><td>const q31_t *bias_data </td></tr>
-<tr>
-<td>const uint16_t pad_y </td><td>const cmsis_nn_dims &amp;output_dims </td></tr>
-<tr>
-<td>const uint16_t stride_x </td><td>q7_t *output_data </td></tr>
-<tr>
-<td>const uint16_t stride_y </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t *bias </td><td><br/>
- </td></tr>
-<tr>
-<td>q7_t *output </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t *output_shift </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t *output_mult </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t out_offset </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t input_offset </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t out_activation_min </td><td><br/>
- </td></tr>
-<tr>
-<td>const int32_t out_activation_max </td><td><br/>
- </td></tr>
-<tr>
-<td>const uint16_t output_x </td><td><br/>
- </td></tr>
-<tr>
-<td>const uint16_t output_y </td><td><br/>
- </td></tr>
-<tr>
-<td>q15_t *buffer_a </td><td><br/>
- </td></tr>
-</table>
 <h2>Copyright Notice </h2>
 <p>Copyright (C) 2010-2019 Arm Limited. All rights reserved.</p>
 <p>[1] CMSIS-NN: Efficient Neural Network Kernels for Arm Cortex-M CPUs <a href="https://arxiv.org/abs/1801.06601">https://arxiv.org/abs/1801.06601</a></p>
-<p>[2] Converting a Neural Network for Arm Cortex-M with CMSIS-NN <a href="https://developer.arm.com/solutions/machine-learning-on-arm/developer-material/how-to-guides/converting-a-neural-network-for-arm-cortex-m-with-cmsis-nn/single-page">https://developer.arm.com/solutions/machine-learning-on-arm/developer-material/how-to-guides/converting-a-neural-network-for-arm-cortex-m-with-cmsis-nn/single-page</a> [3] <a href="https://www.tensorflow.org/lite/microcontrollers/library">https://www.tensorflow.org/lite/microcontrollers/library</a></p>
+<p>[2] Converting a Neural Network for Arm Cortex-M with CMSIS-NN</p>
+<p><a href="https://developer.arm.com/solutions/machine-learning-on-arm/developer-material/how-to-guides/converting-a-neural-network-for-arm-cortex-m-with-cmsis-nn/single-page">https://developer.arm.com/solutions/machine-learning-on-arm/developer-material/how-to-guides/converting-a-neural-network-for-arm-cortex-m-with-cmsis-nn/single-page</a> [3] <a href="https://www.tensorflow.org/lite/microcontrollers/library">https://www.tensorflow.org/lite/microcontrollers/library</a></p>
 <p>[4] <a href="https://github.com/ARM-software/CMSIS_5/tree/develop/CMSIS/NN#legacy-vs-tfl-micro-compliant-apis">https://github.com/ARM-software/CMSIS_5/tree/develop/CMSIS/NN#legacy-vs-tfl-micro-compliant-apis</a> </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:49 for CMSIS-NN Version 1.3.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

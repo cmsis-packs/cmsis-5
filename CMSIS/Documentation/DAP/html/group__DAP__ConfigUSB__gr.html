@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DAP
-   &#160;<span id="projectnumber">Version 2.0.0</span>
+   &#160;<span id="projectnumber">Version 2.1.0</span>
    </div>
    <div id="projectbrief">Interface Firmware for CoreSight Debug Access Port</div>
   </td>
@@ -121,6 +122,7 @@ $(document).ready(function(){initNavTree('group__DAP__ConfigUSB__gr.html','');})
 <li><a class="el" href="group__DAP__ConfigUSB__gr.html">Communication via USB HID</a> (Human Interface Device) does not require any USB driver installation.</li>
 <li><a class="el" href="group__DAP__ConfigUSB__gr.html">Communication via WinUSB</a> provides higher speed communication but may require an *.inf file for USB installation.</li>
 </ul>
+<p>In addition, <a class="el" href="group__DAP__ConfigUSB__gr.html">Communication Device Class</a> is used to enable USB COM port.</p>
 <p>For the USB interface it is important to provide correct configuration information for the USB Peripheral as described in this section.</p>
 <p>The following steps describe how to change and configure the USB peripheral in the CMSIS-DAP Firmware project:</p>
 <ol type="1">
@@ -237,17 +239,27 @@ HKR,,DeviceInterfaceGUIDs,0x10000,"{CDB3B5AD-293B-4663-AA36-1AAE46463776}"
 ClassName        = "Universal Serial Bus devices"
 ManufacturerName = "KEIL - Tools By ARM"
 DeviceName       = "CMSIS-DAP v2" 
-</pre> </div></div><!-- contents -->
+</pre> </div>
+
+<h3><a class="anchor" id="USB_CDC"></a>Communication Device Class</h3><div class="textblock">CMSIS-DAP V2 supports also UART Communication Port optionally routed to USB COM Port which is implemented through USB Communication Device Class (CDC).<br/>
+<br/>
+The picture below shows the configuration of the USB CDC class. <br/>
+<div class="image">
+<img src="MDK_USB_CDC.png" alt="MDK_USB_CDC.png"/>
+<div class="caption">
+Configuration of USB CDC class</div></div>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:25 for CMSIS-DAP Version 2.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

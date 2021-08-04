@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -1074,10 +1075,10 @@ when Slave  </td><td>Set the Slave Select mode for the master to <b>Not used</b>
 <tr>
 <td><a class="el" href="group__spi__slave__select__mode__ctrls.html#gab5e319aa3f9d4d8c9ed92f0fe865f624">ARM_SPI_SS_MASTER_SW</a> </td><td>Set the Slave Select mode for the master to <b>Software controlled</b>. Used with Mode Control ARM_SPI_MODE_MASTER. The Slave Select line is configured as output and controlled via the Miscellaneous Control <a class="el" href="group__spi__misc__ctrls.html#ga5776272b82decff92da003568540c92f">ARM_SPI_CONTROL_SS</a>. By default, the line it is not active (high), and is not affected by transfer-, send-, or receive functions.  </td></tr>
 <tr>
-<td><a class="el" href="group__spi__slave__select__mode__ctrls.html#ga07762709a40dc90aca85553f500c8761">ARM_SPI_SS_MASTER_HW_OUTPUT</a> </td><td>Set the Slave Select mode for the master to <b>Hardware controlled Output</b>. Used with Mode Control ARM_SPI_MODE_MASTER. The Slave Select line is configured as output and controlled by hardware. The line gets activated or deactivated automatically by the hardware for transfers and is not controlled by the Miscellaneous Control <a class="el" href="group__spi__misc__ctrls.html#ga5776272b82decff92da003568540c92f">ARM_SPI_CONTROL_SS</a>. When exactly the line is activated or deactivated is hardware dependent. Typically, the hardware will activate the line before starting the transfer and deactivate it after the transfer completes. Some hardware will leave the line activated until the SPI stays master. <dl class="section note"><dt>Note</dt><dd>Some devices require that the SS signal is strictly defined regarding transfers. Refer to the documentation of your device.  </dd></dl>
+<td><a class="el" href="group__spi__slave__select__mode__ctrls.html#ga07762709a40dc90aca85553f500c8761">ARM_SPI_SS_MASTER_HW_OUTPUT</a> </td><td>Set the Slave Select mode for the master to <b>Hardware controlled Output</b>. Used with Mode Control ARM_SPI_MODE_MASTER. The Slave Select line is configured as output and controlled by hardware. The line gets activated or deactivated automatically by the hardware for transfers and is not controlled by the Miscellaneous Control <a class="el" href="group__spi__misc__ctrls.html#ga5776272b82decff92da003568540c92f">ARM_SPI_CONTROL_SS</a>. When exactly the line is activated or deactivated is hardware dependent. Typically, the hardware will activate the line before starting the transfer and deactivate it after the transfer completes. Some hardware will keep the line active as long as the SPI stays master. <dl class="section note"><dt>Note</dt><dd>Some devices require that the SS signal is strictly defined regarding transfers. Refer to the documentation of your device.  </dd></dl>
 </td></tr>
 <tr>
-<td><a class="el" href="group__spi__slave__select__mode__ctrls.html#ga8561bd0cc25ab2bb02b138c1c6a586cd">ARM_SPI_SS_MASTER_HW_INPUT</a> </td><td>Set the Slave Select mode for the master to <b>Hardware monitored Input</b>. Used with Mode Control ARM_SPI_MODE_MASTER. Used in multi-master configuration where a master does not drive the Slave Select when driving the bus, but rather monitors it. When another master activates this line, the active master backs off. This is called Mode Fault. Slave Select is configured as input and hardware only monitors the line. When the line is deactivated externally while we are master, it presents a Mode Fault (<a class="el" href="group__SPI__events.html#ga7eaa229003689aa18598273490b3e630">ARM_SPI_EVENT_MODE_FAULT</a>) and the SPI switches to inactive mode.  </td></tr>
+<td><a class="el" href="group__spi__slave__select__mode__ctrls.html#ga8561bd0cc25ab2bb02b138c1c6a586cd">ARM_SPI_SS_MASTER_HW_INPUT</a> </td><td>Set the Slave Select mode for the master to <b>Hardware monitored Input</b>. Used with Mode Control ARM_SPI_MODE_MASTER. Used in multi-master configuration where a master does not drive the Slave Select when driving the bus, but rather monitors it. When another master activates this line, the active master backs off. This is called Mode Fault. Slave Select is configured as input and hardware only monitors the line. When the line is activated externally while we are master, it presents a Mode Fault (<a class="el" href="group__SPI__events.html#ga7eaa229003689aa18598273490b3e630">ARM_SPI_EVENT_MODE_FAULT</a>) and the SPI switches to inactive mode.  </td></tr>
 <tr>
 <td><a class="el" href="group__spi__slave__select__mode__ctrls.html#ga2bd0d1f3ade2dc0cc48cc0593336ad70">ARM_SPI_SS_SLAVE_HW</a> (default) </td><td>Set the Slave Select mode for the slave to <b>Hardware monitored</b>. Used with Mode Control ARM_SPI_MODE_SLAVE. Hardware monitors the Slave Select line and accepts transfers only when the line is active. Transfers are ignored while the Slave Select line is inactive.  </td></tr>
 <tr>
@@ -1168,12 +1169,13 @@ when Slave  </td><td>Set the Slave Select mode for the master to <b>Not used</b>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:29 for CMSIS-Driver Version 2.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

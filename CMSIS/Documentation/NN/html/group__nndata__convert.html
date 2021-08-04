@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-NN
-   &#160;<span id="projectnumber">Version 1.3.0</span>
+   &#160;<span id="projectnumber">Version 3.0.0</span>
    </div>
    <div id="projectbrief">CMSIS NN Software Library</div>
   </td>
@@ -97,7 +98,7 @@ $(document).ready(function(){initNavTree('group__nndata__convert.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -175,7 +176,7 @@ Functions</h2></td></tr>
 <pre>
         pDst[n] = (q15_t) pSrc[n];   0 &lt;= n &lt; blockSize.
 </pre> 
-<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>.</p>
+<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>, and <a class="el" href="arm__nnsupportfunctions_8h.html#a9477fb2f82284ac4fe20b2efb721f5f5">arm_nn_write_q15x2_ia()</a>.</p>
 
 <p>Referenced by <a class="el" href="group__Pooling.html#gae4a7b07f97ec4313524c9fb9fbcb1f6a">arm_avepool_q7_HWC()</a>, <a class="el" href="group__NNConv.html#ga210ae8d8fc1d12ee15b41f1fa6947681">arm_convolve_HWC_q7_basic()</a>, and <a class="el" href="group__NNConv.html#ga4501fa22c0836002aa47ccc313dce252">arm_convolve_HWC_q7_basic_nonsquare()</a>.</p>
 
@@ -273,7 +274,7 @@ Functions</h2></td></tr>
 <p>Converts the elements of the q7 vector to reordered q15 vector with an added offset.</p>
 <dl class="section note"><dt>Note</dt><dd>Refer header file for details. </dd></dl>
 
-<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>.</p>
+<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>, and <a class="el" href="arm__nnsupportfunctions_8h.html#a9477fb2f82284ac4fe20b2efb721f5f5">arm_nn_write_q15x2_ia()</a>.</p>
 
 </div>
 </div>
@@ -326,9 +327,9 @@ Functions</h2></td></tr>
 <pre>
  dst[n] = (q15_t) src[n] + offset;   0 &lt;= n &lt; block_size.
 </pre> 
-<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>.</p>
+<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>, and <a class="el" href="arm__nnsupportfunctions_8h.html#a9477fb2f82284ac4fe20b2efb721f5f5">arm_nn_write_q15x2_ia()</a>.</p>
 
-<p>Referenced by <a class="el" href="group__NNConv.html#ga6a0b2161ece62078228ead2d85bbcf28">arm_convolve_s8()</a>, and <a class="el" href="group__NNConv.html#ga3acc8b0cd5bd5d975fdf5a615261f0b1">arm_depthwise_conv_s8_opt()</a>.</p>
+<p>Referenced by <a class="el" href="group__NNConv.html#ga34bb5c05805ca7d5ea9681fcad8a711d">arm_convolve_s8()</a>, and <a class="el" href="group__NNConv.html#gab9dc832c407c0fe0f4d6fbb063e85e97">arm_depthwise_conv_s8_opt()</a>.</p>
 
 </div>
 </div>
@@ -337,12 +338,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:49 for CMSIS-NN Version 1.3.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -110,16 +111,16 @@ $(document).ready(function(){initNavTree('group__SplineInterpolate.html','');});
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Cubic Spline Interpolation<div class="ingroups"><a class="el" href="group__groupSupport.html">Support Functions</a></div></div>  </div>
+<div class="title">Cubic Spline Interpolation<div class="ingroups"><a class="el" href="group__groupInterpolation.html">Interpolation Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga4ef053a783b251b085454b28f8aecb94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SplineInterpolate.html#ga4ef053a783b251b085454b28f8aecb94">arm_spline_f32</a> (<a class="el" href="structarm__spline__instance__f32.html">arm_spline_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *xq, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga4ef053a783b251b085454b28f8aecb94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SplineInterpolate.html#ga4ef053a783b251b085454b28f8aecb94">arm_spline_f32</a> (<a class="el" href="structarm__spline__instance__f32.html">arm_spline_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *xq, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga4ef053a783b251b085454b28f8aecb94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the floating-point cubic spline interpolation.  <a href="#ga4ef053a783b251b085454b28f8aecb94">More...</a><br/></td></tr>
 <tr class="separator:ga4ef053a783b251b085454b28f8aecb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5370a3c4a213e15bf57726406ec52ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SplineInterpolate.html#ga5370a3c4a213e15bf57726406ec52ae0">arm_spline_init_f32</a> (<a class="el" href="structarm__spline__instance__f32.html">arm_spline_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, <a class="el" href="arm__math_8h.html#a545cad4aaf64955a2d2e93d7e806bcd7">arm_spline_type</a> type, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *x, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *y, uint32_t n, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *coeffs, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *tempBuffer)</td></tr>
+<tr class="memitem:ga5370a3c4a213e15bf57726406ec52ae0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__SplineInterpolate.html#ga5370a3c4a213e15bf57726406ec52ae0">arm_spline_init_f32</a> (<a class="el" href="structarm__spline__instance__f32.html">arm_spline_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, <a class="el" href="interpolation__functions_8h.html#a545cad4aaf64955a2d2e93d7e806bcd7">arm_spline_type</a> type, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *x, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *y, uint32_t n, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *coeffs, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *tempBuffer)</td></tr>
 <tr class="memdesc:ga5370a3c4a213e15bf57726406ec52ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the floating-point cubic spline interpolation.  <a href="#ga5370a3c4a213e15bf57726406ec52ae0">More...</a><br/></td></tr>
 <tr class="separator:ga5370a3c4a213e15bf57726406ec52ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -194,13 +195,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>xq</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -220,6 +221,10 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">S</td><td>points to an instance of the floating-point spline structure. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">xq</td><td>points to the x values ot the interpolated data points. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pDst</td><td>points to the block of output data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">blockSize</td><td>number of samples of output data.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">S</td><td>points to an instance of the floating-point spline structure. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xq</td><td>points to the x values of the interpolated data points. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">pDst</td><td>points to the block of output data. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">blockSize</td><td>number of samples of output data. </td></tr>
   </table>
@@ -241,19 +246,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a545cad4aaf64955a2d2e93d7e806bcd7">arm_spline_type</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="interpolation__functions_8h.html#a545cad4aaf64955a2d2e93d7e806bcd7">arm_spline_type</a>&#160;</td>
           <td class="paramname"><em>type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>y</em>, </td>
         </tr>
         <tr>
@@ -265,13 +270,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>coeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>tempBuffer</em>&#160;</td>
         </tr>
         <tr>
@@ -301,12 +306,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

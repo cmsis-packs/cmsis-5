@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validate_20debug_20unit',['Validate Debug Unit',['../group__DAP__Validate__gr.html',1,'']]]
+  ['uart_20com_20commands',['UART COM Commands',['../group__DAP__uart__gr.html',1,'']]]
 ];

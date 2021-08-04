@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -150,18 +151,22 @@ $(document).ready(function(){initNavTree('globals_func_w.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>arm_weighted_sum_f16()
+: <a class="el" href="group__weightedsum.html#ga06e10e847786d8d96c5459fb36d5c752">support_functions_f16.h</a>
+, <a class="el" href="group__weightedsum.html#ga06e10e847786d8d96c5459fb36d5c752">arm_weighted_sum_f16.c</a>
+</li>
 <li>arm_weighted_sum_f32()
-: <a class="el" href="group__groupSupport.html#gaffef5e0e3e1d0289e419c23853e20850">arm_math.h</a>
-, <a class="el" href="group__groupSupport.html#gaffef5e0e3e1d0289e419c23853e20850">arm_weighted_sum_f32.c</a>
+: <a class="el" href="group__weightedsum.html#gaffef5e0e3e1d0289e419c23853e20850">arm_weighted_sum_f32.c</a>
+, <a class="el" href="group__weightedsum.html#gaffef5e0e3e1d0289e419c23853e20850">support_functions.h</a>
 </li>
 <li>write_q15x2()
-: <a class="el" href="arm__math_8h.html#a1c6d46f43d41c6ca1b7d6a0d8ed95036">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a1c6d46f43d41c6ca1b7d6a0d8ed95036">arm_math_memory.h</a>
 </li>
 <li>write_q15x2_ia()
-: <a class="el" href="arm__math_8h.html#a576a0e2a4667277b42c478dfda753dc6">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a576a0e2a4667277b42c478dfda753dc6">arm_math_memory.h</a>
 </li>
 <li>write_q7x4_ia()
-: <a class="el" href="arm__math_8h.html#a05bde59a4c7dd866d0a2e3e6fcac17bd">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a05bde59a4c7dd866d0a2e3e6fcac17bd">arm_math_memory.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -169,12 +174,13 @@ $(document).ready(function(){initNavTree('globals_func_w.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

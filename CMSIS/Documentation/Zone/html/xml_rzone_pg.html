@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Zone
-   &#160;<span id="projectnumber">Version 1.0.0</span>
+   &#160;<span id="projectnumber">Version 1.1.0</span>
    </div>
    <div id="projectbrief">System Resource Management</div>
   </td>
@@ -121,7 +122,7 @@ $(document).ready(function(){initNavTree('xml_rzone_pg.html','');});
 <tr>
 <td>schemaVersion </td><td>CMSIS-Zone schema version used for describing the *.rzone file. </td><td>VersionType </td><td>required  </td></tr>
 <tr>
-<td>xmlns:xs </td><td>Is set to: <span class="XML-Token">"http://www.w3.org/2001/XMLSchema-instance"</span> to indicate compliance to the XML format. </td><td>xs:decimal </td><td>required  </td></tr>
+<td>xmlns:xs </td><td>Is set to: <span class="XML-Token">"http://www.w3.org/2001/XMLSchema-instance"</span> to indicate compliance to the XML format. </td><td>xs:string </td><td>required  </td></tr>
 <tr>
 <td>xs:noNamespaceSchemaLocation </td><td>File name of the schema file. For example, <span class="XML-Token">"rzone.xsd"</span>. </td><td>xs:string </td><td>required  </td></tr>
 <tr>
@@ -139,12 +140,13 @@ $(document).ready(function(){initNavTree('xml_rzone_pg.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="zoneFormat.html">Zone Description Format</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:11 for CMSIS-Zone Version 1.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

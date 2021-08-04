@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -150,36 +151,40 @@ $(document).ready(function(){initNavTree('globals_func_n.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>arm_negate_f16()
+: <a class="el" href="group__BasicNegate.html#gab1a26c4ced6ee0789142f04ec4ef2626">basic_math_functions_f16.h</a>
+, <a class="el" href="group__BasicNegate.html#gab1a26c4ced6ee0789142f04ec4ef2626">arm_negate_f16.c</a>
+</li>
 <li>arm_negate_f32()
-: <a class="el" href="group__BasicNegate.html#ga7d9cfa32eafae01d3dbdcaf05052f431">arm_math.h</a>
-, <a class="el" href="group__BasicNegate.html#ga7d9cfa32eafae01d3dbdcaf05052f431">arm_negate_f32.c</a>
+: <a class="el" href="group__BasicNegate.html#ga7d9cfa32eafae01d3dbdcaf05052f431">arm_negate_f32.c</a>
+, <a class="el" href="group__BasicNegate.html#ga7d9cfa32eafae01d3dbdcaf05052f431">basic_math_functions.h</a>
 </li>
 <li>arm_negate_q15()
-: <a class="el" href="group__BasicNegate.html#ga55b8bbbcd318d5142925bc221db30186">arm_negate_q15.c</a>
-, <a class="el" href="group__BasicNegate.html#ga55b8bbbcd318d5142925bc221db30186">arm_math.h</a>
+: <a class="el" href="group__BasicNegate.html#ga55b8bbbcd318d5142925bc221db30186">basic_math_functions.h</a>
+, <a class="el" href="group__BasicNegate.html#ga55b8bbbcd318d5142925bc221db30186">arm_negate_q15.c</a>
 </li>
 <li>arm_negate_q31()
-: <a class="el" href="group__BasicNegate.html#gad5054d19c205eebab5f2c6e42d8cbb3c">arm_math.h</a>
-, <a class="el" href="group__BasicNegate.html#gad5054d19c205eebab5f2c6e42d8cbb3c">arm_negate_q31.c</a>
+: <a class="el" href="group__BasicNegate.html#gad5054d19c205eebab5f2c6e42d8cbb3c">arm_negate_q31.c</a>
+, <a class="el" href="group__BasicNegate.html#gad5054d19c205eebab5f2c6e42d8cbb3c">basic_math_functions.h</a>
 </li>
 <li>arm_negate_q7()
-: <a class="el" href="group__BasicNegate.html#gaea178c9f486ed4704f8723a2efee271c">arm_negate_q7.c</a>
-, <a class="el" href="group__BasicNegate.html#gaea178c9f486ed4704f8723a2efee271c">arm_math.h</a>
+: <a class="el" href="group__BasicNegate.html#gaea178c9f486ed4704f8723a2efee271c">basic_math_functions.h</a>
+, <a class="el" href="group__BasicNegate.html#gaea178c9f486ed4704f8723a2efee271c">arm_negate_q7.c</a>
 </li>
 <li>arm_norm_64_to_32u()
-: <a class="el" href="arm__math_8h.html#a26dcd84b178df7de44357bbfaaf8dfbc">arm_math.h</a>
+: <a class="el" href="utils_8h.html#a26dcd84b178df7de44357bbfaaf8dfbc">utils.h</a>
 </li>
 <li>arm_not_u16()
-: <a class="el" href="group__Not.html#gaed61b506b4ae90ea27b658cd8a64cf8e">arm_math.h</a>
-, <a class="el" href="group__Not.html#gaed61b506b4ae90ea27b658cd8a64cf8e">arm_not_u16.c</a>
+: <a class="el" href="group__Not.html#gaed61b506b4ae90ea27b658cd8a64cf8e">arm_not_u16.c</a>
+, <a class="el" href="group__Not.html#gaed61b506b4ae90ea27b658cd8a64cf8e">basic_math_functions.h</a>
 </li>
 <li>arm_not_u32()
-: <a class="el" href="group__Not.html#ga32670619299610f0eb73179b5c09f105">arm_math.h</a>
+: <a class="el" href="group__Not.html#ga32670619299610f0eb73179b5c09f105">basic_math_functions.h</a>
 , <a class="el" href="group__Not.html#ga32670619299610f0eb73179b5c09f105">arm_not_u32.c</a>
 </li>
 <li>arm_not_u8()
-: <a class="el" href="group__Not.html#gaae32c6ce0d492165e6e0d5d9ca50a61c">arm_math.h</a>
-, <a class="el" href="group__Not.html#gaae32c6ce0d492165e6e0d5d9ca50a61c">arm_not_u8.c</a>
+: <a class="el" href="group__Not.html#gaae32c6ce0d492165e6e0d5d9ca50a61c">arm_not_u8.c</a>
+, <a class="el" href="group__Not.html#gaae32c6ce0d492165e6e0d5d9ca50a61c">basic_math_functions.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -187,12 +192,13 @@ $(document).ready(function(){initNavTree('globals_func_n.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

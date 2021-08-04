@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-NN
-   &#160;<span id="projectnumber">Version 1.3.0</span>
+   &#160;<span id="projectnumber">Version 3.0.0</span>
    </div>
    <div id="projectbrief">CMSIS NN Software Library</div>
   </td>
@@ -97,7 +98,7 @@ $(document).ready(function(){initNavTree('group__Softmax.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,21 +109,12 @@ $(document).ready(function(){initNavTree('group__Softmax.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Softmax Functions<div class="ingroups"><a class="el" href="group__groupNN.html">Neural Network Functions</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:ga3313178e0fcf9138c3cc3b071a043238"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Softmax.html#ga3313178e0fcf9138c3cc3b071a043238">Q7BITS</a></td></tr>
-<tr class="memdesc:ga3313178e0fcf9138c3cc3b071a043238"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q7 softmax function.  <a href="#ga3313178e0fcf9138c3cc3b071a043238">More...</a><br/></td></tr>
-<tr class="separator:ga3313178e0fcf9138c3cc3b071a043238"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga99133c0c13daf247a40419a385d29190"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Softmax.html#ga99133c0c13daf247a40419a385d29190">LOG2Q7BITS</a></td></tr>
-<tr class="separator:ga99133c0c13daf247a40419a385d29190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ga1cacd8b84b8363079311987d0016ebe5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Softmax.html#ga1cacd8b84b8363079311987d0016ebe5">arm_softmax_q15</a> (const q15_t *vec_in, const uint16_t dim_vec, q15_t *p_out)</td></tr>
@@ -143,50 +135,6 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <p>EXP(2) based softmax functions. </p>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a class="anchor" id="ga99133c0c13daf247a40419a385d29190"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define LOG2Q7BITS</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Referenced by <a class="el" href="group__Softmax.html#ga89aff212a97a3cf32d9d7ddf11a8f43e">arm_softmax_q7()</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ga3313178e0fcf9138c3cc3b071a043238"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define Q7BITS</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">vec_in</td><td>pointer to input vector </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dim_vec</td><td>input vector dimention </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">p_out</td><td>pointer to output vector</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Here, instead of typical natural logarithm e based softmax, we use 2-based softmax here, i.e.,:</p>
-<p>y_i = 2^(x_i) / sum(2^x_j)</p>
-<p>The relative output will be different here. But mathematically, the gradient will be the same with a log(2) scaling factor.</p>
-<p>If we compare the position of the max value in output of this function with a reference float32 softmax (and thus using exp) we see that the position of the max value is sometimes different.</p>
-<p>If we do statistics on lot of input vectors we can compute an average error rate in percent. It is the percent of time that the max will be at a position different from the one computed with a reference float32 implementation.</p>
-<p>This average error rate is dependent on the vector size. We have:</p>
-<p>Average error rate in percent = -0.555548 + 0.246918 dim_vec Variance of the error rate = -0.0112281 + 0.0382476 dim_vec </p>
-
-<p>Referenced by <a class="el" href="group__Softmax.html#ga89aff212a97a3cf32d9d7ddf11a8f43e">arm_softmax_q7()</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ga1cacd8b84b8363079311987d0016ebe5"></a>
 <div class="memitem">
@@ -263,16 +211,16 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">vec_in</td><td>pointer to input vector </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dim_vec</td><td>input vector dimension </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dim_vec</td><td>input vector dimention </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">p_out</td><td>pointer to output vector</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>This function is an optimized version which is not bit-accurate with TensorFlow Lite's kernel </dd></dl>
+<p>Here, instead of typical natural logarithm e based softmax, we use 2-based softmax here, i.e.,:</p>
+<p>y_i = 2^(x_i) / sum(2^x_j)</p>
+<p>The relative output will be different here. But mathematically, the gradient will be the same with a log(2) scaling factor. </p>
 
-<p>References <a class="el" href="arm__nnsupportfunctions_8h.html#ac9f7be20432a6926ac07c1f44b1b02fe">arm_nn_read_q7x4_ia()</a>, <a class="el" href="group__Softmax.html#ga99133c0c13daf247a40419a385d29190">LOG2Q7BITS</a>, and <a class="el" href="group__Softmax.html#ga3313178e0fcf9138c3cc3b071a043238">Q7BITS</a>.</p>
-
-<p>Referenced by <a class="el" href="group__Softmax.html#ga894cfd80c260b946702755b5754e520f">arm_softmax_with_batch_q7()</a>, and <a class="el" href="arm__nnexamples__cifar10_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>.</p>
+<p>Referenced by <a class="el" href="group__Softmax.html#ga894cfd80c260b946702755b5754e520f">arm_softmax_with_batch_q7()</a>.</p>
 
 </div>
 </div>
@@ -475,12 +423,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:49 for CMSIS-NN Version 1.3.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

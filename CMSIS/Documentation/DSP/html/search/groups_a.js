@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normalized_20lms_20filters',['Normalized LMS Filters',['../group__LMS__NORM.html',1,'']]]
+  ['kullback_2dleibler_20divergence',['Kullback-Leibler divergence',['../group__Kullback-Leibler.html',1,'']]]
 ];

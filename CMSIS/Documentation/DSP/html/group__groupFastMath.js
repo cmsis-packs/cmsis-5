@@ -1,6 +1,7 @@
 var group__groupFastMath =
 [
-    [ "Square Root", "group__SQRT.html", "group__SQRT" ],
     [ "Cosine", "group__cos.html", "group__cos" ],
-    [ "Sine", "group__sin.html", "group__sin" ]
+    [ "Fixed point division", "group__divide.html", "group__divide" ],
+    [ "Sine", "group__sin.html", "group__sin" ],
+    [ "Square Root", "group__SQRT.html", "group__SQRT" ]
 ];

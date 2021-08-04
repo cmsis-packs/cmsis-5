@@ -7,5 +7,6 @@ var group__groupNN =
     [ "Fully-connected Layer Functions", "group__FC.html", "group__FC" ],
     [ "Pooling Functions", "group__Pooling.html", "group__Pooling" ],
     [ "Reshape Functions", "group__Reshape.html", "group__Reshape" ],
-    [ "Softmax Functions", "group__Softmax.html", "group__Softmax" ]
+    [ "Softmax Functions", "group__Softmax.html", "group__Softmax" ],
+    [ "SVDF Layer Functions", "group__SVDF.html", "group__SVDF" ]
 ];

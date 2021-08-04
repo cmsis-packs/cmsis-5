@@ -1,7 +1,7 @@
 var structarm__fir__decimate__instance__f32 =
 [
-    [ "M", "structarm__fir__decimate__instance__f32.html#a76a8b2161731638eb3d67f277919f95d", null ],
-    [ "numTaps", "structarm__fir__decimate__instance__f32.html#a2aa2986129db8affef03ede88dd45a03", null ],
-    [ "pCoeffs", "structarm__fir__decimate__instance__f32.html#a1aef1d796b60749d87ff36e282284628", null ],
-    [ "pState", "structarm__fir__decimate__instance__f32.html#a5bddf29aaaf2011d2e3bcec59a83f633", null ]
+    [ "M", "structarm__fir__decimate__instance__f32.html#ae2c8107d00d3c9942e7a20fc598edecf", null ],
+    [ "numTaps", "structarm__fir__decimate__instance__f32.html#a751941891e47f522a7f5375fe8990aac", null ],
+    [ "pCoeffs", "structarm__fir__decimate__instance__f32.html#a39230f04a29d8321948e339633780442", null ],
+    [ "pState", "structarm__fir__decimate__instance__f32.html#a335c87e6fdc4b96601d95a5de8b9c463", null ]
 ];

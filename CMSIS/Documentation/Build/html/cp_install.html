@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -110,7 +111,10 @@ $(document).ready(function(){initNavTree('cp_install.html','');});
 <div class="title">cp_install.sh: Install Packs </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <code>cp_install</code> "cp_install.sh" script gets a list of URLs that refer to software packs in CMSIS-Pack format that should be downloaded and installed. It is called from the <b>Bash</b> command line with the following syntax:</p>
+<div class="textblock"><p>The <code>cp_install</code> "cp_install.sh" script gets a list of URLs that refer to software packs in CMSIS-Pack format that should be downloaded and installed.</p>
+<h1><a class="anchor" id="cp_install_invocation"></a>
+Invocation</h1>
+<p><b>cp_install</b> is called from the <b>Bash</b> command line with the following syntax:</p>
 <div class="fragment"><div class="line">cp_install.sh &lt;pack-list-file&gt; </div>
 </div><!-- fragment --><p><b>Where:</b></p>
 <p><code>cp_install</code> is the name of the script.</p>
@@ -130,14 +134,14 @@ $(document).ready(function(){initNavTree('cp_install.html','');});
 <tr>
 <td align="left"><b>${CMSIS_PACK_ROOT}/.Download</b> </td><td align="left">Stores the downloaded software pack </td></tr>
 <tr>
-<td align="left"><b>${CMSIS_PACK_ROOT}/&lt;vendor&gt;/&lt;packname&gt;/&lt;version&gt;</b> </td><td align="left">Extracted content of the software pack (naming accoring CMSIS-Pack specification) </td></tr>
+<td align="left"><b>${CMSIS_PACK_ROOT}/&lt;vendor&gt;/&lt;packname&gt;/&lt;version&gt;</b> </td><td align="left">Extracted content of the software pack (naming according CMSIS-Pack specification) </td></tr>
 </table>
 <dl class="section note"><dt>Note</dt><dd>The environment variable <code>$CMSIS_PACK_ROOT</code> must reference an existing directory with at least the file ./Web/index.pidx. The directory structure can be created with <a class="el" href="cp_init.html">cp_init.sh: Setup Pack Directory</a></dd></dl>
 <h1><a class="anchor" id="cp_install_example"></a>
 Usage Example</h1>
 <pre class="fragment">$
 cp_install.sh Simulation.cpinstall
-(cp_install.sh): Install Packs 0.9.0 (C) 2020 ARM
+(cp_install.sh): Install Packs 0.10.0 (C) 2020 ARM
 info: reading file: Simulation.cpinstall
 dos2unix: converting file Simulation.cpinstall to Unix format...
 http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
@@ -155,11 +159,11 @@ Error Messages</h1>
 <tr>
 <th>Type </th><th>Message </th><th>Action  </th></tr>
 <tr>
-<td>ERROR </td><td>error: missing command line argument </td><td>See usage and corret argument.  </td></tr>
+<td>ERROR </td><td>error: missing command line argument </td><td>See usage and correct argument.  </td></tr>
 <tr>
-<td>ERROR </td><td>error: too many command line arguments </td><td>See usage and corret argument.  </td></tr>
+<td>ERROR </td><td>error: too many command line arguments </td><td>See usage and correct argument.  </td></tr>
 <tr>
-<td>ERROR </td><td>error: $filename does not exist </td><td>See usage and corret argument.  </td></tr>
+<td>ERROR </td><td>error: $filename does not exist </td><td>See usage and correct argument.  </td></tr>
 <tr>
 <td>ERROR </td><td>error: CMSIS_PACK_ROOT environment variable not set </td><td>Set <a class="el" href="cbuild_install.html#cbuild_envsetup">Environment Variables</a>.  </td></tr>
 <tr>
@@ -183,12 +187,13 @@ Error Messages</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="CmdLineBuild.html">Command Line Build</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -1,6 +1,6 @@
 var structarm__fir__lattice__instance__q31 =
 [
-    [ "numStages", "structarm__fir__lattice__instance__q31.html#a9f3773bbb76bc5a8a5ee9d37786bf478", null ],
-    [ "pCoeffs", "structarm__fir__lattice__instance__q31.html#ac9e648f1e5bc7d5ee6d5f7d8d22b1e74", null ],
-    [ "pState", "structarm__fir__lattice__instance__q31.html#a08fe9494ab7cd336b791e9657adadcf6", null ]
+    [ "numStages", "structarm__fir__lattice__instance__q31.html#a4cceb90547b3e585d4c7aabaa8057212", null ],
+    [ "pCoeffs", "structarm__fir__lattice__instance__q31.html#a80e7fdf4747dbda8eadb2663fb4be317", null ],
+    [ "pState", "structarm__fir__lattice__instance__q31.html#adee4ba3ee8869865af7d8fa08ca913d6", null ]
 ];

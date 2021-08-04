@@ -25,6 +25,7 @@ var searchData=
   ['sppr',['SPPR',['../structTPI__Type.html#a12f79d4e3ddc69893ba8bff890d04cc5',1,'TPI_Type']]],
   ['spsel',['SPSEL',['../unionCONTROL__Type.html#a8cc085fea1c50a8bd9adea63931ee8e2',1,'CONTROL_Type']]],
   ['sspsr',['SSPSR',['../structTPI__Type.html#a7b72598e20066133e505bb781690dc22',1,'TPI_Type']]],
+  ['stack_20sealing_20support_20functions',['Stack Sealing Support Functions',['../group__stacksealing__support__trustzone__functions.html',1,'']]],
   ['startup_20file_20startup_5f_3cdevice_3e_2ec',['Startup File startup_&lt;device&gt;.c',['../startup_c_pg.html',1,'templates_pg']]],
   ['startup_20file_20startup_5f_3cdevice_3e_2es_20_28deprecated_29',['Startup File startup_&lt;device&gt;.s (deprecated)',['../startup_s_pg.html',1,'templates_pg']]],
   ['stir',['STIR',['../structNVIC__Type.html#a37de89637466e007171c6b135299bc75',1,'NVIC_Type']]],

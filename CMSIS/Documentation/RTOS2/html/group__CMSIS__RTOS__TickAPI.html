@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -424,7 +425,7 @@ Functions</h2></td></tr>
 <p>Return the state of OS Tick timer interrupt pending bit that indicates timer overflows to adjust SysTimer calculations.</p>
 <p><b>Cortex-M SysTick implementation:</b></p>
 <div class="fragment"><div class="line">uint32_t <a class="code" href="group__CMSIS__RTOS__TickAPI.html#ga1f9a593126b7f0b66fc526c2cebd6192">OS_Tick_GetOverflow</a> (<span class="keywordtype">void</span>) {</div>
-<div class="line">  <span class="keywordflow">return</span> ((SysTick-&gt;CTRL &gt;&gt; 16) &amp; 1U);</div>
+<div class="line">  <span class="keywordflow">return</span> ((SCB-&gt;ICSR &amp; SCB_ICSR_PENDSTSET_Msk) &gt;&gt; SCB_ICSR_PENDSTSET_Pos);</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
 </div>
@@ -434,12 +435,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:08 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

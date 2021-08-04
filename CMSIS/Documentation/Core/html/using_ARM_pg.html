@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -124,7 +125,15 @@ $(document).ready(function(){initNavTree('using_ARM_pg.html','');});
 <tr>
 <td>".\Device\ARM\ARMCM4" </td><td>Cortex-M4 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M4 processor. The device name is ARMCM4 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM4.h&gt;.   </td></tr>
 <tr>
-<td>".\Device\ARM\ARMCM7" </td><td>Cortex-M7 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M7 processor. The device name is ARMCM7 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM7.h&gt;.   </td></tr>
+<td>".\Device\ARM\ARMCM7" </td><td>Cortex-M7 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M7 processor. The device name is ARMCM7 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM7.h&gt;.    </td></tr>
+<tr>
+<td>".\Device\ARM\ARMCM23" </td><td>Cortex-M23 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M23 processor. The device name is ARMCM23 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM23.h&gt;. This device is available with and without TrustZone.   </td></tr>
+<tr>
+<td>".\Device\ARM\ARMCM33" </td><td>Cortex-M33 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M33 processor. The device name is ARMCM33 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM33.h&gt;. This device is available with and without TrustZone.   </td></tr>
+<tr>
+<td>".\Device\ARM\ARMCM35P" </td><td>Cortex-M35P </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M35P processor. The device name is ARMCM35P and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM35P.h&gt;. This device is available with and without TrustZone.   </td></tr>
+<tr>
+<td>".\Device\ARM\ARMCM55" </td><td>Cortex-M55 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the Cortex-M55 processor. The device name is ARMCM55 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMCM55.h&gt;. This device is only available with TrustZone.   </td></tr>
 <tr>
 <td>".\Device\ARM\ARMSC000" </td><td>SecurCore SC000 </td><td>Contains <b>Include</b> and <b>Source</b> template files configured for the SecurCore SC000 processor. The device name is ARMSC000 and the name of the <a class="el" href="device_h_pg.html">Device Header File &lt;device.h&gt;</a> is &lt;ARMSC000.h&gt;.   </td></tr>
 <tr>
@@ -136,7 +145,7 @@ Create generic Libraries with CMSIS</h1>
 <p>The CMSIS Processor and Core Peripheral files allow also to create generic libraries. The <a href="../../DSP/html/index.html"><b>CMSIS-DSP</b> </a> Libraries are an example for such a generic library.</p>
 <p>To build a generic Library set the define <b>__CMSIS_GENERIC</b> and include the relevant <b>core_&lt;cpu&gt;.h</b> CMSIS CPU &amp; Core Access header file for the processor. The define <b>__CMSIS_GENERIC</b> disables device-dependent features such as the <b>SysTick</b> timer and the <b>Interrupt System</b>. Refer to <a class="el" href="device_h_pg.html#core_config_sect">Configuration of the Processor and Core Peripherals</a> for a list of the available <b>core_&lt;cpu&gt;.h</b> header files.</p>
 <p><b>Example:</b> </p>
-<p>The following code section shows the usage of the <b>core_&lt;cpu&gt;.h</b> header files to build a generic library for Cortex-M0, Cortex-M3, Cortex-M4, or Cortex-M7. To select the processor, the source code uses the define <b>CORTEX_M7</b>, <b>CORTEX_M4</b>, <b>CORTEX_M3</b>, <b>CORTEX_M0</b>, or <b>CORTEX_M0PLUS</b>. One of these defines needs to be provided on the compiler command line. By using this header file, the source code can access the functions for <a class="el" href="group__Core__Register__gr.html">Core Register Access</a>, <a class="el" href="group__intrinsic__CPU__gr.html">Intrinsic Functions for CPU Instructions</a>, <a class="el" href="group__intrinsic__SIMD__gr.html">Intrinsic Functions for SIMD Instructions [only Cortex-M4 and Cortex-M7]</a>, and <a class="el" href="group__ITM__Debug__gr.html">Debug Access</a>.</p>
+<p>The following code section shows the usage of the <b>core_&lt;cpu&gt;.h</b> header files to build a generic library for Cortex-M0, Cortex-M3, Cortex-M4, or Cortex-M7. To select the processor, the source code uses the define <b>CORTEX_M7</b>, <b>CORTEX_M4</b>, <b>CORTEX_M3</b>, <b>CORTEX_M0</b>, or <b>CORTEX_M0PLUS</b>. One of these defines needs to be provided on the compiler command line. By using this header file, the source code can access the functions for <a class="el" href="group__Core__Register__gr.html">Core Register Access</a>, <a class="el" href="group__intrinsic__CPU__gr.html">Intrinsic Functions for CPU Instructions</a>, <a class="el" href="group__intrinsic__SIMD__gr.html">Intrinsic Functions for SIMD Instructions</a>, and <a class="el" href="group__ITM__Debug__gr.html">Debug Access</a>.</p>
 <div class="fragment"><div class="line"><span class="preprocessor">#define __CMSIS_GENERIC              </span><span class="comment">/* disable NVIC and Systick functions */</span><span class="preprocessor"></span></div>
 <div class="line"><span class="preprocessor"></span></div>
 <div class="line"><span class="preprocessor">#if defined (CORTEX_M7)</span></div>
@@ -158,12 +167,13 @@ Create generic Libraries with CMSIS</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="using_pg.html">Using CMSIS in Embedded Applications</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-A)
-   &#160;<span id="projectnumber">Version 1.2.0</span>
+   &#160;<span id="projectnumber">Version 1.2.1</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-A processor-based devices</div>
   </td>
@@ -218,11 +219,11 @@ Device.h Template File</h1>
 <pre class="fragment">/**************************************************************************//**
  * @file     &lt;Device&gt;.h
  * @brief    CMSIS Cortex-A Core Peripheral Access Layer Header File
- * @version  V1.00
- * @date     10. January 2018
+ * @version  V1.01
+ * @date     23. June 2020
  ******************************************************************************/
 /*
- * Copyright (c) 2009-2018 Arm Limited. All rights reserved.
+ * Copyright (c) 2009-2020 Arm Limited. All rights reserved.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -294,8 +295,8 @@ typedef enum IRQn
   HypervisorTimer_IRQn               = 26,      /*!&lt; Hypervisor Timer Interrupt                                                */
   VirtualTimer_IRQn                  = 27,      /*!&lt; Virtual Timer Interrupt                                                   */ 
   Legacy_nFIQ_IRQn                   = 28,      /*!&lt; Legacy nFIQ Interrupt                                                     */
-  SecurePhysicalTimer_IRQn           = 29,      /*!&lt; Secure Physical Timer Interrupt                                           */
-  NonSecurePhysicalTimer_IRQn        = 30,      /*!&lt; Non-Secure Physical Timer Interrupt                                       */
+  SecurePhyTimer_IRQn                = 29,      /*!&lt; Secure Physical Timer Interrupt                                           */
+  NonSecurePhyTimer_IRQn             = 30,      /*!&lt; Non-Secure Physical Timer Interrupt                                       */
   Legacy_nIRQ_IRQn                   = 31,      /*!&lt; Legacy nIRQ Interrupt                                                     */ 
 
  /* Shared Peripheral Interrupts */
@@ -469,12 +470,13 @@ typedef struct
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="templates_pg.html">CMSIS-Core Device Templates</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:24 for CMSIS-Core (Cortex-A) Version 1.2.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

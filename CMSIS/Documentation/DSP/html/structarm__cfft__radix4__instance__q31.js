@@ -1,10 +1,10 @@
 var structarm__cfft__radix4__instance__q31 =
 [
-    [ "bitReverseFlag", "structarm__cfft__radix4__instance__q31.html#a5a7c4f4c7b3fb655cbb2bc11ef160a2a", null ],
-    [ "bitRevFactor", "structarm__cfft__radix4__instance__q31.html#a94d2fead4efa4d5eaae142bbe30b0e15", null ],
-    [ "fftLen", "structarm__cfft__radix4__instance__q31.html#ab413d2a5d3f45fa187d93813bf3bf81b", null ],
-    [ "ifftFlag", "structarm__cfft__radix4__instance__q31.html#adc0a62ba669ad2282ecbe43d5d96abab", null ],
-    [ "pBitRevTable", "structarm__cfft__radix4__instance__q31.html#a64b58f7643b0e27c7f2d66ec0ef2e3dc", null ],
-    [ "pTwiddle", "structarm__cfft__radix4__instance__q31.html#a499e97268c131e20faea4b8565d4204c", null ],
-    [ "twidCoefModifier", "structarm__cfft__radix4__instance__q31.html#a8cf8187b8232815cf17ee82bf572ecf9", null ]
+    [ "bitReverseFlag", "structarm__cfft__radix4__instance__q31.html#a09a221a818c6d0e064557a99e2fe9a8b", null ],
+    [ "bitRevFactor", "structarm__cfft__radix4__instance__q31.html#a33386d95319dc3ee7097b3a8e52e01ec", null ],
+    [ "fftLen", "structarm__cfft__radix4__instance__q31.html#ab8db3bbe7c61e6bb8ca2a55e3446e11a", null ],
+    [ "ifftFlag", "structarm__cfft__radix4__instance__q31.html#ad6ca6e223f986ebfd94c5ee1e410aa73", null ],
+    [ "pBitRevTable", "structarm__cfft__radix4__instance__q31.html#a3b229432d381b0a511a9cdbe3aa74e78", null ],
+    [ "pTwiddle", "structarm__cfft__radix4__instance__q31.html#a9760c603af5d85652496dbffd63a8a2e", null ],
+    [ "twidCoefModifier", "structarm__cfft__radix4__instance__q31.html#afe772e5b5001c9d8e85032115a8df5bf", null ]
 ];

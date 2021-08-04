@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,31 +117,31 @@ $(document).ready(function(){initNavTree('group__Conv.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga2e977f76e873bd47c6c41c7d940fdf7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga2e977f76e873bd47c6c41c7d940fdf7e">arm_conv_f32</a> (const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst)</td></tr>
+<tr class="memitem:ga2e977f76e873bd47c6c41c7d940fdf7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga2e977f76e873bd47c6c41c7d940fdf7e">arm_conv_f32</a> (const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst)</td></tr>
 <tr class="memdesc:ga2e977f76e873bd47c6c41c7d940fdf7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of floating-point sequences.  <a href="#ga2e977f76e873bd47c6c41c7d940fdf7e">More...</a><br/></td></tr>
 <tr class="separator:ga2e977f76e873bd47c6c41c7d940fdf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8ecd292b8e74c8f05b208e7948d05a90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga8ecd292b8e74c8f05b208e7948d05a90">arm_conv_fast_opt_q15</a> (const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
+<tr class="memitem:ga8ecd292b8e74c8f05b208e7948d05a90"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga8ecd292b8e74c8f05b208e7948d05a90">arm_conv_fast_opt_q15</a> (const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
 <tr class="memdesc:ga8ecd292b8e74c8f05b208e7948d05a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q15 sequences (fast version).  <a href="#ga8ecd292b8e74c8f05b208e7948d05a90">More...</a><br/></td></tr>
 <tr class="separator:ga8ecd292b8e74c8f05b208e7948d05a90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6bc2c8d655ef8c9b66affdae489f366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#gaf6bc2c8d655ef8c9b66affdae489f366">arm_conv_fast_q15</a> (const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst)</td></tr>
+<tr class="memitem:gaf6bc2c8d655ef8c9b66affdae489f366"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#gaf6bc2c8d655ef8c9b66affdae489f366">arm_conv_fast_q15</a> (const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst)</td></tr>
 <tr class="memdesc:gaf6bc2c8d655ef8c9b66affdae489f366"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q15 sequences (fast version).  <a href="#gaf6bc2c8d655ef8c9b66affdae489f366">More...</a><br/></td></tr>
 <tr class="separator:gaf6bc2c8d655ef8c9b66affdae489f366"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2d2b29b1f7f00a8651f1bc7f0560464b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga2d2b29b1f7f00a8651f1bc7f0560464b">arm_conv_fast_q31</a> (const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst)</td></tr>
+<tr class="memitem:ga2d2b29b1f7f00a8651f1bc7f0560464b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga2d2b29b1f7f00a8651f1bc7f0560464b">arm_conv_fast_q31</a> (const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst)</td></tr>
 <tr class="memdesc:ga2d2b29b1f7f00a8651f1bc7f0560464b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q31 sequences (fast version).  <a href="#ga2d2b29b1f7f00a8651f1bc7f0560464b">More...</a><br/></td></tr>
 <tr class="separator:ga2d2b29b1f7f00a8651f1bc7f0560464b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0d60c7a8349c6235d88bf87b04172252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252">arm_conv_opt_q15</a> (const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
+<tr class="memitem:ga0d60c7a8349c6235d88bf87b04172252"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252">arm_conv_opt_q15</a> (const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
 <tr class="memdesc:ga0d60c7a8349c6235d88bf87b04172252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q15 sequences.  <a href="#ga0d60c7a8349c6235d88bf87b04172252">More...</a><br/></td></tr>
 <tr class="separator:ga0d60c7a8349c6235d88bf87b04172252"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf23966af04840f17c26c93849986baeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#gaf23966af04840f17c26c93849986baeb">arm_conv_opt_q7</a> (const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
+<tr class="memitem:gaf23966af04840f17c26c93849986baeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#gaf23966af04840f17c26c93849986baeb">arm_conv_opt_q7</a> (const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch1, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratch2)</td></tr>
 <tr class="memdesc:gaf23966af04840f17c26c93849986baeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q7 sequences.  <a href="#gaf23966af04840f17c26c93849986baeb">More...</a><br/></td></tr>
 <tr class="separator:gaf23966af04840f17c26c93849986baeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga372d3fd79b107dc6b12163a00c22da18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga372d3fd79b107dc6b12163a00c22da18">arm_conv_q15</a> (const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst)</td></tr>
+<tr class="memitem:ga372d3fd79b107dc6b12163a00c22da18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga372d3fd79b107dc6b12163a00c22da18">arm_conv_q15</a> (const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst)</td></tr>
 <tr class="memdesc:ga372d3fd79b107dc6b12163a00c22da18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q15 sequences.  <a href="#ga372d3fd79b107dc6b12163a00c22da18">More...</a><br/></td></tr>
 <tr class="separator:ga372d3fd79b107dc6b12163a00c22da18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga08ce299fb5c3329505cb8ce4bf4f6e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga08ce299fb5c3329505cb8ce4bf4f6e06">arm_conv_q31</a> (const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst)</td></tr>
+<tr class="memitem:ga08ce299fb5c3329505cb8ce4bf4f6e06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga08ce299fb5c3329505cb8ce4bf4f6e06">arm_conv_q31</a> (const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst)</td></tr>
 <tr class="memdesc:ga08ce299fb5c3329505cb8ce4bf4f6e06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q31 sequences.  <a href="#ga08ce299fb5c3329505cb8ce4bf4f6e06">More...</a><br/></td></tr>
 <tr class="separator:ga08ce299fb5c3329505cb8ce4bf4f6e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga625b30107443b6d145350bc242749764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga625b30107443b6d145350bc242749764">arm_conv_q7</a> (const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst)</td></tr>
+<tr class="memitem:ga625b30107443b6d145350bc242749764"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Conv.html#ga625b30107443b6d145350bc242749764">arm_conv_q7</a> (const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcA, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#ace48ed566e2cd6a680f0681192e6af28">srcALen</a>, const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrcB, uint32_t <a class="el" href="arm__convolution__example__f32_8c.html#aea71286f498978c5ed3775609b974fc8">srcBLen</a>, <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst)</td></tr>
 <tr class="memdesc:ga625b30107443b6d145350bc242749764"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convolution of Q7 sequences.  <a href="#ga625b30107443b6d145350bc242749764">More...</a><br/></td></tr>
 <tr class="separator:ga625b30107443b6d145350bc242749764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -170,7 +171,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_f32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -182,7 +183,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -194,7 +195,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -225,7 +226,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_fast_opt_q15 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -237,7 +238,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -249,19 +250,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch2</em>&#160;</td>
         </tr>
         <tr>
@@ -297,7 +298,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_fast_q15 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -309,7 +310,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -321,7 +322,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -355,7 +356,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_fast_q31 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -367,7 +368,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -379,7 +380,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -414,7 +415,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_opt_q15 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -426,7 +427,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -438,19 +439,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch2</em>&#160;</td>
         </tr>
         <tr>
@@ -485,7 +486,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_opt_q7 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -497,7 +498,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -509,19 +510,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratch2</em>&#160;</td>
         </tr>
         <tr>
@@ -555,7 +556,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void arm_conv_q15 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -567,7 +568,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -579,7 +580,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -614,7 +615,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="memname">void arm_conv_q31 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -626,7 +627,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -638,7 +639,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -671,7 +672,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="memname">void arm_conv_q7 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcA</em>, </td>
         </tr>
         <tr>
@@ -683,7 +684,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pSrcB</em>, </td>
         </tr>
         <tr>
@@ -695,7 +696,7 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>&#160;</td>
         </tr>
         <tr>
@@ -726,12 +727,13 @@ Refer to <a class="el" href="group__Conv.html#ga0d60c7a8349c6235d88bf87b04172252
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

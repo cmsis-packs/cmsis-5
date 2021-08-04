@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,9 +148,9 @@ $(document).ready(function(){initNavTree('functions_vars_l.html','');});
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
 <li>L
-: <a class="el" href="structarm__fir__interpolate__instance__f32.html#ae6f94dcc0ccd8aa4bc699b20985d9df5">arm_fir_interpolate_instance_f32</a>
-, <a class="el" href="structarm__fir__interpolate__instance__q15.html#a5431bdc079e72a973b51d359f7f13603">arm_fir_interpolate_instance_q15</a>
-, <a class="el" href="structarm__fir__interpolate__instance__q31.html#a5cdf0a631cb74e0e9588c388abe5235c">arm_fir_interpolate_instance_q31</a>
+: <a class="el" href="structarm__fir__interpolate__instance__f32.html#aee73cc056696e504430c53eaa9c58cf0">arm_fir_interpolate_instance_f32</a>
+, <a class="el" href="structarm__fir__interpolate__instance__q15.html#aee73cc056696e504430c53eaa9c58cf0">arm_fir_interpolate_instance_q15</a>
+, <a class="el" href="structarm__fir__interpolate__instance__q31.html#aee73cc056696e504430c53eaa9c58cf0">arm_fir_interpolate_instance_q31</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -157,12 +158,13 @@ $(document).ready(function(){initNavTree('functions_vars_l.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

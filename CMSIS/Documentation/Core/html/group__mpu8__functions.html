@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -212,7 +213,7 @@ Functions</h2></td></tr>
 <p>The following functions support the optional Memory Protection Unit (MPU) that is available on the Cortex-M23, M33, M35P processor.</p>
 <p>The MPU is used to prevent from illegal memory accesses that are typically caused by errors in an application software.</p>
 <p><b>Example:</b> </p>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> main() </div>
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main() </div>
 <div class="line">{</div>
 <div class="line">  <span class="comment">// Set Region 0 using Attr 0</span></div>
 <div class="line">  <a class="code" href="group__mpu8__functions.html#gab5b3c0a53d19c09a5550f1d9071ae65c">ARM_MPU_SetMemAttr</a>(0UL, <a class="code" href="group__mpu8__functions.html#ga2c465cc9429b8233bcb9cd7cbef0e54c">ARM_MPU_ATTR</a>(       <span class="comment">/* Normal memory */</span></div>
@@ -903,7 +904,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Memcopy with strictly ordered memory access, e.g. for register targets. </p>
+<p>Memcpy with strictly ordered memory access, e.g. used by code in <a class="el" href="group__mpu8__functions.html#gab6094419f2abd678f1f3b121cd115049">ARM_MPU_LoadEx</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dst</td><td>Destination data is copied to. </td></tr>
@@ -1159,12 +1160,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

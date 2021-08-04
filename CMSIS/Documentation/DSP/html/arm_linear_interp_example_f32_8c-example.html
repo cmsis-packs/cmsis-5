@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -170,7 +171,7 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line"><span class="comment">* randn(&#39;state&#39;, 0)</span></div>
 <div class="line"><span class="comment">* xi = (((1/4.18318581819710)* randn(blockSize, 1) * 2* pi));</span></div>
 <div class="line"><span class="comment">* --------------------------------------------------------------------*/</span></div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a0"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a4be0c4d25e63ce04b8cc8ad070805287">testInputSin_f32</a>[<a name="a1"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>] =</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a0"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a4be0c4d25e63ce04b8cc8ad070805287">testInputSin_f32</a>[<a name="a1"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>] =</div>
 <div class="line">{</div>
 <div class="line">   -0.649716504673081170, -2.501723745497831200,</div>
 <div class="line">    0.188250329003310100,  0.432092748487532540,</div>
@@ -183,7 +184,7 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line"><span class="comment">*  Reference out of SIN F32 function for Block Size = 10</span></div>
 <div class="line"><span class="comment">*  Calculated from sin(testInputSin_f32)</span></div>
 <div class="line"><span class="comment">*------------------------------------------------------------------------------*/</span></div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a2"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a5a33218d422603f3e5267b6984bdddd1">testRefSinOutput32_f32</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>] =</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a2"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a5a33218d422603f3e5267b6984bdddd1">testRefSinOutput32_f32</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>] =</div>
 <div class="line">{</div>
 <div class="line">   -0.604960695383043530, -0.597090287967934840,</div>
 <div class="line">    0.187140422442966500,  0.418772124875992690,</div>
@@ -195,12 +196,12 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line"><span class="comment">/*------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">*  Method 1: Test out Buffer Calculated from Cubic Interpolation</span></div>
 <div class="line"><span class="comment">*------------------------------------------------------------------------------*/</span></div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a3"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#afd4d61aad5f35a4e42d580004e2f9a1d">testOutput</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>];</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a3"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#afd4d61aad5f35a4e42d580004e2f9a1d">testOutput</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>];</div>
 <div class="line"></div>
 <div class="line"><span class="comment">/*------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">*  Method 2: Test out buffer Calculated from Linear Interpolation</span></div>
 <div class="line"><span class="comment">*------------------------------------------------------------------------------*/</span></div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a4"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a8ca7d0ad6e04efed464bcaacedacf925">testLinIntOutput</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>];</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a4"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a8ca7d0ad6e04efed464bcaacedacf925">testLinIntOutput</a>[<a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>];</div>
 <div class="line"></div>
 <div class="line"><span class="comment">/*------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">*  External table used for linear interpolation</span></div>
@@ -210,8 +211,8 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line"><span class="comment">/* ----------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">* Global Variables for caluclating SNR&#39;s for Method1 &amp; Method 2</span></div>
 <div class="line"><span class="comment">* ------------------------------------------------------------------- */</span></div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a6"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#ad492c21cf2dd4e9199ae46c77f812cbc">snr1</a>;</div>
-<div class="line"><a class="code" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a7"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a269948ab25f230d33e3f22eab85aa1cf">snr2</a>;</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a6"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#ad492c21cf2dd4e9199ae46c77f812cbc">snr1</a>;</div>
+<div class="line"><a class="code" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> <a name="a7"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a269948ab25f230d33e3f22eab85aa1cf">snr2</a>;</div>
 <div class="line"></div>
 <div class="line"><span class="comment">/* ----------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">* Calculation of Sine values from Cubic Interpolation and Linear interpolation</span></div>
@@ -219,7 +220,7 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line">int32_t <a name="a8"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a52d2cba30e6946c95578be946ac12a65">main</a>(<span class="keywordtype">void</span>)</div>
 <div class="line">{</div>
 <div class="line">  uint32_t i;</div>
-<div class="line">  <a class="code" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> <a name="a9"></a><a class="code" href="arm__dotproduct__example__f32_8c.html#a88ccb294236ab22b00310c47164c53c3">status</a>;</div>
+<div class="line">  <a class="code" href="arm__math__types_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6">arm_status</a> <a name="a9"></a><a class="code" href="arm__dotproduct__example__f32_8c.html#a88ccb294236ab22b00310c47164c53c3">status</a>;</div>
 <div class="line"></div>
 <div class="line">  <a name="_a10"></a><a class="code" href="structarm__linear__interp__instance__f32.html">arm_linear_interp_instance_f32</a> <a name="a11"></a><a class="code" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a> = {1884, -3.141592653589793238, <a name="a12"></a><a class="code" href="arm__linear__interp__example__f32_8c.html#a0ecae49cebd837aac53411c8f877503d">XSPACING</a>, (<span class="keywordtype">float</span>*)&amp;<a class="code" href="arm__linear__interp__example__f32_8c.html#ab01b60c3faca4a492739bea167cbeb84">arm_linear_interep_table</a>[0]};</div>
 <div class="line"></div>
@@ -237,7 +238,7 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line"></div>
 <div class="line">  <span class="keywordflow">for</span>(i=0; i&lt; <a class="code" href="arm__linear__interp__example__f32_8c.html#abc004a7fade488e72310fd96c0a101dc">TEST_LENGTH_SAMPLES</a>; i++)</div>
 <div class="line">  {</div>
-<div class="line">      <a class="code" href="arm__linear__interp__example__f32_8c.html#a8ca7d0ad6e04efed464bcaacedacf925">testLinIntOutput</a>[i] = <a name="a14"></a><a class="code" href="group__LinearInterpolate.html#ga5335f60532bab8cee1e7c22f76a41805">arm_linear_interp_f32</a>(&amp;S, <a class="code" href="arm__linear__interp__example__f32_8c.html#a4be0c4d25e63ce04b8cc8ad070805287">testInputSin_f32</a>[i]);</div>
+<div class="line">      <a class="code" href="arm__linear__interp__example__f32_8c.html#a8ca7d0ad6e04efed464bcaacedacf925">testLinIntOutput</a>[i] = <a name="a14"></a><a class="code" href="group__LinearInterpolate.html#ga7d0a7f29f5048aa5c5d68fa26d39eda4">arm_linear_interp_f32</a>(&amp;S, <a class="code" href="arm__linear__interp__example__f32_8c.html#a4be0c4d25e63ce04b8cc8ad070805287">testInputSin_f32</a>[i]);</div>
 <div class="line">  }</div>
 <div class="line"></div>
 <div class="line">  <span class="comment">/*------------------------------------------------------------------------------</span></div>
@@ -253,9 +254,9 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <div class="line">  <span class="comment">/*------------------------------------------------------------------------------</span></div>
 <div class="line"><span class="comment">  *            Initialise status depending on SNR calculations</span></div>
 <div class="line"><span class="comment">  *------------------------------------------------------------------------------*/</span></div>
-<div class="line">  status = (<a class="code" href="arm__linear__interp__example__f32_8c.html#a269948ab25f230d33e3f22eab85aa1cf">snr2</a> &lt;= <a class="code" href="arm__linear__interp__example__f32_8c.html#ad492c21cf2dd4e9199ae46c77f812cbc">snr1</a>) ? <a name="a16"></a><a class="code" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a09457f2be656b35015fd6d36202fa376">ARM_MATH_TEST_FAILURE</a> : <a name="a17"></a><a class="code" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a9f8b2a10bd827fb4600e77d455902eb0">ARM_MATH_SUCCESS</a>;</div>
+<div class="line">  status = (<a class="code" href="arm__linear__interp__example__f32_8c.html#a269948ab25f230d33e3f22eab85aa1cf">snr2</a> &lt;= <a class="code" href="arm__linear__interp__example__f32_8c.html#ad492c21cf2dd4e9199ae46c77f812cbc">snr1</a>) ? <a name="a16"></a><a class="code" href="arm__math__types_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a09457f2be656b35015fd6d36202fa376">ARM_MATH_TEST_FAILURE</a> : <a name="a17"></a><a class="code" href="arm__math__types_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a9f8b2a10bd827fb4600e77d455902eb0">ARM_MATH_SUCCESS</a>;</div>
 <div class="line"></div>
-<div class="line">  <span class="keywordflow">if</span> (status != <a class="code" href="arm__math_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a9f8b2a10bd827fb4600e77d455902eb0">ARM_MATH_SUCCESS</a>)</div>
+<div class="line">  <span class="keywordflow">if</span> (status != <a class="code" href="arm__math__types_8h.html#a5e459c6409dfcd2927bb8a57491d7cf6a9f8b2a10bd827fb4600e77d455902eb0">ARM_MATH_SUCCESS</a>)</div>
 <div class="line">  {</div>
 <div class="line"><span class="preprocessor">#if defined (SEMIHOSTING)</span></div>
 <div class="line"><span class="preprocessor"></span>    printf(<span class="stringliteral">&quot;FAILURE\n&quot;</span>);</div>
@@ -279,12 +280,13 @@ $(document).ready(function(){initNavTree('arm_linear_interp_example_f32_8c-examp
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:34 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

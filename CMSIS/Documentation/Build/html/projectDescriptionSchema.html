@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -129,18 +130,21 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
   See the License for the specific language governing permissions and
   limitations under the License.
 
-  $Date:        03. April 2020
-  $Revision:    0.9.0
+  $Date:        23. September 2020
+  $Revision:    1.0.0
 
   $Project: Schema File for CMSIS Project Description File Format Specification
 
-  SchemaVersion=0.9.0
+  SchemaVersion=1.0.0
+
+  1.0.0: Specification of CMSIS Project Format:
+  - adding layer interface description
 
   0.9.0: (BETA) Specification of CMSIS Project Format, replacing CPDSC based on PACK.xsd.
 
 --&gt;
 
-&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" version="0.9.0"&gt;
+&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified" version="1.0.0"&gt;
 
   &lt;xs:simpleType name="RestrictedString"&gt;
     &lt;xs:restriction base="xs:string"&gt;
@@ -160,14 +164,7 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;/xs:restriction&gt;
   &lt;/xs:simpleType&gt;
 
-  &lt;xs:simpleType name="PackVersionType"&gt;
-    &lt;xs:restriction base="xs:string"&gt;
-      &lt;!-- major . minor . patch [[-]quality] [+build] --&gt;
-      &lt;xs:pattern value="[0-9]+.[0-9]+.[0-9]+((\-[0-9A-Za-z_\-\.]+)|([_A-Za-z][0-9A-Za-z_\-\.]*)|())((\+[\-\._A-Za-z0-9]+)|())" /&gt;
-    &lt;/xs:restriction&gt;
-  &lt;/xs:simpleType&gt;
-
-  &lt;!-- version can contain one or more of alphanumeric characters and symbols '_' '-' '.' 
+  &lt;!-- version can contain one or more of alphanumeric characters and symbols '_' '-' '.'
        Allows specifing a version range: minVersion : maxVersion
   --&gt;
   &lt;xs:simpleType name="VersionRangeType"&gt;
@@ -300,26 +297,14 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;/xs:restriction&gt;
   &lt;/xs:simpleType&gt;
 
-  &lt;xs:complexType name="ComponentCategoryType"&gt;
-    &lt;xs:attribute name="Cvendor"     type="xs:string"            use="optional" /&gt;
-    &lt;xs:attribute name="Cbundle"     type="xs:string"            use="optional" /&gt;
-    &lt;xs:attribute name="Cclass"      type="xs:string"            use="required" /&gt;
-    &lt;xs:attribute name="Cgroup"      type="xs:string"            use="optional" /&gt;
-    &lt;xs:attribute name="Csub"        type="xs:string"            use="optional" /&gt;
-    &lt;xs:attribute name="Cvariant"    type="xs:string"            use="optional" /&gt;
-    &lt;xs:attribute name="Cversion"    type="ComponentVersionType" use="optional" /&gt;
-    &lt;xs:attribute name="Capiversion" type="ComponentVersionType" use="optional" /&gt;
-    &lt;xs:attribute name="instances"   type="InstancesType"        use="optional" default="1" /&gt;
-  &lt;/xs:complexType&gt;
-
   &lt;!-- PackageType creates a unique ID for a package / if no version specified use "latest" --&gt;
   &lt;xs:complexType name="PackageType"&gt;
     &lt;!-- vendor of the package --&gt;
     &lt;xs:attribute name="vendor"  type="xs:string" use="required" /&gt;
     &lt;!-- name of the package --&gt;
     &lt;xs:attribute name="name"    type="xs:string" use="required" /&gt;
-    &lt;!-- version of the package (no range supported) --&gt;
-    &lt;xs:attribute name="version" type="PackVersionType" use="optional" /&gt;
+    &lt;!-- version of the package --&gt;
+    &lt;xs:attribute name="version" type="VersionRangeType" use="optional" /&gt;
   &lt;/xs:complexType&gt;
 
   &lt;!-- Package section type --&gt;
@@ -329,21 +314,41 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;/xs:sequence&gt;
   &lt;/xs:complexType&gt;
 
+  &lt;!-- Layer Interfaces type --&gt;
+  &lt;xs:complexType name="InterfacesType"&gt;
+    &lt;xs:choice maxOccurs="unbounded"&gt;
+      &lt;xs:element name="provides" type="InterfaceType"/&gt;
+      &lt;xs:element name="consumes" type="InterfaceType"/&gt;
+    &lt;/xs:choice&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;!-- provided interface --&gt;
+  &lt;xs:complexType name="InterfaceType"&gt;
+    &lt;xs:attribute name="id"      type="xs:string"       use="required" /&gt;
+    &lt;xs:attribute name="value"   type="xs:string"       use="optional" /&gt;
+  &lt;/xs:complexType&gt;
+
   &lt;xs:complexType name="LayerType"&gt;
     &lt;xs:all&gt;
       &lt;!-- layer description --&gt;
-      &lt;xs:element name="description" type="xs:string" minOccurs="0" /&gt;
-      &lt;!-- layer intentionally does not have url ! --&gt;
-      &lt;!-- comma separated list of keywords --&gt;
-      &lt;xs:element name="keywords"    type="xs:string" minOccurs="0" /&gt;
+      &lt;xs:element name="description"   type="xs:string" minOccurs="0" /&gt;
+      &lt;!-- layer documentation points to detailed documentation local *.md file or URL --&gt;
+      &lt;xs:element name="doc"           type="xs:string" minOccurs="0" /&gt;
       &lt;!-- comma separated list of pre-defined categories --&gt;
-      &lt;xs:element name="category"    type="xs:string" minOccurs="0" /&gt;
+      &lt;xs:element name="category"      type="xs:string" minOccurs="0" /&gt;
+      &lt;!-- deprecated keywords --&gt;
+      &lt;xs:element name="keywords"      type="xs:string" minOccurs="0" /&gt;
       &lt;!-- license covering the layer (the license of referenced components is not covered) --&gt;
-      &lt;xs:element name="license"     type="xs:string" minOccurs="0" /&gt;
+      &lt;xs:element name="license"       type="xs:string" minOccurs="0" /&gt;
+      &lt;!-- interfaces --&gt;
+      &lt;xs:element name="interfaces"    type="InterfacesType" minOccurs="0" /&gt;
     &lt;/xs:all&gt;
-    &lt;!-- layer name is used in file and directory names, hence restricted --&gt;
-    &lt;xs:attribute name="name"        type="RestrictedString"  use="required" /&gt;
-    &lt;xs:attribute name="hasTarget"   type="xs:boolean" use="optional" /&gt;
+    &lt;!-- layer name is an ID used in file and directory names, hence restricted --&gt;
+    &lt;xs:attribute name="name"      type="RestrictedString"  use="required" /&gt;
+    &lt;!-- display name for the layer --&gt;
+    &lt;xs:attribute name="title"     type="xs:string"         use="optional" /&gt;
+    &lt;!-- indicates whether this layer is HW dependent --&gt;
+    &lt;xs:attribute name="hasTarget" type="xs:boolean"        use="optional" /&gt;
   &lt;/xs:complexType&gt;
 
   &lt;!-- Layers section type --&gt;
@@ -370,16 +375,22 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
   &lt;!-- Project target specification: --&gt;
   &lt;xs:complexType name="TargetType"&gt;
     &lt;xs:choice maxOccurs="unbounded"&gt;
-      &lt;!-- build options --&gt;
+      &lt;!-- Build options --&gt;
       &lt;xs:element name="output"    type="OutputType" /&gt;
-      &lt;!-- linker command-line --&gt;
+      &lt;!-- Linker command-line --&gt;
       &lt;xs:element name="ldflags"   type="LinkerFlagsType" /&gt;
       &lt;!-- C-Compiler command-line --&gt;
       &lt;xs:element name="cflags"    type="ToolOptionType" /&gt;
       &lt;!-- C++ Compiler command-line --&gt;
       &lt;xs:element name="cxxflags"  type="ToolOptionType" /&gt;
+      &lt;!-- Archiver command-line --&gt;
+      &lt;xs:element name="arflags"  type="ToolOptionType" /&gt;
       &lt;!-- Assembler command-line --&gt;
-      &lt;xs:element name="asflags"   type="ToolOptionType" /&gt;
+      &lt;xs:element name="asflags"   type="AsmOptionType" /&gt;
+      &lt;!-- Include paths --&gt;
+      &lt;xs:element name="includes"  type="xs:string" minOccurs="0" /&gt;
+      &lt;!-- Preprocessing definitions --&gt;
+      &lt;xs:element name="defines"   type="xs:string" minOccurs="0" /&gt;
     &lt;/xs:choice&gt;
     &lt;!-- Board Vendor --&gt;
     &lt;xs:attribute name="Bvendor"  type="xs:string"   use="optional" /&gt;
@@ -408,23 +419,32 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
   &lt;!-- Build settings for the project, setting RTE filter options --&gt;
   &lt;xs:complexType name="OutputType"&gt;
     &lt;!-- Project output file name --&gt;
-    &lt;xs:attribute name="name"  type="xs:string"          use="required" /&gt;
-    &lt;xs:attribute name="obj"   type="xs:string"          use="optional" /&gt;
-    &lt;xs:attribute name="list"  type="xs:string"          use="optional" /&gt;
-    &lt;xs:attribute name="type"  type="CompilerOutputType" use="required" /&gt;
+    &lt;xs:attribute name="name"   type="xs:string"          use="required" /&gt;
+    &lt;xs:attribute name="obj"    type="xs:string"          use="optional" /&gt; &lt;!-- Deprecated --&gt;
+    &lt;xs:attribute name="list"   type="xs:string"          use="optional" /&gt; &lt;!-- Deprecated --&gt;
+    &lt;xs:attribute name="outdir" type="xs:string"          use="optional" /&gt;
+    &lt;xs:attribute name="intdir" type="xs:string"          use="optional" /&gt;
+    &lt;xs:attribute name="type"   type="CompilerOutputType" use="required" /&gt;
   &lt;/xs:complexType&gt;
 
   &lt;xs:complexType name="LinkerFlagsType"&gt;
-    &lt;xs:attribute name="compiler"  type="CompilerEnumType" use="required"/&gt;
-    &lt;xs:attribute name="file"      type="xs:string"/&gt;
-    &lt;xs:attribute name="add"       type="xs:string"/&gt;
-    &lt;xs:attribute name="remove"    type="xs:string"/&gt;
+    &lt;xs:attribute name="compiler" type="CompilerEnumType" use="required" /&gt;
+    &lt;xs:attribute name="file"     type="xs:string" /&gt;
+    &lt;xs:attribute name="add"      type="xs:string" /&gt;
+    &lt;xs:attribute name="remove"   type="xs:string" /&gt;
+  &lt;/xs:complexType&gt;
+
+  &lt;xs:complexType name="AsmOptionType"&gt;
+    &lt;xs:attribute name="compiler" type="CompilerEnumType" use="required" /&gt;
+    &lt;xs:attribute name="add"      type="xs:string" /&gt;
+    &lt;xs:attribute name="remove"   type="xs:string" /&gt;
+    &lt;xs:attribute name="use"      type="xs:string" /&gt;
   &lt;/xs:complexType&gt;
 
   &lt;xs:complexType name="ToolOptionType"&gt;
-    &lt;xs:attribute name="compiler"  type="CompilerEnumType" use="required"/&gt;
-    &lt;xs:attribute name="add"    type="xs:string" /&gt;
-    &lt;xs:attribute name="remove" type="xs:string" /&gt;
+    &lt;xs:attribute name="compiler" type="CompilerEnumType" use="required"/&gt;
+    &lt;xs:attribute name="add"      type="xs:string" /&gt;
+    &lt;xs:attribute name="remove"   type="xs:string" /&gt;
   &lt;/xs:complexType&gt;
 
   &lt;xs:complexType name="UsedType"&gt;
@@ -438,11 +458,16 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;xs:choice maxOccurs="unbounded"&gt;
       &lt;xs:element name="cflags"    type="ToolOptionType" /&gt;
       &lt;xs:element name="cxxflags"  type="ToolOptionType" /&gt;
-      &lt;xs:element name="asflags"   type="ToolOptionType" /&gt;
+      &lt;xs:element name="asflags"   type="AsmOptionType" /&gt;
       &lt;xs:element name="file"      type="FileType" /&gt;
-      &lt;xs:element name="group"     type="GroupType" /&gt;
+      &lt;xs:element name="group"     type="GroupType" &gt;
+        &lt;xs:unique name="unique-group-levelN"&gt;
+          &lt;xs:selector xpath="group"/&gt;
+          &lt;xs:field xpath="@name"/&gt;
+        &lt;/xs:unique&gt;
+      &lt;/xs:element&gt;
     &lt;/xs:choice&gt;
-    &lt;xs:attribute name="name" use="required" /&gt;
+    &lt;xs:attribute name="name"  type="xs:string" use="required"/&gt;
     &lt;!-- layer reference --&gt;
     &lt;xs:attribute name="layer" type="RestrictedString" use="optional" /&gt;
   &lt;/xs:complexType&gt;
@@ -452,7 +477,7 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;xs:choice minOccurs="0"&gt;
       &lt;xs:element name="cflags"   type="ToolOptionType" /&gt;
       &lt;xs:element name="cxxflags" type="ToolOptionType" /&gt;
-      &lt;xs:element name="asflags"  type="ToolOptionType" /&gt;
+      &lt;xs:element name="asflags"  type="AsmOptionType" /&gt;
     &lt;/xs:choice&gt;
     &lt;!-- path + filename + extension --&gt;
     &lt;xs:attribute name="name"     type="xs:string"        use="required" /&gt;
@@ -475,9 +500,15 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
       &lt;!-- C++ Compiler command-line --&gt;
       &lt;xs:element name="cxxflags"  type="ToolOptionType" /&gt;
       &lt;!-- Assembler command-line --&gt;
-      &lt;xs:element name="asflags"   type="ToolOptionType" /&gt;
-      &lt;xs:element name="file" type="FileType" /&gt;
-      &lt;xs:element name="group" type="GroupType" /&gt;
+      &lt;xs:element name="asflags"   type="AsmOptionType" /&gt;
+      &lt;xs:element name="file"      type="FileType" &gt;
+      &lt;/xs:element&gt;
+      &lt;xs:element name="group"     type="GroupType" &gt;
+        &lt;xs:unique name="unique-group-level1"&gt;
+          &lt;xs:selector xpath="group"/&gt;
+          &lt;xs:field xpath="@name"/&gt;
+        &lt;/xs:unique&gt;
+      &lt;/xs:element&gt;
     &lt;/xs:choice&gt;
   &lt;/xs:complexType&gt;
 
@@ -502,7 +533,7 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
             &lt;/xs:element&gt;
             &lt;xs:element name="cflags"   type="ToolOptionType" minOccurs="0"/&gt;
             &lt;xs:element name="cxxflags" type="ToolOptionType" minOccurs="0"/&gt;
-            &lt;xs:element name="asflags"  type="ToolOptionType" minOccurs="0"/&gt;
+            &lt;xs:element name="asflags"  type="AsmOptionType" minOccurs="0"/&gt;
           &lt;/xs:choice&gt;
           &lt;xs:attribute name="Cvendor"     type="xs:string"            use="optional" /&gt;
           &lt;xs:attribute name="Cbundle"     type="xs:string"            use="optional" /&gt;
@@ -538,7 +569,7 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
     &lt;/xs:restriction&gt;
   &lt;/xs:simpleType&gt;
 
-  &lt;!-- URL type (optionally describes public repository) --&gt;
+  &lt;!-- URL type (deprecated) --&gt;
   &lt;xs:complexType name="UrlType"&gt;
     &lt;xs:simpleContent&gt;
       &lt;xs:extension base="xs:anyURI"&gt;
@@ -551,28 +582,19 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
   &lt;!-- Project/Layer Info --&gt;
   &lt;xs:complexType name="InfoType"&gt;
     &lt;xs:all&gt;
-      &lt;!-- use filename as 'name' --&gt;
+      &lt;xs:element name="name"        type="xs:string" minOccurs="0" /&gt;
       &lt;xs:element name="description" type="xs:string" minOccurs="1" /&gt;
-      &lt;xs:element name="url"         type="UrlType"   minOccurs="0" /&gt;
-      &lt;xs:element name="keywords"    type="xs:string" minOccurs="0" /&gt;
+      &lt;xs:element name="doc"         type="xs:string" minOccurs="0" /&gt;
       &lt;xs:element name="category"    type="xs:string" minOccurs="0" /&gt;
+      &lt;!-- deprecated: url --&gt;
+      &lt;xs:element name="url"         type="UrlType"   minOccurs="0" /&gt;
+      &lt;!-- deprecated: keywords --&gt;
+      &lt;xs:element name="keywords"    type="xs:string" minOccurs="0" /&gt;
       &lt;!-- SPDX license ID: https://spdx.org/licenses/ --&gt;
       &lt;xs:element name="license"     type="xs:string" minOccurs="0" /&gt;
     &lt;/xs:all&gt;
     &lt;!-- 'true' if file is a layer description. Default 'false' --&gt;
     &lt;xs:attribute name="isLayer"      type="xs:boolean"         use="optional" default="false"/&gt;
-  &lt;/xs:complexType&gt;
-
-  &lt;!-- Board Info --&gt;
-  &lt;xs:complexType name="BoardInfoType"&gt;
-    &lt;xs:simpleContent&gt;
-      &lt;xs:extension base="xs:string"&gt;
-        &lt;xs:attribute name="vendor"    type="xs:string"  use="required" /&gt;
-        &lt;xs:attribute name="name"      type="xs:string"  use="required" /&gt;
-        &lt;xs:attribute name="url"       type="xs:anyURI"  use="optional" /&gt;
-        &lt;xs:attribute name="revision"  type="xs:string"  use="optional" /&gt;
-      &lt;/xs:extension&gt;
-    &lt;/xs:simpleContent&gt;
   &lt;/xs:complexType&gt;
 
   &lt;!-- package description root point --&gt;
@@ -581,8 +603,6 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
       &lt;xs:all&gt;
         &lt;!-- project info --&gt;
         &lt;xs:element name="info"           type="InfoType"         minOccurs="1" /&gt;
-        &lt;!-- board info --&gt;
-        &lt;xs:element name="board"          type="BoardInfoType"    minOccurs="0" /&gt;
         &lt;!-- tool info --&gt;
         &lt;xs:element name="created"        type="CreationInfoType" minOccurs="0" /&gt;
         &lt;!-- optional: project layers --&gt;
@@ -594,10 +614,19 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
         &lt;!-- project build target settings --&gt;
         &lt;xs:element name="target"         type="TargetType"       minOccurs="0" /&gt;
         &lt;!-- components used by project --&gt;
-        &lt;xs:element name="components"     type="ComponentsType"   minOccurs="1" /&gt;
+        &lt;xs:element name="components"     type="ComponentsType"   minOccurs="0" /&gt;
         &lt;!-- project modules/source files not contained in components --&gt;
-        &lt;xs:element name="files"          type="FilesType"        minOccurs="0"/&gt;
-      &lt;/xs:all&gt;
+        &lt;xs:element name="files"          type="FilesType"        minOccurs="0"&gt;
+          &lt;xs:unique name="unique-group-level0"&gt;
+            &lt;xs:selector xpath="group"/&gt;
+            &lt;xs:field xpath="@name"/&gt;
+          &lt;/xs:unique&gt;
+          &lt;xs:unique name="unique-filename"&gt;
+            &lt;xs:selector xpath=".//file"/&gt;
+            &lt;xs:field xpath="@name"/&gt;
+          &lt;/xs:unique&gt;
+        &lt;/xs:element&gt;
+        &lt;/xs:all&gt;
       &lt;!-- schema version used by writer --&gt;
       &lt;xs:attribute name="schemaVersion"  type="SchemaVersionType" use="required" /&gt;
     &lt;/xs:complexType&gt;
@@ -609,12 +638,13 @@ $(document).ready(function(){initNavTree('projectDescriptionSchema.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="cprjFormat_pg.html">Project Description (*.cprj) Format</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -150,9 +151,13 @@ $(document).ready(function(){initNavTree('globals_func_g.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>arm_gaussian_naive_bayes_predict_f16()
+: <a class="el" href="group__groupBayes.html#ga6f7cde3d37f85f99bd1a125601a718a0">bayes_functions_f16.h</a>
+, <a class="el" href="group__groupBayes.html#ga6f7cde3d37f85f99bd1a125601a718a0">arm_gaussian_naive_bayes_predict_f16.c</a>
+</li>
 <li>arm_gaussian_naive_bayes_predict_f32()
-: <a class="el" href="group__groupBayes.html#ga84d3fecc4e11958ca19c4e86fc8c8eb1">arm_math.h</a>
-, <a class="el" href="group__groupBayes.html#ga84d3fecc4e11958ca19c4e86fc8c8eb1">arm_gaussian_naive_bayes_predict_f32.c</a>
+: <a class="el" href="group__groupBayes.html#ga23f942747fc13865a66bf14bb44dd299">arm_gaussian_naive_bayes_predict_f32.c</a>
+, <a class="el" href="group__groupBayes.html#ga23f942747fc13865a66bf14bb44dd299">bayes_functions.h</a>
 </li>
 <li>getinput()
 : <a class="el" href="arm__signal__converge__example__f32_8c.html#afd2975c4763ec935771e6f63bfe7758b">arm_signal_converge_example_f32.c</a>
@@ -163,12 +168,13 @@ $(document).ready(function(){initNavTree('globals_func_g.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

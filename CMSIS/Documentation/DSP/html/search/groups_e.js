@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['transform_20functions',['Transform Functions',['../group__groupTransforms.html',1,'']]]
+  ['partial_20convolution',['Partial Convolution',['../group__PartialConv.html',1,'']]],
+  ['pid_20motor_20control',['PID Motor Control',['../group__PID.html',1,'']]],
+  ['polynomial_20svm',['Polynomial SVM',['../group__polysvm.html',1,'']]],
+  ['power',['Power',['../group__power.html',1,'']]]
 ];

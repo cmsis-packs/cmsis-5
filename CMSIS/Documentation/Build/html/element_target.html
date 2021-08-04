@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -113,6 +114,8 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="textblock"><p>This element describes the hardware target, build output and command line options for a specific compiler tool-chain. These settings are applied to all modules of the project. The C/C++ and assembler flags can be refined for components, files. The following elements are available:</p>
 <ul>
 <li><a class="el" href="element_target.html#element_output">output</a> : Build output options</li>
+<li><a class="el" href="element_target.html#element_includes">includes</a> : List of include paths</li>
+<li><a class="el" href="element_target.html#element_defines">defines</a> : List of preprocessor definitions</li>
 <li><a class="el" href="element_target.html#element_target_cflags">cflags</a> : C compiler options applied to C modules (category="sourceC").</li>
 <li><a class="el" href="element_target.html#element_target_cxxflags">cxxflags</a> : C++ compiler options applied to C++ modules (category="sourceCpp").</li>
 <li><a class="el" href="element_target.html#element_target_asflags">asflags</a> : Assembler options applied to Assembler modules (category="sourceAsm").</li>
@@ -128,7 +131,9 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="line">  &lt;/compilers&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Dname=<span class="stringliteral">&quot;ARMCM0&quot;</span> Dvendor=<span class="stringliteral">&quot;ARM:82&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span>&gt;</div>
-<div class="line">    &lt;output name=<span class="stringliteral">&quot;Blinky&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span> obj=<span class="stringliteral">&quot;./Objects list=&quot;</span>./Listings<span class="stringliteral">&quot;/&gt;</span></div>
+<div class="line">    &lt;output name=<span class="stringliteral">&quot;Blinky&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span> outdir=<span class="stringliteral">&quot;./Objects intdir=&quot;</span>./Listings<span class="stringliteral">&quot;/&gt;</span></div>
+<div class="line"><span class="stringliteral">    &lt;includes&gt;./path/to/header/files&lt;/includes&gt;</span></div>
+<div class="line"><span class="stringliteral">    &lt;defines&gt;DEF1=1;DEF2=2&lt;/defines&gt;</span></div>
 <div class="line"><span class="stringliteral">    &lt;cflags compiler=&quot;</span>AC5<span class="stringliteral">&quot; add=&quot;</span>-Osize<span class="stringliteral">&quot;/&gt;</span></div>
 <div class="line"><span class="stringliteral">    ...</span></div>
 <div class="line"><span class="stringliteral">    &lt;ldflags compiler=&quot;</span>AC5<span class="stringliteral">&quot; file=&quot;</span>./RTE/Device/ARMCM0/gcc_arm.ld<span class="stringliteral">&quot;/&gt;</span></div>
@@ -171,9 +176,13 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <tr>
 <td><a class="el" href="element_target.html#element_output">output</a> </td><td>Configure the build output name and type, and specify whether to include debug information. Required if type="exe". </td><td>OutputType </td><td>1..1  </td></tr>
 <tr>
-<td><a class="el" href="element_target.html#element_ldflags">ldflags</a> </td><td>Linker flags used for constructing the effective linker command line </td><td>LinkerFlagsType </td><td>0..1 </td></tr>
+<td><a class="el" href="element_target.html#element_includes">includes</a> </td><td>List of include paths </td><td>xs:string </td><td>0..1  </td></tr>
 <tr>
-<td><a class="el" href="element_target.html#element_arflags">arflags</a> </td><td>Archiver command line flags for the toolchain selected by 'compiler' attribute. </td><td>ArchiverFlagsType </td><td>0..1   </td></tr>
+<td><a class="el" href="element_target.html#element_defines">defines</a> </td><td>List of preprocessor definitions </td><td>xs:string </td><td>0..1  </td></tr>
+<tr>
+<td><a class="el" href="element_target.html#element_ldflags">ldflags</a> </td><td>Linker flags used for constructing the effective linker command line </td><td>LinkerFlagsType </td><td>0..1  </td></tr>
+<tr>
+<td><a class="el" href="element_target.html#element_arflags">arflags</a> </td><td>Archiver command line flags for the toolchain selected by 'compiler' attribute. </td><td>ArchiverFlagsType </td><td>0..1  </td></tr>
 <tr>
 <td><a class="el" href="cprj_types.html#type_toolOptionType">cflags</a> </td><td>Compiler flags for C-modules used for constructing the effective compiler command line </td><td>ToolOptionType </td><td>0..1  </td></tr>
 <tr>
@@ -192,7 +201,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Dname=<span class="stringliteral">&quot;ARMCM0&quot;</span> Dvendor=<span class="stringliteral">&quot;ARM:83&quot;</span>&gt;</div>
-<div class="line">     &lt;output compiler=<span class="stringliteral">&quot;AC5&quot;</span> name=<span class="stringliteral">&quot;MyProject&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span> list=<span class="stringliteral">&quot;Listings&quot;</span> obj=<span class="stringliteral">&quot;Objects&quot;</span>/&gt;</div>
+<div class="line">     &lt;output compiler=<span class="stringliteral">&quot;AC5&quot;</span> name=<span class="stringliteral">&quot;MyProject&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span> intdir=<span class="stringliteral">&quot;Listings&quot;</span> outdir=<span class="stringliteral">&quot;Objects&quot;</span>/&gt;</div>
 <div class="line">     ...</div>
 <div class="line">  &lt;/target&gt;</div>
 <div class="line">  ...</div>
@@ -211,9 +220,49 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <tr>
 <td>type </td><td>Select the build target to be <span class="XML-Token">lib</span> - library or <span class="XML-Token">exe</span> - executable </td><td>CompilerOutputType </td><td>required  </td></tr>
 <tr>
-<td>obj </td><td>Relative path of the output folder </td><td>xs:string </td><td>optional  </td></tr>
+<td>intdir </td><td>Relative path of the folder containing intermediate files (such as object files). </td><td>xs:string </td><td>optional  </td></tr>
 <tr>
-<td>listing </td><td>Relative path of the listings folder </td><td>xs:string </td><td>optional  </td></tr>
+<td>outdir </td><td>Relative path of the output folder containing the executable binaries. </td><td>xs:string </td><td>optional  </td></tr>
+</table>
+<p>&#160;</p>
+<hr/>
+<h1><a class="anchor" id="element_includes"></a>
+/cprj/target/includes</h1>
+<p>This element specifies a semicolon separated list of include paths that are valid for the compilation of all modules in the project.</p>
+<p><b>Example</b> <em>includes</em> element </p>
+<div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
+<div class="line">  ...</div>
+<div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span>/&gt;</div>
+<div class="line">    &lt;includes&gt;./path/to/header/files&lt;/includes&gt;</div>
+<div class="line">  &lt;/target&gt;</div>
+<div class="line">  ...</div>
+<div class="line">&lt;/cprj&gt;</div>
+</div><!-- fragment --><table  class="cmtable" summary="Element: includes">
+<tr>
+<th>Parents </th><th colspan="3">Element Chain  </th></tr>
+<tr>
+<td><a class="el" href="element_target.html">target</a> </td><td colspan="3"><a class="el" href="element_target.html">/cprj/target</a>  </td></tr>
+</table>
+<p>&#160;</p>
+<hr/>
+<h1><a class="anchor" id="element_defines"></a>
+/cprj/target/defines</h1>
+<p>This element specifies a semicolon separated list of preprocessor definitions that are valid for all project modules undergoing preprocessing. Key/value pairs are separated by the equal sign.</p>
+<p><b>Example</b> <em>defines</em> element </p>
+<div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
+<div class="line">  ...</div>
+<div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span>/&gt;</div>
+<div class="line">    &lt;defines&gt;DEF1=1;DEF2=2&lt;/defines&gt;</div>
+<div class="line">  &lt;/target&gt;</div>
+<div class="line">  ...</div>
+<div class="line">&lt;/cprj&gt;</div>
+</div><!-- fragment --><table  class="cmtable" summary="Element: defines">
+<tr>
+<th>Parents </th><th colspan="3">Element Chain  </th></tr>
+<tr>
+<td><a class="el" href="element_target.html">target</a> </td><td colspan="3"><a class="el" href="element_target.html">/cprj/target</a>  </td></tr>
 </table>
 <p>&#160;</p>
 <hr/>
@@ -224,7 +273,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
-<div class="line">    &lt;output list=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> obj=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span>/&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;exe&quot;</span>/&gt;</div>
 <div class="line">    &lt;ldflags compiler=<span class="stringliteral">&quot;AC5&quot;</span> add=<span class="stringliteral">&quot;--entry=Reset_Handler --load_addr_map_info --map --strict &quot;</span> file=<span class="stringliteral">&quot;BSD_Client.sct&quot;</span>/&gt;</div>
 <div class="line">  &lt;/target&gt;</div>
 <div class="line">  ...</div>
@@ -250,7 +299,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
-<div class="line">    &lt;output list=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> obj=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
 <div class="line">    &lt;arflags compiler=<span class="stringliteral">&quot;AC5&quot;</span> add=<span class="stringliteral">&quot;--debug_symbols &quot;</span>/&gt;</div>
 <div class="line">  &lt;/target&gt;</div>
 <div class="line">  ...</div>
@@ -276,7 +325,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
-<div class="line">    &lt;output list=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> obj=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
 <div class="line">    &lt;cflags add=<span class="stringliteral">&quot;-O1 -fno-function-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char&quot;</span>/&gt;</div>
 <div class="line">    &lt;arflags compiler=<span class="stringliteral">&quot;AC5&quot;</span> add=<span class="stringliteral">&quot;--debug_symbols &quot;</span>/&gt;</div>
 <div class="line">  &lt;/target&gt;</div>
@@ -303,7 +352,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
-<div class="line">    &lt;output list=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> obj=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
 <div class="line">        &lt;cflags add=<span class="stringliteral">&quot;-O1 -fno-function-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char&quot;</span>/&gt;</div>
 <div class="line">        &lt;cxxflags add=<span class="stringliteral">&quot;-O1 -fno-function-sections -fno-rtti -fshort-enums -fshort-wchar -funsigned-char&quot;</span>/&gt;</div>
 <div class="line">    &lt;arflags compiler=<span class="stringliteral">&quot;AC5&quot;</span> add=<span class="stringliteral">&quot;--debug_symbols &quot;</span>/&gt;</div>
@@ -331,7 +380,7 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div class="fragment"><div class="line">&lt;cprj ...&gt;</div>
 <div class="line">  ...</div>
 <div class="line">  &lt;target Ddsp=<span class="stringliteral">&quot;NO_DSP&quot;</span> Dendian=<span class="stringliteral">&quot;Little-endian&quot;</span> Dfpu=<span class="stringliteral">&quot;NO_FPU&quot;</span> Dmve=<span class="stringliteral">&quot;NO_MVE&quot;</span> Dname=<span class="stringliteral">&quot;LPC4357&quot;</span> Dtz=<span class="stringliteral">&quot;NO_TZ&quot;</span> Dvendor=<span class="stringliteral">&quot;NXP:11&quot;</span> Pname=<span class="stringliteral">&quot;Cortex-M4&quot;</span>&gt;</div>
-<div class="line">    &lt;output list=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> obj=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
+<div class="line">    &lt;output intdir=<span class="stringliteral">&quot;./Debug/&quot;</span> name=<span class="stringliteral">&quot;BSD_Client&quot;</span> outdir=<span class="stringliteral">&quot;./Debug/&quot;</span> type=<span class="stringliteral">&quot;lib&quot;</span>/&gt;</div>
 <div class="line">    &lt;asflags add=<span class="stringliteral">&quot;--xref --split_ldm&quot;</span>/&gt;</div>
 <div class="line">    &lt;arflags compiler=<span class="stringliteral">&quot;AC5&quot;</span> add=<span class="stringliteral">&quot;--debug_symbols &quot;</span>/&gt;</div>
 <div class="line">  &lt;/target&gt;</div>
@@ -357,12 +406,13 @@ $(document).ready(function(){initNavTree('element_target.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="cprjFormat_pg.html">Project Description (*.cprj) Format</a></li><li class="navelem"><a class="el" href="element_cprj.html">/cprj</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

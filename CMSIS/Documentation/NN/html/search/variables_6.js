@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['reset_5fbias',['reset_bias',['../namespacepara__gen.html#a3da798c88974b5d760f3e97288a0c490',1,'para_gen']]],
-  ['reset_5fgate_5fbias',['reset_gate_bias',['../arm__nnexamples__gru_8cpp.html#a2a9d5c9f16ee778ecc8170d8664722c7',1,'arm_nnexamples_gru.cpp']]],
-  ['reset_5fgate_5fweights',['reset_gate_weights',['../arm__nnexamples__gru_8cpp.html#ac2ae1ff19167c2bb359db2b319ca1060',1,'arm_nnexamples_gru.cpp']]],
-  ['reset_5fweight',['reset_weight',['../namespacepara__gen.html#a4ebba057829420c878a0a29ee9c71582',1,'para_gen']]],
-  ['row_5fdim',['row_dim',['../namespacepara__gen.html#a26cc0a96186b2e6b238d783d9364f14d',1,'para_gen']]]
+  ['input_5factivation',['input_activation',['../structcmsis__nn__svdf__params.html#af9bee3ba507e5226a264097a6a6e78ed',1,'cmsis_nn_svdf_params']]],
+  ['input_5foffset',['input_offset',['../structcmsis__nn__conv__params.html#ac284274c0aa03b1a0bcc0a93b275eadd',1,'cmsis_nn_conv_params::input_offset()'],['../structcmsis__nn__dw__conv__params.html#aab0b7c6b993dc249651b77c675c7a9b4',1,'cmsis_nn_dw_conv_params::input_offset()'],['../structcmsis__nn__fc__params.html#a9d6902def53781c44a0a74dbc305629a',1,'cmsis_nn_fc_params::input_offset()'],['../structcmsis__nn__svdf__params.html#a4afe1cfeca461ebb42dab876e3b5c31e',1,'cmsis_nn_svdf_params::input_offset()']]]
 ];

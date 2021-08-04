@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-NN
-   &#160;<span id="projectnumber">Version 1.3.0</span>
+   &#160;<span id="projectnumber">Version 3.0.0</span>
    </div>
    <div id="projectbrief">CMSIS NN Software Library</div>
   </td>
@@ -103,7 +104,7 @@ $(document).ready(function(){initNavTree('unionarm__nnword.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Data Structures</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Macros</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -144,7 +145,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>q7 type </p>
 
-<p>Referenced by <a class="el" href="group__NNConv.html#gad3d21b3bc6dbd6f3b97d01104349cb0a">arm_depthwise_separable_conv_HWC_q7()</a>, and <a class="el" href="group__NNConv.html#ga32ac508c5467813a84f74f96655dc697">arm_depthwise_separable_conv_HWC_q7_nonsquare()</a>.</p>
+<p>Referenced by <a class="el" href="group__NNConv.html#gad3d21b3bc6dbd6f3b97d01104349cb0a">arm_depthwise_separable_conv_HWC_q7()</a>, <a class="el" href="group__NNConv.html#ga32ac508c5467813a84f74f96655dc697">arm_depthwise_separable_conv_HWC_q7_nonsquare()</a>, <a class="el" href="arm__max__pool__s8_8c.html#ae73d902e6c38cf63ab235d6c4a3ff3b0">clamp_output()</a>, and <a class="el" href="arm__max__pool__s8_8c.html#a3b21bd4a5703839f9ffa5407502c302c">compare_and_replace_if_larger_q7()</a>.</p>
 
 </div>
 </div>
@@ -174,7 +175,7 @@ Data Fields</h2></td></tr>
 </div><div class="memdoc">
 <p>q31 type </p>
 
-<p>Referenced by <a class="el" href="group__NNConv.html#ga98f2ead67d7cbdf558b0cd8a3b8fc148">arm_convolve_HWC_q7_RGB()</a>, <a class="el" href="group__NNConv.html#gad3d21b3bc6dbd6f3b97d01104349cb0a">arm_depthwise_separable_conv_HWC_q7()</a>, and <a class="el" href="group__NNConv.html#ga32ac508c5467813a84f74f96655dc697">arm_depthwise_separable_conv_HWC_q7_nonsquare()</a>.</p>
+<p>Referenced by <a class="el" href="group__NNConv.html#ga98f2ead67d7cbdf558b0cd8a3b8fc148">arm_convolve_HWC_q7_RGB()</a>, <a class="el" href="group__NNConv.html#gad3d21b3bc6dbd6f3b97d01104349cb0a">arm_depthwise_separable_conv_HWC_q7()</a>, <a class="el" href="group__NNConv.html#ga32ac508c5467813a84f74f96655dc697">arm_depthwise_separable_conv_HWC_q7_nonsquare()</a>, <a class="el" href="arm__max__pool__s8_8c.html#ae73d902e6c38cf63ab235d6c4a3ff3b0">clamp_output()</a>, and <a class="el" href="arm__max__pool__s8_8c.html#a3b21bd4a5703839f9ffa5407502c302c">compare_and_replace_if_larger_q7()</a>.</p>
 
 </div>
 </div>
@@ -184,12 +185,13 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="unionarm__nnword.html">arm_nnword</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:49 for CMSIS-NN Version 1.3.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

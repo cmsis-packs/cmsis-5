@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,23 +148,26 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
 <li>theta
-: <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#a88b225d1292eefe044cb0464aac35210">arm_gaussian_naive_bayes_instance_f32</a>
+: <a class="el" href="structarm__gaussian__naive__bayes__instance__f16.html#a77e000dd719b33c501b58dca1e29278a">arm_gaussian_naive_bayes_instance_f16</a>
+, <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#a60ddd36c1b1e0c25bc9d3e09e59c7d40">arm_gaussian_naive_bayes_instance_f32</a>
 </li>
 <li>twidCoefModifier
-: <a class="el" href="structarm__cfft__radix2__instance__f32.html#a411f75b6ed01690293f4f5988030ea42">arm_cfft_radix2_instance_f32</a>
-, <a class="el" href="structarm__cfft__radix2__instance__q15.html#a6f2ab87fb4c568656e1f92f687b5c850">arm_cfft_radix2_instance_q15</a>
-, <a class="el" href="structarm__cfft__radix2__instance__q31.html#ae63ca9193322cd477970c1d2086407d1">arm_cfft_radix2_instance_q31</a>
-, <a class="el" href="structarm__cfft__radix4__instance__f32.html#abe31ea2157dfa233e389cdfd3b9993ee">arm_cfft_radix4_instance_f32</a>
-, <a class="el" href="structarm__cfft__radix4__instance__q15.html#af32fdc78bcc27ca385f9b76a0a1f71c3">arm_cfft_radix4_instance_q15</a>
-, <a class="el" href="structarm__cfft__radix4__instance__q31.html#a8cf8187b8232815cf17ee82bf572ecf9">arm_cfft_radix4_instance_q31</a>
+: <a class="el" href="structarm__cfft__radix2__instance__f16.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix2_instance_f16</a>
+, <a class="el" href="structarm__cfft__radix2__instance__f32.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix2_instance_f32</a>
+, <a class="el" href="structarm__cfft__radix2__instance__q15.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix2_instance_q15</a>
+, <a class="el" href="structarm__cfft__radix2__instance__q31.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix2_instance_q31</a>
+, <a class="el" href="structarm__cfft__radix4__instance__f16.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix4_instance_f16</a>
+, <a class="el" href="structarm__cfft__radix4__instance__f32.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix4_instance_f32</a>
+, <a class="el" href="structarm__cfft__radix4__instance__q15.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix4_instance_q15</a>
+, <a class="el" href="structarm__cfft__radix4__instance__q31.html#afe772e5b5001c9d8e85032115a8df5bf">arm_cfft_radix4_instance_q31</a>
 </li>
 <li>twidCoefRModifier
-: <a class="el" href="structarm__rfft__instance__f32.html#aede85350fb5ae6baa1b3e8bfa15b18d6">arm_rfft_instance_f32</a>
-, <a class="el" href="structarm__rfft__instance__q15.html#afd444d05858c5f419980e94e8240d5c3">arm_rfft_instance_q15</a>
-, <a class="el" href="structarm__rfft__instance__q31.html#a6fc90252b579f7c29e01bd279334fc43">arm_rfft_instance_q31</a>
+: <a class="el" href="structarm__rfft__instance__f32.html#a5b06f7f76c018db993fe6acc5708c589">arm_rfft_instance_f32</a>
+, <a class="el" href="structarm__rfft__instance__q15.html#a5b06f7f76c018db993fe6acc5708c589">arm_rfft_instance_q15</a>
+, <a class="el" href="structarm__rfft__instance__q31.html#a5b06f7f76c018db993fe6acc5708c589">arm_rfft_instance_q31</a>
 </li>
 <li>type
-: <a class="el" href="structarm__spline__instance__f32.html#a26acf1cb37658c19dfd5bfab23cd3014">arm_spline_instance_f32</a>
+: <a class="el" href="structarm__spline__instance__f32.html#a0ba30157b3b00a2e132c50481a0aeb05">arm_spline_instance_f32</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -171,12 +175,13 @@ $(document).ready(function(){initNavTree('functions_t.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

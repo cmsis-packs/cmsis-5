@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -152,8 +153,14 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 
 <h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
 <li>arm_hamming_distance()
-: <a class="el" href="group__BoolDist.html#ga408dd9df42fb1f3f5ec7ca8d80694d4a">arm_math.h</a>
+: <a class="el" href="group__BoolDist.html#ga408dd9df42fb1f3f5ec7ca8d80694d4a">distance_functions.h</a>
 , <a class="el" href="group__BoolDist.html#ga408dd9df42fb1f3f5ec7ca8d80694d4a">arm_hamming_distance.c</a>
+</li>
+<li>HALF_Q15
+: <a class="el" href="arm__levinson__durbin__q31_8c.html#af53eb1f80ad06646990e67560ab2a8b0">arm_levinson_durbin_q31.c</a>
+</li>
+<li>HALF_Q31
+: <a class="el" href="arm__levinson__durbin__q31_8c.html#a84b2434cbc9524cea6f4487aa94d5bfa">arm_levinson_durbin_q31.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -161,12 +168,13 @@ $(document).ready(function(){initNavTree('globals_h.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

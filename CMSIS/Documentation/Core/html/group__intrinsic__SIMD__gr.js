@@ -38,6 +38,7 @@ var group__intrinsic__SIMD__gr =
     [ "__SSUB16", "group__intrinsic__SIMD__gr.html#ga4262f73be75efbac6b46ab7c71aa6cbc", null ],
     [ "__SSUB8", "group__intrinsic__SIMD__gr.html#gaba63bb52e1e93fb527e26f3d474da12e", null ],
     [ "__SXTAB16", "group__intrinsic__SIMD__gr.html#gac540b4fc41d30778ba102d2a65db5589", null ],
+    [ "__SXTAB16_RORn", "group__intrinsic__SIMD__gr.html#gaf0029ec2b0decbff4df5bc6f4352bba4", null ],
     [ "__SXTB16", "group__intrinsic__SIMD__gr.html#ga38dce3dd13ba212e80ec3cff4abeb11a", null ],
     [ "__SXTB16_RORn", "group__intrinsic__SIMD__gr.html#gaef7e08ba1dbaaae1efdb76c113155ed1", null ],
     [ "__UADD16", "group__intrinsic__SIMD__gr.html#gaa1160f0cf76d6aa292fbad54a1aa6b74", null ],

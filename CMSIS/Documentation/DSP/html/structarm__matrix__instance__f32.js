@@ -1,6 +1,6 @@
 var structarm__matrix__instance__f32 =
 [
-    [ "numCols", "structarm__matrix__instance__f32.html#acdd1fb73734df68b89565c54f1dd8ae2", null ],
-    [ "numRows", "structarm__matrix__instance__f32.html#a23f4e34d70a82c9cad7612add5640b7b", null ],
-    [ "pData", "structarm__matrix__instance__f32.html#af3917c032600a9dfd5ed4a96f074910a", null ]
+    [ "numCols", "structarm__matrix__instance__f32.html#a4bb5ec0d13eb4c9cf887aa8366a44117", null ],
+    [ "numRows", "structarm__matrix__instance__f32.html#a1bcf80ccdc2acc29198f1592ae300390", null ],
+    [ "pData", "structarm__matrix__instance__f32.html#af5c3a2f15c98850cdcfbe6f87e5ac5df", null ]
 ];

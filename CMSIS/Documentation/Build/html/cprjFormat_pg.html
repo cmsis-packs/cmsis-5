@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -122,7 +123,7 @@ Overview</h1>
 </ul>
 <h1><a class="anchor" id="section_layer"></a>
 Introduction of Layers</h1>
-<p>One example is the separation of an existing project into files and components that are HW dependent (board, device, processor) and those that are application specific. The result is a HW and an application layer. Assuming that there is layers for multiple boards and applications sharing common interfaces between layers, any combination of HW laywer with an application layer can be combined to create projects and build consistent applications across a range of hardware.</p>
+<p>One example is the separation of an existing project into files and components that are HW dependent (board, device, processor) and those that are application specific. The result is a HW and an application layer. Assuming that there is layers for multiple boards and applications sharing common interfaces between layers, any combination of HW layer with an application layer can be combined to create projects and build consistent applications across a range of hardware.</p>
 <h1><a class="anchor" id="section_varieties"></a>
 Varieties of a build</h1>
 <p>Due to CMSIS-Pack's software lifecycle management features, projects can be build using different combinations of compatible pack and component versions. as well as different versions of a tool-chain. If the project contains descriptions for multiple different tool-chains, also different tool-chains can be used to create additional build variants.</p>
@@ -146,12 +147,13 @@ Varieties of a build</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

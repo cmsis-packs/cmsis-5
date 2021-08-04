@@ -3,13 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Setup Build Environment</title>
-<title>CMSIS-Build: Setup Build Environment</title>
+<title>Setup Script for the Build Environment</title>
+<title>CMSIS-Build: Setup Script for the Build Environment</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="cmsis.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -107,7 +108,7 @@ $(document).ready(function(){initNavTree('cbuild_install.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Setup Build Environment </div>  </div>
+<div class="title">Setup Script for the Build Environment </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The command line build environment for projects that are based on the CMSIS-Pack standard requires:</p>
@@ -121,8 +122,8 @@ $(document).ready(function(){initNavTree('cbuild_install.html','');});
 <li><a href="https://gitforwindows.org/" target="_blank"><b>git for Windows</b></a> includes <b>Git Bash</b> which is easy to download and install.</li>
 </ul>
 <h1><a class="anchor" id="cbuild_install2"></a>
-cbuild_install.sh: Install Build Tools</h1>
-<p>CMSIS-Build tools are available for download as an asset of the respective <a href="https://github.com/ARM-software/CMSIS_5/releases/" target="_blank"><b>CMSIS Release Version</b></a> (starting 5.7.0 e/o April 2020).</p>
+Invocation</h1>
+<p>CMSIS-Build tools are available for download as an asset of the respective <a href="https://github.com/ARM-software/CMSIS_5/releases/" target="_blank"><b>CMSIS Release Version</b></a> (starting with 5.7.0).</p>
 <p>To install the command line build environment start from the Bash prompt: </p>
 <div class="fragment"><div class="line">$ ./cbuild_install.sh</div>
 </div><!-- fragment --><p>This install script queries for:</p>
@@ -142,7 +143,9 @@ Environment Variables</h1>
 <div class="line">export MDK_ROOT=/C/Keil_v5</div>
 </div><!-- fragment --><p>The file <b>./cbuild/etc/setup</b> is used to setup environment variables in Bash using the <b>source</b> command: </p>
 <div class="fragment"><div class="line">$ source ./cbuild/etc/setup</div>
-</div><!-- fragment --><table class="doxtable">
+</div><!-- fragment --><p><br/>
+ </p>
+<table class="doxtable">
 <tr>
 <th align="left">Variable </th><th align="left">Description  </th></tr>
 <tr>
@@ -156,24 +159,20 @@ Environment Variables</h1>
 </table>
 <h1><a class="anchor" id="cbuild_compiler_config"></a>
 Compiler Configuration</h1>
-<p>The CMSIS <a class="el" href="cbuildgen.html">cbuildgen: Build Process Manager</a> uses toolchain specific <b>.mak files</b> that map the CMSIS project settings to the toolchain. For each supported toolchain a <b>.mak files</b> is provided in the directory <b>./cbuild/etc</b> and specifies the base directory of the toolchain installation (TOOLCHAIN_ROOT). In addition other toolchain specific environment variables may be setup here (e.g. license file and product variant). The user is required to update the these settings after installation to reflect the actual installation.</p>
+<p><a class="el" href="cbuildgen.html">cbuildgen</a> uses toolchain specific <b>.mak files</b> that map the CMSIS project settings to the toolchain. For each supported toolchain a <b>.mak files</b> is provided in the directory <b>./cbuild/etc</b> and specifies the base directory of the toolchain installation(<code>TOOLCHAIN_ROOT</code>). In addition other toolchain specific environment variables may be setup here (e.g. license file and product variant). The user is required to update the these settings after installation to reflect the actual installation.</p>
 <p><b>Example file: ./cbuild/etc/ARMCC.6.13.1.mak</b></p>
-<div class="fragment"><div class="line"><span class="preprocessor"># Version: 1.0.0</span></div>
-<div class="line"><span class="preprocessor"></span><span class="preprocessor"># Date: 2020-02-11</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor"># Version: 0.10.0</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor"># Date: 2020-09-30</span></div>
 <div class="line"><span class="preprocessor"></span><span class="preprocessor"># This file maps the CMSIS project options to toolchain settings.</span></div>
 <div class="line"><span class="preprocessor"></span><span class="preprocessor">#</span></div>
-<div class="line"><span class="preprocessor"></span><span class="preprocessor">#   - Applies to toolchain: ARMCC 6.13.1 </span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#   - Applies to toolchain: ARMCC 6.14.0</span></div>
 <div class="line"><span class="preprocessor"></span><span class="preprocessor">#</span></div>
 <div class="line"><span class="preprocessor"></span><span class="preprocessor">############### EDIT BELOW ###############</span></div>
 <div class="line"><span class="preprocessor"></span><span class="preprocessor"># Set base directory of toolchain</span></div>
-<div class="line"><span class="preprocessor"></span>TOOLCHAIN_ROOT:=/C/Keil_v5/ARM/ARMCLANG</div>
-<div class="line"> </div>
-<div class="line"><span class="preprocessor"># Licensing</span></div>
-<div class="line"><span class="preprocessor"></span><span class="preprocessor">#export ARMLMD_LICENSE_FILE=todo</span></div>
-<div class="line"><span class="preprocessor"></span><span class="preprocessor">#export ARM_PRODUCT_DEF=$(TOOLCHAIN_ROOT)/../../mappings/gold.elmap</span></div>
-<div class="line"><span class="preprocessor"></span> </div>
+<div class="line"><span class="preprocessor"></span>TOOLCHAIN_ROOT:=C:/Keil_v5/ARM/ARMCLANG</div>
+<div class="line"></div>
 <div class="line"><span class="preprocessor">############ DO NOT EDIT BELOW ###########</span></div>
-</div><!-- fragment --><p>The toolchain for compilation is defined in project file <b>*.cprj</b> and used by <a class="el" href="cbuildgen.html">cbuildgen: Build Process Manager</a>. The <a class="el" href="cbuildgen.html">cbuildgen: Build Process Manager</a> first searches for the toolchain specific <b>.mak file</b> in the project directory. If the toolchain specific <b>.mak file</b> is not present there, it uses the directory that is specified by the <b>$CMSIS_BUILD_ROOT</b> environment variable.</p>
+</div><!-- fragment --><p>The toolchain for compilation is defined in project file <b>*.cprj</b> and used by <a class="el" href="cbuildgen.html">cbuildgen</a>. <a class="el" href="cbuildgen.html">cbuildgen</a> first searches for the toolchain specific <b>.mak file</b> in the project directory. If the toolchain specific <b>.mak file</b> is not present there, it uses the directory that is specified by the <b>$CMSIS_BUILD_ROOT</b> environment variable.</p>
 <h1><a class="anchor" id="libxml"></a>
 libxml (optional for Windows)</h1>
 <p>For Windows the <a href="https://www.zlatkovic.com/pub/libxml/" target="_blank"><b>libxml</b></a> provides an XML processor that provides the functionality of <b>xmllint</b>.</p>
@@ -197,12 +196,13 @@ When <b>xmllint</b> is not installed, the XML schema verification is skipped by 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="CmdLineBuild.html">Command Line Build</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,22 +117,22 @@ $(document).ready(function(){initNavTree('group__FIR__Lattice.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga62053bf9d04f9f97ee5f4ef831533d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga62053bf9d04f9f97ee5f4ef831533d68">arm_fir_lattice_f32</a> (const <a class="el" href="structarm__fir__lattice__instance__f32.html">arm_fir_lattice_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga62053bf9d04f9f97ee5f4ef831533d68"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga62053bf9d04f9f97ee5f4ef831533d68">arm_fir_lattice_f32</a> (const <a class="el" href="structarm__fir__lattice__instance__f32.html">arm_fir_lattice_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga62053bf9d04f9f97ee5f4ef831533d68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the floating-point FIR lattice filter.  <a href="#ga62053bf9d04f9f97ee5f4ef831533d68">More...</a><br/></td></tr>
 <tr class="separator:ga62053bf9d04f9f97ee5f4ef831533d68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga489e9fd4fed0037b5ed0947eaa12d68d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga489e9fd4fed0037b5ed0947eaa12d68d">arm_fir_lattice_init_f32</a> (<a class="el" href="structarm__fir__lattice__instance__f32.html">arm_fir_lattice_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pState)</td></tr>
+<tr class="memitem:ga489e9fd4fed0037b5ed0947eaa12d68d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga489e9fd4fed0037b5ed0947eaa12d68d">arm_fir_lattice_init_f32</a> (<a class="el" href="structarm__fir__lattice__instance__f32.html">arm_fir_lattice_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pState)</td></tr>
 <tr class="memdesc:ga489e9fd4fed0037b5ed0947eaa12d68d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the floating-point FIR lattice filter.  <a href="#ga489e9fd4fed0037b5ed0947eaa12d68d">More...</a><br/></td></tr>
 <tr class="separator:ga489e9fd4fed0037b5ed0947eaa12d68d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae4657ac1025b5b4294fd4acc1e49e7f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gae4657ac1025b5b4294fd4acc1e49e7f8">arm_fir_lattice_init_q15</a> (<a class="el" href="structarm__fir__lattice__instance__q15.html">arm_fir_lattice_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pState)</td></tr>
+<tr class="memitem:gae4657ac1025b5b4294fd4acc1e49e7f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gae4657ac1025b5b4294fd4acc1e49e7f8">arm_fir_lattice_init_q15</a> (<a class="el" href="structarm__fir__lattice__instance__q15.html">arm_fir_lattice_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pState)</td></tr>
 <tr class="memdesc:gae4657ac1025b5b4294fd4acc1e49e7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q15 FIR lattice filter.  <a href="#gae4657ac1025b5b4294fd4acc1e49e7f8">More...</a><br/></td></tr>
 <tr class="separator:gae4657ac1025b5b4294fd4acc1e49e7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf7723f451f6d4cf2586bb4b63d2029cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gaf7723f451f6d4cf2586bb4b63d2029cb">arm_fir_lattice_init_q31</a> (<a class="el" href="structarm__fir__lattice__instance__q31.html">arm_fir_lattice_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pState)</td></tr>
+<tr class="memitem:gaf7723f451f6d4cf2586bb4b63d2029cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gaf7723f451f6d4cf2586bb4b63d2029cb">arm_fir_lattice_init_q31</a> (<a class="el" href="structarm__fir__lattice__instance__q31.html">arm_fir_lattice_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numStages, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pState)</td></tr>
 <tr class="memdesc:gaf7723f451f6d4cf2586bb4b63d2029cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q31 FIR lattice filter.  <a href="#gaf7723f451f6d4cf2586bb4b63d2029cb">More...</a><br/></td></tr>
 <tr class="separator:gaf7723f451f6d4cf2586bb4b63d2029cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafddb7fd49cb0e8a4b6d9546b58bf60fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gafddb7fd49cb0e8a4b6d9546b58bf60fb">arm_fir_lattice_q15</a> (const <a class="el" href="structarm__fir__lattice__instance__q15.html">arm_fir_lattice_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gafddb7fd49cb0e8a4b6d9546b58bf60fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#gafddb7fd49cb0e8a4b6d9546b58bf60fb">arm_fir_lattice_q15</a> (const <a class="el" href="structarm__fir__lattice__instance__q15.html">arm_fir_lattice_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gafddb7fd49cb0e8a4b6d9546b58bf60fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for Q15 FIR lattice filter.  <a href="#gafddb7fd49cb0e8a4b6d9546b58bf60fb">More...</a><br/></td></tr>
 <tr class="separator:gafddb7fd49cb0e8a4b6d9546b58bf60fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9ae2b76a2a1625d00f902919d0fdea05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga9ae2b76a2a1625d00f902919d0fdea05">arm_fir_lattice_q31</a> (const <a class="el" href="structarm__fir__lattice__instance__q31.html">arm_fir_lattice_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga9ae2b76a2a1625d00f902919d0fdea05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Lattice.html#ga9ae2b76a2a1625d00f902919d0fdea05">arm_fir_lattice_q31</a> (const <a class="el" href="structarm__fir__lattice__instance__q31.html">arm_fir_lattice_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga9ae2b76a2a1625d00f902919d0fdea05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q31 FIR lattice filter.  <a href="#ga9ae2b76a2a1625d00f902919d0fdea05">More...</a><br/></td></tr>
 <tr class="separator:ga9ae2b76a2a1625d00f902919d0fdea05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -182,13 +183,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -236,13 +237,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>&#160;</td>
         </tr>
         <tr>
@@ -284,13 +285,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>&#160;</td>
         </tr>
         <tr>
@@ -332,13 +333,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>&#160;</td>
         </tr>
         <tr>
@@ -374,13 +375,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -423,13 +424,13 @@ Finite Impulse Response Lattice filter</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -464,12 +465,13 @@ Finite Impulse Response Lattice filter</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

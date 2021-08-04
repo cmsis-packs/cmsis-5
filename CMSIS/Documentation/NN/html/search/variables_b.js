@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['weight',['weight',['../namespacepara__gen.html#af3dbe004474bc66ad55591f470ff008c',1,'para_gen']]],
-  ['word',['word',['../unionarm__nnword.html#a35c7b2ae25e35e0ddcd9ec0a1a6f8d18',1,'arm_nnword']]]
+  ['padding',['padding',['../structcmsis__nn__conv__params.html#a0dd7826503a39d346ab260fa042ea525',1,'cmsis_nn_conv_params::padding()'],['../structcmsis__nn__dw__conv__params.html#a26ce1b5e6d00c24781628288e7cf286a',1,'cmsis_nn_dw_conv_params::padding()'],['../structcmsis__nn__pool__params.html#aba41d8fba7aca6871e7a67f0e6c63346',1,'cmsis_nn_pool_params::padding()']]]
 ];

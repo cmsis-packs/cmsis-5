@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,17 +148,22 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>degree
-: <a class="el" href="structarm__svm__polynomial__instance__f32.html#aadf0dc6d4de0f53a2f145f3ee35f29b5">arm_svm_polynomial_instance_f32</a>
+: <a class="el" href="structarm__svm__polynomial__instance__f16.html#a192432a474907a70b37aa10ddabc0c97">arm_svm_polynomial_instance_f16</a>
+, <a class="el" href="structarm__svm__polynomial__instance__f32.html#a192432a474907a70b37aa10ddabc0c97">arm_svm_polynomial_instance_f32</a>
 </li>
 <li>dir
-: <a class="el" href="structarm__merge__sort__instance__f32.html#a0f0245c571bf3ca7489f088d87521fa6">arm_merge_sort_instance_f32</a>
-, <a class="el" href="structarm__sort__instance__f32.html#ab76adec37769943685c731d2f45fd50d">arm_sort_instance_f32</a>
+: <a class="el" href="structarm__merge__sort__instance__f32.html#ac6f3976ef6b482e4c2b4a865bb362518">arm_merge_sort_instance_f32</a>
+, <a class="el" href="structarm__sort__instance__f32.html#ac6f3976ef6b482e4c2b4a865bb362518">arm_sort_instance_f32</a>
 </li>
 <li>dualCoefficients
-: <a class="el" href="structarm__svm__linear__instance__f32.html#a0f661b17229d457a64834c55c606b4bd">arm_svm_linear_instance_f32</a>
-, <a class="el" href="structarm__svm__polynomial__instance__f32.html#abbd237eb8f091c97e855f2b3d744e354">arm_svm_polynomial_instance_f32</a>
-, <a class="el" href="structarm__svm__rbf__instance__f32.html#ab5bbe8dc148f9a1b64091b5df0677383">arm_svm_rbf_instance_f32</a>
-, <a class="el" href="structarm__svm__sigmoid__instance__f32.html#ad290fd29e1a436bfe772c28eac9ea47a">arm_svm_sigmoid_instance_f32</a>
+: <a class="el" href="structarm__svm__linear__instance__f16.html#a5d4e70779fa42764818a1fcbf44e3b91">arm_svm_linear_instance_f16</a>
+, <a class="el" href="structarm__svm__linear__instance__f32.html#a97fe467fbc733cbaa864399edaaf7366">arm_svm_linear_instance_f32</a>
+, <a class="el" href="structarm__svm__polynomial__instance__f16.html#a5d4e70779fa42764818a1fcbf44e3b91">arm_svm_polynomial_instance_f16</a>
+, <a class="el" href="structarm__svm__polynomial__instance__f32.html#a97fe467fbc733cbaa864399edaaf7366">arm_svm_polynomial_instance_f32</a>
+, <a class="el" href="structarm__svm__rbf__instance__f16.html#a5d4e70779fa42764818a1fcbf44e3b91">arm_svm_rbf_instance_f16</a>
+, <a class="el" href="structarm__svm__rbf__instance__f32.html#a97fe467fbc733cbaa864399edaaf7366">arm_svm_rbf_instance_f32</a>
+, <a class="el" href="structarm__svm__sigmoid__instance__f16.html#a5d4e70779fa42764818a1fcbf44e3b91">arm_svm_sigmoid_instance_f16</a>
+, <a class="el" href="structarm__svm__sigmoid__instance__f32.html#a97fe467fbc733cbaa864399edaaf7366">arm_svm_sigmoid_instance_f32</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -165,12 +171,13 @@ $(document).ready(function(){initNavTree('functions_d.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

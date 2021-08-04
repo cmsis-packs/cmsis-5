@@ -3,7 +3,7 @@ var NAVTREE =
   [ "CMSIS-Core (Cortex-M)", "index.html", [
     [ "Overview", "index.html", [
       [ "Processor Support", "index.html#ref_v6-v8M", [
-        [ "Cortex-M Reference Manuals", "index.html#ref_man_sec", null ],
+        [ "Cortex-M Generic User Guides", "index.html#ref_man_sec", null ],
         [ "Armv8-M and Armv8.1-M Architecture", "index.html#ARMv8M", null ]
       ] ],
       [ "Tested and Verified Toolchains", "index.html#tested_tools_sec", null ]
@@ -14,7 +14,9 @@ var NAVTREE =
       [ "Simplified Use Case with TrustZone", "using_TrustZone_pg.html#useCase_TrustZone", [
         [ "Program Examples", "using_TrustZone_pg.html#Example_TrustZone", null ]
       ] ],
-      [ "Programmers Model with TrustZone", "using_TrustZone_pg.html#Model_TrustZone", null ],
+      [ "Programmers Model with TrustZone", "using_TrustZone_pg.html#Model_TrustZone", [
+        [ "Stack Sealing", "using_TrustZone_pg.html#RTOS_TrustZone_stacksealing", null ]
+      ] ],
       [ "CMSIS Files for TrustZone", "using_TrustZone_pg.html#CMSIS_Files_TrustZone", [
         [ "RTOS Thread Context Management", "using_TrustZone_pg.html#RTOS_TrustZone", null ]
       ] ]
@@ -36,8 +38,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "group__intrinsic__SIMD__gr.html#ga9c286d330f4fb29b256335add91eec9f",
-"group__pmu8__events__armv81.html#gaf9ebeb1f49dba56d8f90f9bd5d3da58e",
-"unionCONTROL__Type.html"
+"group__pmu8__events__armv81.html#gaf9424157e9c5dca3a3689d181005c4f8",
+"unionAPSR__Type.html#a7e7bbba9b00b0bb3283dc07f1abe37e0"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

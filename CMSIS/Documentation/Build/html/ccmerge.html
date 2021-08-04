@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -110,11 +111,13 @@ $(document).ready(function(){initNavTree('ccmerge.html','');});
 <div class="title">ccmerge: Config File Updater </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="ccmerge.html">ccmerge</a> tool supports the update process for configuration files that use <a href="../../Pack/html/configWizard.html"><b>Configuration Wizard Annotations</b></a>. The tool takes the configuration file located in the CMSIS Pack (pfile) and merges the configuration information extracted from the configuration file located in the current project (cfile). If the merge succeeds the result is written to 'cfile' after a copy of 'cfile' has been stored as 'cfile.nnnn'.</p>
-<p>It is called from the <b>Bash</b> command line with the following syntax:</p>
-<p><b>ccmerge</b> has the following command invocation:</p>
+<div class="textblock"><p><b>ccmerge</b> supports the update process for configuration files that use <a href="../../Pack/html/configWizard.html"><b>Configuration Wizard Annotations</b></a>. The tool takes the configuration file located in the CMSIS-Pack (<code>pfile</code>) and merges the configuration information extracted from the configuration file located in the current project (<code>cfile</code>). If the merge succeeds, the result is written to 'cfile' after a copy of 'cfile' has been stored as 'cfile.nnnn'.</p>
+<dl class="section note"><dt>Note</dt><dd><b>ccmerge</b> currently only works with <a class="el" href="make.html">Make</a>.</dd></dl>
+<h1><a class="anchor" id="ccmerge_invocation"></a>
+Invocation</h1>
+<p><b>ccmerge</b> is called from the <b>Bash</b> command line with the following syntax:</p>
 <div class="fragment"><div class="line">ccmerge -pfile &lt;name_of_pack_cfgfile&gt; -cfile &lt;name_of_current_cfgfile&gt; [-merge] [-details]</div>
-</div><!-- fragment --><p><a class="el" href="ccmerge.html">ccmerge</a> helps to update the setup of software components as it merges options from a previous configuration file version to a new version.</p>
+</div><!-- fragment --><p><b>Operation</b> </p>
 <table  class="cmtable" summary="ccmerge Arguments">
 <tr>
 <th style="min-width:210px">Option </th><th>Description  </th></tr>
@@ -127,9 +130,10 @@ $(document).ready(function(){initNavTree('ccmerge.html','');});
 <tr>
 <td>-details </td><td>Create a log file: the name will be that of 'cfile' with an extension '.mlog' added to 'cfile'. The log file will contain info about merged items and their location or warning and error messages when processing fails.  </td></tr>
 </table>
-<p>When -details is specified without -merge, then a .mlog file will be created that shows the differences of the config values but no actual merge takes place.</p>
-<p>When <a class="el" href="ccmerge.html">ccmerge</a> detects that 'cfile' and 'pfile' are incompatible then an error message is shown and the merge is not executed.</p>
-<dl class="section note"><dt>Note</dt><dd>A filepath name can be specified without surrounding " characters as long as it does not contain any space or other special characters. It must be enclosed by " characters when the filepath name contains one or more spaces or other special characters.</dd></dl>
+<p>When <code>-details</code> is specified without <code>-merge</code>, then an <code></code>.mlog file will be created that shows the differences of the config values but no actual merge takes place.</p>
+<p>When <b>ccmerge</b> detects that <code>'cfile'</code> and <code>'pfile'</code> are incompatible, then an error message is shown and the merge is aborted.</p>
+<dl class="section note"><dt>Note</dt><dd>A file's path name can be specified without surrounding " characters as long as it does not contain any spaces or other
+special characters. It must be enclosed by " characters when the path name contains one or more spaces or other special characters.</dd></dl>
 <h1><a class="anchor" id="ccmerge_examples"></a>
 Usage Example</h1>
 <div class="fragment"><div class="line">ccmerge -pfile $CMSIS_PACK_ROOT/ARM/CMSIS/5.6.0/CMSIS/RTOS2/RTX/Config/RTX_Config.h -cfile RTE/CMSIS/RTX_Config.h -merge</div>
@@ -177,12 +181,13 @@ Error Messages</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="CmdLineBuild.html">Command Line Build</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

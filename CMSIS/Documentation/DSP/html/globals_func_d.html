@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -151,51 +152,62 @@ $(document).ready(function(){initNavTree('globals_func_d.html','');});
 
 <h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
 <li>arm_dct4_f32()
-: <a class="el" href="group__DCT4__IDCT4.html#gafd538d68886848bc090ec2b0d364cc81">arm_math.h</a>
+: <a class="el" href="group__DCT4__IDCT4.html#gafd538d68886848bc090ec2b0d364cc81">transform_functions.h</a>
 , <a class="el" href="group__DCT4__IDCT4.html#gafd538d68886848bc090ec2b0d364cc81">arm_dct4_f32.c</a>
 </li>
 <li>arm_dct4_init_f32()
 : <a class="el" href="group__DCT4__IDCT4.html#gab094ad3bc6fa1b84e8b12a24e1850a06">arm_dct4_init_f32.c</a>
-, <a class="el" href="group__DCT4__IDCT4.html#gab094ad3bc6fa1b84e8b12a24e1850a06">arm_math.h</a>
+, <a class="el" href="group__DCT4__IDCT4.html#gab094ad3bc6fa1b84e8b12a24e1850a06">transform_functions.h</a>
 </li>
 <li>arm_dct4_init_q15()
-: <a class="el" href="group__DCT4__IDCT4.html#ga966fd1b66a80873964533703ab5dc054">arm_math.h</a>
+: <a class="el" href="group__DCT4__IDCT4.html#ga966fd1b66a80873964533703ab5dc054">transform_functions.h</a>
 , <a class="el" href="group__DCT4__IDCT4.html#ga966fd1b66a80873964533703ab5dc054">arm_dct4_init_q15.c</a>
 </li>
 <li>arm_dct4_init_q31()
 : <a class="el" href="group__DCT4__IDCT4.html#ga631bb59c7c97c814ff7147ecba6a716a">arm_dct4_init_q31.c</a>
-, <a class="el" href="group__DCT4__IDCT4.html#ga631bb59c7c97c814ff7147ecba6a716a">arm_math.h</a>
+, <a class="el" href="group__DCT4__IDCT4.html#ga631bb59c7c97c814ff7147ecba6a716a">transform_functions.h</a>
 </li>
 <li>arm_dct4_q15()
-: <a class="el" href="group__DCT4__IDCT4.html#ga114cb9635059f678df291fcc887aaf2b">arm_math.h</a>
+: <a class="el" href="group__DCT4__IDCT4.html#ga114cb9635059f678df291fcc887aaf2b">transform_functions.h</a>
 , <a class="el" href="group__DCT4__IDCT4.html#ga114cb9635059f678df291fcc887aaf2b">arm_dct4_q15.c</a>
 </li>
 <li>arm_dct4_q31()
-: <a class="el" href="group__DCT4__IDCT4.html#gad04d0baab6ed081d8e8afe02538eb80b">arm_math.h</a>
+: <a class="el" href="group__DCT4__IDCT4.html#gad04d0baab6ed081d8e8afe02538eb80b">transform_functions.h</a>
 , <a class="el" href="group__DCT4__IDCT4.html#gad04d0baab6ed081d8e8afe02538eb80b">arm_dct4_q31.c</a>
 </li>
 <li>arm_dice_distance()
-: <a class="el" href="group__BoolDist.html#gac95c8fbb4848b18c3641b77d3ba46b50">arm_math.h</a>
+: <a class="el" href="group__BoolDist.html#gac95c8fbb4848b18c3641b77d3ba46b50">distance_functions.h</a>
 , <a class="el" href="group__BoolDist.html#gac95c8fbb4848b18c3641b77d3ba46b50">arm_dice_distance.c</a>
 </li>
 <li>arm_div_q63_to_q31()
-: <a class="el" href="arm__math_8h.html#ac338a2101175ccd2a90ddee6290f6a7e">arm_math.h</a>
+: <a class="el" href="utils_8h.html#ac338a2101175ccd2a90ddee6290f6a7e">utils.h</a>
+</li>
+<li>arm_divide_q15()
+: <a class="el" href="group__divide.html#ga3d5bc8179cdfb12288d58d99d635e4cb">fast_math_functions.h</a>
+, <a class="el" href="group__divide.html#ga3d5bc8179cdfb12288d58d99d635e4cb">arm_divide_q15.c</a>
+</li>
+<li>arm_dot_prod_f16()
+: <a class="el" href="group__BasicDotProd.html#ga4b1c07e74162ebfeed1eb08020b15d70">basic_math_functions_f16.h</a>
+, <a class="el" href="group__BasicDotProd.html#ga4b1c07e74162ebfeed1eb08020b15d70">arm_dot_prod_f16.c</a>
 </li>
 <li>arm_dot_prod_f32()
-: <a class="el" href="group__BasicDotProd.html#gadf26f6bc62d6416528663ad3e46fbf67">arm_math.h</a>
+: <a class="el" href="group__BasicDotProd.html#gadf26f6bc62d6416528663ad3e46fbf67">basic_math_functions.h</a>
 , <a class="el" href="group__BasicDotProd.html#gadf26f6bc62d6416528663ad3e46fbf67">arm_dot_prod_f32.c</a>
 </li>
 <li>arm_dot_prod_q15()
-: <a class="el" href="group__BasicDotProd.html#gac2314012fbbf73bfd95ce8c57bc9ba69">arm_math.h</a>
+: <a class="el" href="group__BasicDotProd.html#gac2314012fbbf73bfd95ce8c57bc9ba69">basic_math_functions.h</a>
 , <a class="el" href="group__BasicDotProd.html#gac2314012fbbf73bfd95ce8c57bc9ba69">arm_dot_prod_q15.c</a>
 </li>
 <li>arm_dot_prod_q31()
-: <a class="el" href="group__BasicDotProd.html#gafe3f9ace6c4576847eabf44ed7ca7b96">arm_math.h</a>
+: <a class="el" href="group__BasicDotProd.html#gafe3f9ace6c4576847eabf44ed7ca7b96">basic_math_functions.h</a>
 , <a class="el" href="group__BasicDotProd.html#gafe3f9ace6c4576847eabf44ed7ca7b96">arm_dot_prod_q31.c</a>
 </li>
 <li>arm_dot_prod_q7()
-: <a class="el" href="group__BasicDotProd.html#gaadd347d5f5adf902c63f0b90ffc19538">arm_dot_prod_q7.c</a>
-, <a class="el" href="group__BasicDotProd.html#gaadd347d5f5adf902c63f0b90ffc19538">arm_math.h</a>
+: <a class="el" href="group__BasicDotProd.html#gaadd347d5f5adf902c63f0b90ffc19538">basic_math_functions.h</a>
+, <a class="el" href="group__BasicDotProd.html#gaadd347d5f5adf902c63f0b90ffc19538">arm_dot_prod_q7.c</a>
+</li>
+<li>divide()
+: <a class="el" href="arm__levinson__durbin__q31_8c.html#a23311be79a9c610acae9e3fae494bda1">arm_levinson_durbin_q31.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -203,12 +215,13 @@ $(document).ready(function(){initNavTree('globals_func_d.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

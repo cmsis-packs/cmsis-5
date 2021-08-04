@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-A)
-   &#160;<span id="projectnumber">Version 1.2.0</span>
+   &#160;<span id="projectnumber">Version 1.2.1</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-A processor-based devices</div>
   </td>
@@ -115,6 +116,12 @@ $(document).ready(function(){initNavTree('rev_histCoreA.html','');});
 <tr>
 <th>Version </th><th>Description  </th></tr>
 <tr>
+<td>V1.2.1 </td><td><ul>
+<li>
+Bugfixes for Cortex-A32 </li>
+</ul>
+</td></tr>
+<tr>
 <td>V1.2.0 </td><td><ul>
 <li>
 Fixed GIC_SetPendingIRQ to use GICD_SGIR instead of GICD_SPENDSGIR for compliance with all GIC specification versions. </li>
@@ -174,12 +181,13 @@ Bug fixes and minor enhancements. </li>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:24 for CMSIS-Core (Cortex-A) Version 1.2.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

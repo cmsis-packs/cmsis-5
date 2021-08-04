@@ -4,10 +4,11 @@ var templates_pg =
     [ "Device Examples", "templates_pg.html#device_examples", null ],
     [ "Template Files", "templates_pg.html#template_files_sec", null ],
     [ "Startup File startup_<device>.c", "startup_c_pg.html", [
-      [ "startup_Device.c Template File", "startup_c_pg.html#startup_c_sec", null ]
+      [ "startup_Device.c Template File", "startup_c_pg.html#startup_c_sec", null ],
+      [ "startup_Device.c Template File (Armv8-M/v8.1-M)", "startup_c_pg.html#startup_c_sec_v8", null ]
     ] ],
     [ "Startup File startup_<device>.s (deprecated)", "startup_s_pg.html", [
-      [ "startup_Device.s Template File", "startup_s_pg.html#startup_s_sec", null ]
+      [ "startup_Device.S Template File", "startup_s_pg.html#startup_s_sec", null ]
     ] ],
     [ "System Configuration Files system_<device>.c and system_<device>.h", "system_c_pg.html", [
       [ "system_Device.c Template File", "system_c_pg.html#system_Device_sec", null ],

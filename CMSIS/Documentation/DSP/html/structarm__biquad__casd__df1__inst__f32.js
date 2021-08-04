@@ -1,6 +1,6 @@
 var structarm__biquad__casd__df1__inst__f32 =
 [
-    [ "numStages", "structarm__biquad__casd__df1__inst__f32.html#af69820c37a87252c46453e4cfe120585", null ],
-    [ "pCoeffs", "structarm__biquad__casd__df1__inst__f32.html#a4e873ff8bb6273858481cfd4c7f8f6d5", null ],
-    [ "pState", "structarm__biquad__casd__df1__inst__f32.html#a8c245d79e0d8cfabc82409d4b54fb682", null ]
+    [ "numStages", "structarm__biquad__casd__df1__inst__f32.html#aed9c8a6224cd149e8e12b17b25b9b767", null ],
+    [ "pCoeffs", "structarm__biquad__casd__df1__inst__f32.html#a39230f04a29d8321948e339633780442", null ],
+    [ "pState", "structarm__biquad__casd__df1__inst__f32.html#a335c87e6fdc4b96601d95a5de8b9c463", null ]
 ];

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -150,33 +151,37 @@ $(document).ready(function(){initNavTree('globals_func_o.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>arm_offset_f16()
+: <a class="el" href="group__BasicOffset.html#gac3b49792acfb05fbb008074f0ce2518a">basic_math_functions_f16.h</a>
+, <a class="el" href="group__BasicOffset.html#gac3b49792acfb05fbb008074f0ce2518a">arm_offset_f16.c</a>
+</li>
 <li>arm_offset_f32()
-: <a class="el" href="group__BasicOffset.html#ga4ea8c9e1829e3b4d297f87e4a40478ad">arm_math.h</a>
-, <a class="el" href="group__BasicOffset.html#ga4ea8c9e1829e3b4d297f87e4a40478ad">arm_offset_f32.c</a>
+: <a class="el" href="group__BasicOffset.html#ga4ea8c9e1829e3b4d297f87e4a40478ad">arm_offset_f32.c</a>
+, <a class="el" href="group__BasicOffset.html#ga4ea8c9e1829e3b4d297f87e4a40478ad">basic_math_functions.h</a>
 </li>
 <li>arm_offset_q15()
-: <a class="el" href="group__BasicOffset.html#gaffc78c4cda3e39b518d79cef293532b7">arm_offset_q15.c</a>
-, <a class="el" href="group__BasicOffset.html#gaffc78c4cda3e39b518d79cef293532b7">arm_math.h</a>
+: <a class="el" href="group__BasicOffset.html#gaffc78c4cda3e39b518d79cef293532b7">basic_math_functions.h</a>
+, <a class="el" href="group__BasicOffset.html#gaffc78c4cda3e39b518d79cef293532b7">arm_offset_q15.c</a>
 </li>
 <li>arm_offset_q31()
-: <a class="el" href="group__BasicOffset.html#ga55604198ef59f391a96ec95c188fca85">arm_math.h</a>
-, <a class="el" href="group__BasicOffset.html#ga55604198ef59f391a96ec95c188fca85">arm_offset_q31.c</a>
+: <a class="el" href="group__BasicOffset.html#ga55604198ef59f391a96ec95c188fca85">arm_offset_q31.c</a>
+, <a class="el" href="group__BasicOffset.html#ga55604198ef59f391a96ec95c188fca85">basic_math_functions.h</a>
 </li>
 <li>arm_offset_q7()
-: <a class="el" href="group__BasicOffset.html#ga26adad00c10390145b02080a53e782b4">arm_offset_q7.c</a>
-, <a class="el" href="group__BasicOffset.html#ga26adad00c10390145b02080a53e782b4">arm_math.h</a>
+: <a class="el" href="group__BasicOffset.html#ga26adad00c10390145b02080a53e782b4">basic_math_functions.h</a>
+, <a class="el" href="group__BasicOffset.html#ga26adad00c10390145b02080a53e782b4">arm_offset_q7.c</a>
 </li>
 <li>arm_or_u16()
-: <a class="el" href="group__Or.html#gacded406b80990722bad988fcebfe7a8d">arm_math.h</a>
+: <a class="el" href="group__Or.html#gacded406b80990722bad988fcebfe7a8d">basic_math_functions.h</a>
 , <a class="el" href="group__Or.html#gacded406b80990722bad988fcebfe7a8d">arm_or_u16.c</a>
 </li>
 <li>arm_or_u32()
-: <a class="el" href="group__Or.html#ga23aca4e51346bad32e49a08a945c5009">arm_math.h</a>
+: <a class="el" href="group__Or.html#ga23aca4e51346bad32e49a08a945c5009">basic_math_functions.h</a>
 , <a class="el" href="group__Or.html#ga23aca4e51346bad32e49a08a945c5009">arm_or_u32.c</a>
 </li>
 <li>arm_or_u8()
-: <a class="el" href="group__Or.html#ga5ff49ba25a243532b9397d557fd42606">arm_or_u8.c</a>
-, <a class="el" href="group__Or.html#ga5ff49ba25a243532b9397d557fd42606">arm_math.h</a>
+: <a class="el" href="group__Or.html#ga5ff49ba25a243532b9397d557fd42606">basic_math_functions.h</a>
+, <a class="el" href="group__Or.html#ga5ff49ba25a243532b9397d557fd42606">arm_or_u8.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -184,12 +189,13 @@ $(document).ready(function(){initNavTree('globals_func_o.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

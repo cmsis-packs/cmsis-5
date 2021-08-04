@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['linear_20interpolate_20example',['Linear Interpolate Example',['../group__LinearInterpExample.html',1,'']]],
-  ['linear_20interpolation',['Linear Interpolation',['../group__LinearInterpolate.html',1,'']]],
-  ['least_20mean_20square_20_28lms_29_20filters',['Least Mean Square (LMS) Filters',['../group__LMS.html',1,'']]]
+  ['interpolation_20functions',['Interpolation Functions',['../group__groupInterpolation.html',1,'']]],
+  ['infinite_20impulse_20response_20_28iir_29_20lattice_20filters',['Infinite Impulse Response (IIR) Lattice Filters',['../group__IIR__Lattice.html',1,'']]]
 ];

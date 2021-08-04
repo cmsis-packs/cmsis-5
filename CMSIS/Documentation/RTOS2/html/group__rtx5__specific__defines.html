@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -147,8 +148,10 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga47eb1e21f1bf9a42281c6c89c7473e99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message Queue Memory size.  <a href="#ga47eb1e21f1bf9a42281c6c89c7473e99">More...</a><br/></td></tr>
 <tr class="separator:ga47eb1e21f1bf9a42281c6c89c7473e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42206aa2524b8fab613d26bea0f73c44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rtx5__specific__defines.html#ga42206aa2524b8fab613d26bea0f73c44">osRtxErrorStackUnderflow</a>&#160;&#160;&#160;1U</td></tr>
-<tr class="memdesc:ga42206aa2524b8fab613d26bea0f73c44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack overflow, i.e. stack pointer below its lower memory limit for descending stacks.  <a href="#ga42206aa2524b8fab613d26bea0f73c44">More...</a><br/></td></tr>
 <tr class="separator:ga42206aa2524b8fab613d26bea0f73c44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0663254070f9f9cd402d735715aa1904"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rtx5__specific__defines.html#ga0663254070f9f9cd402d735715aa1904">osRtxErrorStackOverflow</a>&#160;&#160;&#160;1U</td></tr>
+<tr class="memdesc:ga0663254070f9f9cd402d735715aa1904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stack overflow, i.e. stack pointer below its lower memory limit for descending stacks.  <a href="#ga0663254070f9f9cd402d735715aa1904">More...</a><br/></td></tr>
+<tr class="separator:ga0663254070f9f9cd402d735715aa1904"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7377235f9fa3cedee06f682cd93f3e88"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rtx5__specific__defines.html#ga7377235f9fa3cedee06f682cd93f3e88">osRtxErrorISRQueueOverflow</a>&#160;&#160;&#160;2U</td></tr>
 <tr class="memdesc:ga7377235f9fa3cedee06f682cd93f3e88"><td class="mdescLeft">&#160;</td><td class="mdescRight">ISR Queue overflow detected when inserting object.  <a href="#ga7377235f9fa3cedee06f682cd93f3e88">More...</a><br/></td></tr>
 <tr class="separator:ga7377235f9fa3cedee06f682cd93f3e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -379,6 +382,19 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd>Superseded by <a class="el" href="group__rtx5__specific__defines.html#ga0663254070f9f9cd402d735715aa1904">osRtxErrorStackOverflow</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga0663254070f9f9cd402d735715aa1904"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define osRtxErrorStackOverflow&#160;&#160;&#160;1U</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 <p>This error identifier is used with <a class="el" href="group__rtx5__specific__functions.html#gaf1745a88f9cc60b609ab1c8076bd346d">osRtxErrorNotify</a> when RTX5 detects a thread stack overflow. The object_id announced along this error can be used to identify the affected thread.</p>
 <p><a class="el" href="config_rtx5.html#threadConfig_watermark">Stack Usage Watermark</a> used together with larger stack sizes can help to figure out actual memory requirements for threads.</p>
 <dl class="section attention"><dt>Attention</dt><dd>Whenever this error identifier is signaled memory corruption has already happened. </dd></dl>
@@ -445,12 +461,13 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:07 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -11,6 +11,7 @@ var group__groupFilters =
     [ "Finite Impulse Response (FIR) Lattice Filters", "group__FIR__Lattice.html", "group__FIR__Lattice" ],
     [ "Finite Impulse Response (FIR) Sparse Filters", "group__FIR__Sparse.html", "group__FIR__Sparse" ],
     [ "Infinite Impulse Response (IIR) Lattice Filters", "group__IIR__Lattice.html", "group__IIR__Lattice" ],
+    [ "Levinson Durbin Algorithm", "group__LD.html", "group__LD" ],
     [ "Least Mean Square (LMS) Filters", "group__LMS.html", "group__LMS" ],
     [ "Normalized LMS Filters", "group__LMS__NORM.html", "group__LMS__NORM" ],
     [ "Finite Impulse Response (FIR) Interpolator", "group__FIR__Interpolate.html", "group__FIR__Interpolate" ]

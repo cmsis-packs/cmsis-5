@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,28 +117,28 @@ $(document).ready(function(){initNavTree('group__FIR__Sparse.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gac6817bc86974b7121c3288fce25dbc5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gac6817bc86974b7121c3288fce25dbc5f">arm_fir_sparse_f32</a> (<a class="el" href="structarm__fir__sparse__instance__f32.html">arm_fir_sparse_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pScratchIn, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gac6817bc86974b7121c3288fce25dbc5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gac6817bc86974b7121c3288fce25dbc5f">arm_fir_sparse_f32</a> (<a class="el" href="structarm__fir__sparse__instance__f32.html">arm_fir_sparse_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pScratchIn, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gac6817bc86974b7121c3288fce25dbc5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the floating-point sparse FIR filter.  <a href="#gac6817bc86974b7121c3288fce25dbc5f">More...</a><br/></td></tr>
 <tr class="separator:gac6817bc86974b7121c3288fce25dbc5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga967a0564d6d59f2b9e12f4a5b7a3f877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga967a0564d6d59f2b9e12f4a5b7a3f877">arm_fir_sparse_init_f32</a> (<a class="el" href="structarm__fir__sparse__instance__f32.html">arm_fir_sparse_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga967a0564d6d59f2b9e12f4a5b7a3f877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga967a0564d6d59f2b9e12f4a5b7a3f877">arm_fir_sparse_init_f32</a> (<a class="el" href="structarm__fir__sparse__instance__f32.html">arm_fir_sparse_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga967a0564d6d59f2b9e12f4a5b7a3f877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the floating-point sparse FIR filter.  <a href="#ga967a0564d6d59f2b9e12f4a5b7a3f877">More...</a><br/></td></tr>
 <tr class="separator:ga967a0564d6d59f2b9e12f4a5b7a3f877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad1c7f891760e91301aac7e3a48aca449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gad1c7f891760e91301aac7e3a48aca449">arm_fir_sparse_init_q15</a> (<a class="el" href="structarm__fir__sparse__instance__q15.html">arm_fir_sparse_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gad1c7f891760e91301aac7e3a48aca449"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gad1c7f891760e91301aac7e3a48aca449">arm_fir_sparse_init_q15</a> (<a class="el" href="structarm__fir__sparse__instance__q15.html">arm_fir_sparse_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gad1c7f891760e91301aac7e3a48aca449"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q15 sparse FIR filter.  <a href="#gad1c7f891760e91301aac7e3a48aca449">More...</a><br/></td></tr>
 <tr class="separator:gad1c7f891760e91301aac7e3a48aca449"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade71e2e0432a0e6de36fa9f23b2c984c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gade71e2e0432a0e6de36fa9f23b2c984c">arm_fir_sparse_init_q31</a> (<a class="el" href="structarm__fir__sparse__instance__q31.html">arm_fir_sparse_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gade71e2e0432a0e6de36fa9f23b2c984c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gade71e2e0432a0e6de36fa9f23b2c984c">arm_fir_sparse_init_q31</a> (<a class="el" href="structarm__fir__sparse__instance__q31.html">arm_fir_sparse_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gade71e2e0432a0e6de36fa9f23b2c984c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q31 sparse FIR filter.  <a href="#gade71e2e0432a0e6de36fa9f23b2c984c">More...</a><br/></td></tr>
 <tr class="separator:gade71e2e0432a0e6de36fa9f23b2c984c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5e74f8f4e4df85de5feb4e62125ff590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga5e74f8f4e4df85de5feb4e62125ff590">arm_fir_sparse_init_q7</a> (<a class="el" href="structarm__fir__sparse__instance__q7.html">arm_fir_sparse_instance_q7</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pCoeffs, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga5e74f8f4e4df85de5feb4e62125ff590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga5e74f8f4e4df85de5feb4e62125ff590">arm_fir_sparse_init_q7</a> (<a class="el" href="structarm__fir__sparse__instance__q7.html">arm_fir_sparse_instance_q7</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t numTaps, const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pCoeffs, <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pState, int32_t *pTapDelay, uint16_t maxDelay, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga5e74f8f4e4df85de5feb4e62125ff590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function for the Q7 sparse FIR filter.  <a href="#ga5e74f8f4e4df85de5feb4e62125ff590">More...</a><br/></td></tr>
 <tr class="separator:ga5e74f8f4e4df85de5feb4e62125ff590"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac3e43b06bff38ac8e62e145f88e9dbc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gac3e43b06bff38ac8e62e145f88e9dbc7">arm_fir_sparse_q15</a> (<a class="el" href="structarm__fir__sparse__instance__q15.html">arm_fir_sparse_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratchIn, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchOut, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gac3e43b06bff38ac8e62e145f88e9dbc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gac3e43b06bff38ac8e62e145f88e9dbc7">arm_fir_sparse_q15</a> (<a class="el" href="structarm__fir__sparse__instance__q15.html">arm_fir_sparse_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pScratchIn, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchOut, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gac3e43b06bff38ac8e62e145f88e9dbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q15 sparse FIR filter.  <a href="#gac3e43b06bff38ac8e62e145f88e9dbc7">More...</a><br/></td></tr>
 <tr class="separator:gac3e43b06bff38ac8e62e145f88e9dbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaba9f7ef4acf293034af42baa2fd3df52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gaba9f7ef4acf293034af42baa2fd3df52">arm_fir_sparse_q31</a> (<a class="el" href="structarm__fir__sparse__instance__q31.html">arm_fir_sparse_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchIn, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:gaba9f7ef4acf293034af42baa2fd3df52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#gaba9f7ef4acf293034af42baa2fd3df52">arm_fir_sparse_q31</a> (<a class="el" href="structarm__fir__sparse__instance__q31.html">arm_fir_sparse_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchIn, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:gaba9f7ef4acf293034af42baa2fd3df52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q31 sparse FIR filter.  <a href="#gaba9f7ef4acf293034af42baa2fd3df52">More...</a><br/></td></tr>
 <tr class="separator:gaba9f7ef4acf293034af42baa2fd3df52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga319b3d9032ba723a8efb819b9d2a3676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga319b3d9032ba723a8efb819b9d2a3676">arm_fir_sparse_q7</a> (<a class="el" href="structarm__fir__sparse__instance__q7.html">arm_fir_sparse_instance_q7</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst, <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pScratchIn, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchOut, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
+<tr class="memitem:ga319b3d9032ba723a8efb819b9d2a3676"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__FIR__Sparse.html#ga319b3d9032ba723a8efb819b9d2a3676">arm_fir_sparse_q7</a> (<a class="el" href="structarm__fir__sparse__instance__q7.html">arm_fir_sparse_instance_q7</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pDst, <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *pScratchIn, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pScratchOut, uint32_t <a class="el" href="arm__variance__example__f32_8c.html#ab6558f40a619c2502fbc24c880fd4fb0">blockSize</a>)</td></tr>
 <tr class="memdesc:ga319b3d9032ba723a8efb819b9d2a3676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processing function for the Q7 sparse FIR filter.  <a href="#ga319b3d9032ba723a8efb819b9d2a3676">More...</a><br/></td></tr>
 <tr class="separator:ga319b3d9032ba723a8efb819b9d2a3676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -180,19 +181,19 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchIn</em>, </td>
         </tr>
         <tr>
@@ -241,13 +242,13 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>, </td>
         </tr>
         <tr>
@@ -311,13 +312,13 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>, </td>
         </tr>
         <tr>
@@ -381,13 +382,13 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>, </td>
         </tr>
         <tr>
@@ -451,13 +452,13 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pCoeffs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pState</em>, </td>
         </tr>
         <tr>
@@ -515,25 +516,25 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchOut</em>, </td>
         </tr>
         <tr>
@@ -578,19 +579,19 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchIn</em>, </td>
         </tr>
         <tr>
@@ -634,25 +635,25 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">q7_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchIn</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pScratchOut</em>, </td>
         </tr>
         <tr>
@@ -689,12 +690,13 @@ Sparse FIR filter. b[n] represents the filter coefficients</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

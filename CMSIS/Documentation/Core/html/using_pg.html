@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -125,13 +126,13 @@ $(document).ready(function(){initNavTree('using_pg.html','');});
 <li><a class="el" href="group__peripheral__gr.html">Peripheral Access</a> provides a standardized register layout for all peripherals. Optionally functions for device-specific peripherals may be available.</li>
 <li><a class="el" href="group__NVIC__gr.html">Interrupts and Exceptions (NVIC)</a> can be accessed with standardized symbols and functions for the Nested Interrupt Vector Controller (NVIC) are provided.</li>
 <li><a class="el" href="group__intrinsic__CPU__gr.html">Intrinsic Functions for CPU Instructions</a> allow to access special instructions, for example for activating sleep mode or the NOP instruction.</li>
-<li><a class="el" href="group__intrinsic__SIMD__gr.html">Intrinsic Functions for SIMD Instructions [only Cortex-M4 and Cortex-M7]</a> provide access to the DSP-oriented instructions.</li>
+<li><a class="el" href="group__intrinsic__SIMD__gr.html">Intrinsic Functions for SIMD Instructions</a> provide access to the DSP-oriented instructions.</li>
 <li><a class="el" href="group__SysTick__gr.html">Systick Timer (SYSTICK)</a> function to configure and start a periodic timer interrupt.</li>
 <li><a class="el" href="group__ITM__Debug__gr.html">Debug Access</a> are functions that allow printf-style I/O via the CoreSight Debug Unit and ITM communication.</li>
 </ul>
 <p>CMSIS-Pack provides the <b>#define CMSIS_header_file</b> in <a href="../../Pack/html/pdsc_components_pg.html#RTE_Components_h"><b>RTE_Components.h</b></a> which gives you access to this <b><em>device</em>.h</b> file.</p>
 <div class="image">
-<img src="CMSIS_CORE_Files_user.png" alt="CMSIS_CORE_Files_user.png"/>
+<img src="CMSIS_CORE_Files_USER.png" alt="CMSIS_CORE_Files_USER.png"/>
 <div class="caption">
 CMSIS-Core (Cortex-M) User Files</div></div>
 <p> The CMSIS-Core (Cortex-M) system files are device specific. In addition, the deprecated <a class="el" href="startup_s_pg.html">Startup File startup_&lt;device&gt;.s (deprecated)</a> is also compiler vendor specific. The versions provided by CMSIS are only generic templates. The adopted versions for a concrete device are typically provided by the device vendor through the according device family pack (DFP).</p>
@@ -161,12 +162,13 @@ CMSIS-Core (Cortex-M) User Files</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

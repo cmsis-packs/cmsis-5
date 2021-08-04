@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -549,6 +550,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>__STACK_LIMIT
 : <a class="el" href="group__compiler__conntrol__gr.html#ga84b0bad4aa39632d3faea46aa1e102a8">Ref_CompilerControl.txt</a>
 </li>
+<li>__STACK_SEAL
+: <a class="el" href="group__stacksealing__support__trustzone__functions.html#gacc36ddac1642fe80a690364911542d79">Ref_Trustzone.txt</a>
+</li>
 <li>__STATIC_FORCEINLINE
 : <a class="el" href="group__compiler__conntrol__gr.html#gab904513442afdf77d4f8c74f23cbb040">Ref_CompilerControl.txt</a>
 </li>
@@ -593,6 +597,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>__SXTAB16()
 : <a class="el" href="group__intrinsic__SIMD__gr.html#gac540b4fc41d30778ba102d2a65db5589">Ref_cm4_simd.txt</a>
+</li>
+<li>__SXTAB16_RORn()
+: <a class="el" href="group__intrinsic__SIMD__gr.html#gaf0029ec2b0decbff4df5bc6f4352bba4">Ref_cm4_simd.txt</a>
 </li>
 <li>__SXTB16()
 : <a class="el" href="group__intrinsic__SIMD__gr.html#ga38dce3dd13ba212e80ec3cff4abeb11a">Ref_cm4_simd.txt</a>
@@ -653,6 +660,9 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </li>
 <li>__TZ_set_SP_NS()
 : <a class="el" href="group__coreregister__trustzone__functions.html#gab7263167cb006aeeb04b68e579dae015">Ref_Trustzone.txt</a>
+</li>
+<li>__TZ_set_STACKSEAL_S()
+: <a class="el" href="group__stacksealing__support__trustzone__functions.html#ga87d2473a3adebb73941065366feec690">Ref_Trustzone.txt</a>
 </li>
 <li>__UADD16()
 : <a class="el" href="group__intrinsic__SIMD__gr.html#gaa1160f0cf76d6aa292fbad54a1aa6b74">Ref_cm4_simd.txt</a>
@@ -777,12 +787,13 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

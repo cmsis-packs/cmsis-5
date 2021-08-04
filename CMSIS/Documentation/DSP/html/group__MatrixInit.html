@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,19 +117,70 @@ $(document).ready(function(){initNavTree('group__MatrixInit.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga11e3dc41592a6401c13182fef9416a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga11e3dc41592a6401c13182fef9416a27">arm_mat_init_f32</a> (<a class="el" href="structarm__matrix__instance__f32.html">arm_matrix_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pData)</td></tr>
+<tr class="memitem:ga1d3b0bea0f7978b117c16b330fe0e2e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga1d3b0bea0f7978b117c16b330fe0e2e5">arm_mat_init_f16</a> (<a class="el" href="structarm__matrix__instance__f16.html">arm_matrix_instance_f16</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, float16_t *pData)</td></tr>
+<tr class="memdesc:ga1d3b0bea0f7978b117c16b330fe0e2e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point matrix initialization.  <a href="#ga1d3b0bea0f7978b117c16b330fe0e2e5">More...</a><br/></td></tr>
+<tr class="separator:ga1d3b0bea0f7978b117c16b330fe0e2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga11e3dc41592a6401c13182fef9416a27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga11e3dc41592a6401c13182fef9416a27">arm_mat_init_f32</a> (<a class="el" href="structarm__matrix__instance__f32.html">arm_matrix_instance_f32</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pData)</td></tr>
 <tr class="memdesc:ga11e3dc41592a6401c13182fef9416a27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point matrix initialization.  <a href="#ga11e3dc41592a6401c13182fef9416a27">More...</a><br/></td></tr>
 <tr class="separator:ga11e3dc41592a6401c13182fef9416a27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga31a7c2b991803d49719393eb2d53dc26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga31a7c2b991803d49719393eb2d53dc26">arm_mat_init_q15</a> (<a class="el" href="structarm__matrix__instance__q15.html">arm_matrix_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pData)</td></tr>
+<tr class="memitem:ga31a7c2b991803d49719393eb2d53dc26"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga31a7c2b991803d49719393eb2d53dc26">arm_mat_init_q15</a> (<a class="el" href="structarm__matrix__instance__q15.html">arm_matrix_instance_q15</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pData)</td></tr>
 <tr class="memdesc:ga31a7c2b991803d49719393eb2d53dc26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q15 matrix initialization.  <a href="#ga31a7c2b991803d49719393eb2d53dc26">More...</a><br/></td></tr>
 <tr class="separator:ga31a7c2b991803d49719393eb2d53dc26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga48a5e5d37e1f062cc57fcfaf683343cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga48a5e5d37e1f062cc57fcfaf683343cc">arm_mat_init_q31</a> (<a class="el" href="structarm__matrix__instance__q31.html">arm_matrix_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pData)</td></tr>
+<tr class="memitem:ga48a5e5d37e1f062cc57fcfaf683343cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__MatrixInit.html#ga48a5e5d37e1f062cc57fcfaf683343cc">arm_mat_init_q31</a> (<a class="el" href="structarm__matrix__instance__q31.html">arm_matrix_instance_q31</a> *<a class="el" href="arm__bayes__example__f32_8c.html#ad5af783c9e1eb1514dec0a59dac35eb7">S</a>, uint16_t nRows, uint16_t nColumns, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pData)</td></tr>
 <tr class="memdesc:ga48a5e5d37e1f062cc57fcfaf683343cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q31 matrix initialization.  <a href="#ga48a5e5d37e1f062cc57fcfaf683343cc">More...</a><br/></td></tr>
 <tr class="separator:ga48a5e5d37e1f062cc57fcfaf683343cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <p>Initializes the underlying matrix data structure. The functions set the <code>numRows</code>, <code>numCols</code>, and <code>pData</code> fields of the matrix data structure. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="ga1d3b0bea0f7978b117c16b330fe0e2e5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_mat_init_f16 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structarm__matrix__instance__f16.html">arm_matrix_instance_f16</a> *&#160;</td>
+          <td class="paramname"><em>S</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>nRows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>nColumns</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float16_t *&#160;</td>
+          <td class="paramname"><em>pData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">S</td><td>points to an instance of the floating-point matrix structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nRows</td><td>number of rows in the matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">nColumns</td><td>number of columns in the matrix </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pData</td><td>points to the matrix data array </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ga11e3dc41592a6401c13182fef9416a27"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +206,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pData</em>&#160;</td>
         </tr>
         <tr>
@@ -202,7 +254,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pData</em>&#160;</td>
         </tr>
         <tr>
@@ -250,7 +302,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pData</em>&#160;</td>
         </tr>
         <tr>
@@ -278,12 +330,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

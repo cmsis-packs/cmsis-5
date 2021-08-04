@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,12 +148,13 @@ $(document).ready(function(){initNavTree('functions_e.html','');});
 
 <h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
 <li>energy
-: <a class="el" href="structarm__lms__norm__instance__f32.html#a6a4119e4f39447bbee31b066deafa16f">arm_lms_norm_instance_f32</a>
-, <a class="el" href="structarm__lms__norm__instance__q15.html#a1c81ded399919d8181026bc1c8602e7b">arm_lms_norm_instance_q15</a>
-, <a class="el" href="structarm__lms__norm__instance__q31.html#a3c0ae42869afec8555dc8e3a7ef9b386">arm_lms_norm_instance_q31</a>
+: <a class="el" href="structarm__lms__norm__instance__f32.html#ae1ed544b72f1510ed55d144a9424fddd">arm_lms_norm_instance_f32</a>
+, <a class="el" href="structarm__lms__norm__instance__q15.html#ae7a8ccabc82348f6742ca7a2b3da2a41">arm_lms_norm_instance_q15</a>
+, <a class="el" href="structarm__lms__norm__instance__q31.html#a012fee0f71095d2557bb633e73ef7355">arm_lms_norm_instance_q31</a>
 </li>
 <li>epsilon
-: <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#a05a3e725ff3c5b5241f17472cf8f44ec">arm_gaussian_naive_bayes_instance_f32</a>
+: <a class="el" href="structarm__gaussian__naive__bayes__instance__f16.html#a3e8f818ca8817326747ea17945c1751b">arm_gaussian_naive_bayes_instance_f16</a>
+, <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#ad2b99521268e7cfcceceb2a14dd8b9a1">arm_gaussian_naive_bayes_instance_f32</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -160,12 +162,13 @@ $(document).ready(function(){initNavTree('functions_e.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

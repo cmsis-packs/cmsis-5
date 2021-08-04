@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -151,21 +152,25 @@ $(document).ready(function(){initNavTree('globals_w.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>arm_weighted_sum_f16()
+: <a class="el" href="group__weightedsum.html#ga06e10e847786d8d96c5459fb36d5c752">support_functions_f16.h</a>
+, <a class="el" href="group__weightedsum.html#ga06e10e847786d8d96c5459fb36d5c752">arm_weighted_sum_f16.c</a>
+</li>
 <li>arm_weighted_sum_f32()
-: <a class="el" href="group__groupSupport.html#gaffef5e0e3e1d0289e419c23853e20850">arm_math.h</a>
-, <a class="el" href="group__groupSupport.html#gaffef5e0e3e1d0289e419c23853e20850">arm_weighted_sum_f32.c</a>
+: <a class="el" href="group__weightedsum.html#gaffef5e0e3e1d0289e419c23853e20850">arm_weighted_sum_f32.c</a>
+, <a class="el" href="group__weightedsum.html#gaffef5e0e3e1d0289e419c23853e20850">support_functions.h</a>
 </li>
 <li>Weights_128
-: <a class="el" href="group__DCT4__IDCT4__Table.html#gad00f29d896d64d6da7afbbb9d3e182a4">arm_common_tables.c</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#gad00f29d896d64d6da7afbbb9d3e182a4">arm_common_tables.h</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#gad00f29d896d64d6da7afbbb9d3e182a4">arm_common_tables.h</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#gad00f29d896d64d6da7afbbb9d3e182a4">arm_common_tables.c</a>
 </li>
 <li>Weights_2048
-: <a class="el" href="group__DCT4__IDCT4__Table.html#gac3a2a00b3106dfcb5e0a582f50c65692">arm_common_tables.h</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#gac3a2a00b3106dfcb5e0a582f50c65692">arm_common_tables.c</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#gac3a2a00b3106dfcb5e0a582f50c65692">arm_common_tables.c</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#gac3a2a00b3106dfcb5e0a582f50c65692">arm_common_tables.h</a>
 </li>
 <li>Weights_512
-: <a class="el" href="group__DCT4__IDCT4__Table.html#gaeb67b0be5b3c2139d660e02cedeed908">arm_common_tables.c</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#gaeb67b0be5b3c2139d660e02cedeed908">arm_common_tables.h</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#gaeb67b0be5b3c2139d660e02cedeed908">arm_common_tables.h</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#gaeb67b0be5b3c2139d660e02cedeed908">arm_common_tables.c</a>
 </li>
 <li>Weights_8192
 : <a class="el" href="group__DCT4__IDCT4__Table.html#ga45a8ec91e5da91790566105bc7e6f0c2">arm_common_tables.h</a>
@@ -176,12 +181,12 @@ $(document).ready(function(){initNavTree('globals_w.html','');});
 , <a class="el" href="group__DCT4__IDCT4__Table.html#ga8e8f0253c5a4337bd90968838db6164d">arm_common_tables.c</a>
 </li>
 <li>WeightsQ15_2048
-: <a class="el" href="group__DCT4__IDCT4__Table.html#gab858d2072b29f338b5dabf5cde9aaf66">arm_common_tables.h</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#gab858d2072b29f338b5dabf5cde9aaf66">arm_common_tables.c</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#gab858d2072b29f338b5dabf5cde9aaf66">arm_common_tables.c</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#gab858d2072b29f338b5dabf5cde9aaf66">arm_common_tables.h</a>
 </li>
 <li>WeightsQ15_512
-: <a class="el" href="group__DCT4__IDCT4__Table.html#ga0492a1e2539ffb9d5276a357dab9dca1">arm_common_tables.c</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#ga0492a1e2539ffb9d5276a357dab9dca1">arm_common_tables.h</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#ga0492a1e2539ffb9d5276a357dab9dca1">arm_common_tables.h</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#ga0492a1e2539ffb9d5276a357dab9dca1">arm_common_tables.c</a>
 </li>
 <li>WeightsQ15_8192
 : <a class="el" href="group__DCT4__IDCT4__Table.html#ga94e0c6d08e4c2eee4d75dc5cde0e4019">arm_common_tables.h</a>
@@ -196,8 +201,8 @@ $(document).ready(function(){initNavTree('globals_w.html','');});
 , <a class="el" href="group__DCT4__IDCT4__Table.html#ga725b65c25a02b3cad329e18bb832f65e">arm_common_tables.c</a>
 </li>
 <li>WeightsQ31_512
-: <a class="el" href="group__DCT4__IDCT4__Table.html#ga31a8217a96f7d3171921e98398f31596">arm_common_tables.c</a>
-, <a class="el" href="group__DCT4__IDCT4__Table.html#ga31a8217a96f7d3171921e98398f31596">arm_common_tables.h</a>
+: <a class="el" href="group__DCT4__IDCT4__Table.html#ga31a8217a96f7d3171921e98398f31596">arm_common_tables.h</a>
+, <a class="el" href="group__DCT4__IDCT4__Table.html#ga31a8217a96f7d3171921e98398f31596">arm_common_tables.c</a>
 </li>
 <li>WeightsQ31_8192
 : <a class="el" href="group__DCT4__IDCT4__Table.html#ga16bf6bbe5c4c9b35f88253cf7bdcc435">arm_common_tables.c</a>
@@ -208,21 +213,21 @@ $(document).ready(function(){initNavTree('globals_w.html','');});
 , <a class="el" href="arm__variance__example__f32_8c.html#acc43b372d92d5027b9f9cac782c8b3c7">arm_variance_example_f32.c</a>
 </li>
 <li>wire2
-: <a class="el" href="arm__signal__converge__example__f32_8c.html#a4e370163c81ae2b72cc655a6b79e4c6a">arm_signal_converge_example_f32.c</a>
-, <a class="el" href="arm__variance__example__f32_8c.html#a41a9afab5be5ccd2e6f618b83102f0d1">arm_variance_example_f32.c</a>
+: <a class="el" href="arm__variance__example__f32_8c.html#a41a9afab5be5ccd2e6f618b83102f0d1">arm_variance_example_f32.c</a>
+, <a class="el" href="arm__signal__converge__example__f32_8c.html#a4e370163c81ae2b72cc655a6b79e4c6a">arm_signal_converge_example_f32.c</a>
 </li>
 <li>wire3
 : <a class="el" href="arm__variance__example__f32_8c.html#af61f43ad332a2322e43ced590b6d9768">arm_variance_example_f32.c</a>
 , <a class="el" href="arm__signal__converge__example__f32_8c.html#a7e2cceadf6ec7f0aa0f698a680fa3a4b">arm_signal_converge_example_f32.c</a>
 </li>
 <li>write_q15x2()
-: <a class="el" href="arm__math_8h.html#a1c6d46f43d41c6ca1b7d6a0d8ed95036">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a1c6d46f43d41c6ca1b7d6a0d8ed95036">arm_math_memory.h</a>
 </li>
 <li>write_q15x2_ia()
-: <a class="el" href="arm__math_8h.html#a576a0e2a4667277b42c478dfda753dc6">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a576a0e2a4667277b42c478dfda753dc6">arm_math_memory.h</a>
 </li>
 <li>write_q7x4_ia()
-: <a class="el" href="arm__math_8h.html#a05bde59a4c7dd866d0a2e3e6fcac17bd">arm_math.h</a>
+: <a class="el" href="arm__math__memory_8h.html#a05bde59a4c7dd866d0a2e3e6fcac17bd">arm_math_memory.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -230,12 +235,13 @@ $(document).ready(function(){initNavTree('globals_w.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

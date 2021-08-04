@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -176,7 +177,7 @@ Virtual I/O provides a generic API for examples and testing</div></div>
 <li><b>cmsis_vio.h</b> : API for VIO</li>
 </ul>
 <p><b>VIO User Code Templates</b></p>
-<p>The VIO software component contains two user code templates wit different purposes:</p>
+<p>The VIO software component contains two user code templates with different purposes:</p>
 <ul>
 <li>VIO:Custom: This file is an empty stub with all functions that are defined in the header file that can be used to implement the VIO layer for the hardware that is used in the application.</li>
 <li>VIO:Virtual: This file uses a fixed memory location to emulate the VIO functionality and can be used off-the-shelf.</li>
@@ -312,7 +313,7 @@ Virtual I/O provides a generic API for examples and testing</div></div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>number of characters written or -1 in case of error.</dd></dl>
-<p>The function <b>vioPrint</b> prints a formatted string to a test terminal. Formatting of the output follows the rulse od standard C language printf().</p>
+<p>The function <b>vioPrint</b> prints a formatted string to a test terminal. Formatting of the output follows the rules of standard C language printf().</p>
 <p>Refer to <a class="el" href="group__vioPrintLevels__gr.html">Print Levels</a> for information about the possible <em>levels</em>.</p>
 <p><b>Code</b> <b>Example:</b> </p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="cmsis__vio_8h.html">cmsis_vio.h</a>&quot;</span>                  <span class="comment">// ::CMSIS Driver:VIO</span></div>
@@ -759,12 +760,13 @@ Virtual I/O provides a generic API for examples and testing</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:29 for CMSIS-Driver Version 2.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

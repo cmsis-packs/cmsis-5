@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['snr_5fthreshold',['SNR_THRESHOLD',['../arm__convolution__example__f32_8c.html#af08ec3fef897d77c6817638bf0e0c5c6',1,'SNR_THRESHOLD():&#160;arm_convolution_example_f32.c'],['../arm__linear__interp__example__f32_8c.html#af08ec3fef897d77c6817638bf0e0c5c6',1,'SNR_THRESHOLD():&#160;arm_linear_interp_example_f32.c'],['../arm__matrix__example__f32_8c.html#af08ec3fef897d77c6817638bf0e0c5c6',1,'SNR_THRESHOLD():&#160;arm_matrix_example_f32.c']]],
-  ['snr_5fthreshold_5ff32',['SNR_THRESHOLD_F32',['../arm__fir__example__f32_8c.html#af7d1dd4deffa8e7ed6429e5dd0fe1812',1,'SNR_THRESHOLD_F32():&#160;arm_fir_example_f32.c'],['../arm__graphic__equalizer__example__q31_8c.html#af7d1dd4deffa8e7ed6429e5dd0fe1812',1,'SNR_THRESHOLD_F32():&#160;arm_graphic_equalizer_example_q31.c']]],
-  ['sq',['SQ',['../arm__math_8h.html#ac3644f84794a8bfdacf39c4b2c2495fc',1,'arm_math.h']]],
-  ['step',['STEP',['../arm__math_8h.html#a41600e7828c196ee086489538ba6d25e',1,'arm_math.h']]]
+  ['one_5fq15',['ONE_Q15',['../arm__levinson__durbin__q31_8c.html#a8a57fbdad94ffd18e5c5f15ad1fa1e57',1,'arm_levinson_durbin_q31.c']]],
+  ['one_5fq31',['ONE_Q31',['../arm__levinson__durbin__q31_8c.html#abcb1d16f4b35d69afd3f997ad792e600',1,'arm_levinson_durbin_q31.c']]]
 ];

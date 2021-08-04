@@ -1,10 +1,10 @@
 var structarm__dct4__instance__f32 =
 [
-    [ "N", "structarm__dct4__instance__f32.html#a262b29a51c371b46efc89120e31ccf37", null ],
-    [ "Nby2", "structarm__dct4__instance__f32.html#adb1ef2739ddbe62e5cdadc47455a4147", null ],
-    [ "normalize", "structarm__dct4__instance__f32.html#a61ce8c967b2e998a9c0041cca73cdef8", null ],
-    [ "pCfft", "structarm__dct4__instance__f32.html#a018f7860b6e070af533fb7d76c7cdc32", null ],
-    [ "pCosFactor", "structarm__dct4__instance__f32.html#a7762296d8871c58f2ef0b6ce327b8f4e", null ],
-    [ "pRfft", "structarm__dct4__instance__f32.html#a978f37fc19add31af243ab5c63ae502f", null ],
-    [ "pTwiddle", "structarm__dct4__instance__f32.html#a01fe45dbe46c782245832f2169622c29", null ]
+    [ "N", "structarm__dct4__instance__f32.html#a37d49571fe35012087153c093705cd11", null ],
+    [ "Nby2", "structarm__dct4__instance__f32.html#afa64b1618089e35c2b55cff71cb29715", null ],
+    [ "normalize", "structarm__dct4__instance__f32.html#a1bf2ed86ef2c3dd83af606bb3f520f2a", null ],
+    [ "pCfft", "structarm__dct4__instance__f32.html#ab7bd4d374a1780dea50efd3e7ac220be", null ],
+    [ "pCosFactor", "structarm__dct4__instance__f32.html#a6978f973c110508f6086347c87eaea7a", null ],
+    [ "pRfft", "structarm__dct4__instance__f32.html#ad4cd7c85eea3f7c5fff4630bbd979e6a", null ],
+    [ "pTwiddle", "structarm__dct4__instance__f32.html#a8292d9775f5c5472f59915649fe3b378", null ]
 ];

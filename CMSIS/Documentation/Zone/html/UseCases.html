@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Zone
-   &#160;<span id="projectnumber">Version 1.0.0</span>
+   &#160;<span id="projectnumber">Version 1.1.0</span>
    </div>
    <div id="projectbrief">System Resource Management</div>
   </td>
@@ -111,7 +112,7 @@ $(document).ready(function(){initNavTree('UseCases.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><b>CMSIS-Zone</b> simplifies to manage the complexity and the configuration of modern embedded systems that frequently include multiple processors and/or memory protection hardware. It helps to split the embedded application various projects which creates the need to partition system resources. And it simplifies the consistent configuration of access rights across the system, for example when using an MPU (memory protection unit).</p>
-<p>The following section describes several uses cases that benefit from <b>CMSIS-Zone</b>.</p>
+<p>The following section describes several use cases that benefit from <b>CMSIS-Zone</b>.</p>
 <h1><a class="anchor" id="UseCase_MPU"></a>
 MPU Protection</h1>
 <p>Focused on a single core microcontroller one might want to utilize the memory protection unit (MPU) capabilities to segregate parts of an application. Thus the need to partition the system resources accordingly arises.</p>
@@ -138,12 +139,13 @@ Multi-Core Partitioning</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:11 for CMSIS-Zone Version 1.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

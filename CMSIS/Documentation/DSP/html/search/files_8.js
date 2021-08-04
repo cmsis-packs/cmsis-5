@@ -1,20 +1,7 @@
 var searchData=
 [
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2BasicMathFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2BayesFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2CommonTables_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2FastMathFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2TransformFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2SVMFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2SupportFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2StatisticsFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2MatrixFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2FilteringFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2ComplexMathFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2DistanceFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2ControllerFunctions_2CMakeLists_8txt.html',1,'']]],
-  ['cmakelists_2etxt',['CMakeLists.txt',['../Source_2CMakeLists_8txt.html',1,'']]],
-  ['statisticsfunctions_2ec',['StatisticsFunctions.c',['../StatisticsFunctions_8c.html',1,'']]],
-  ['supportfunctions_2ec',['SupportFunctions.c',['../SupportFunctions_8c.html',1,'']]],
-  ['svmfunctions_2ec',['SVMFunctions.c',['../SVMFunctions_8c.html',1,'']]]
+  ['matrix_5ffunctions_2eh',['matrix_functions.h',['../matrix__functions_8h.html',1,'']]],
+  ['matrix_5ffunctions_5ff16_2eh',['matrix_functions_f16.h',['../matrix__functions__f16_8h.html',1,'']]],
+  ['matrixfunctions_2ec',['MatrixFunctions.c',['../MatrixFunctions_8c.html',1,'']]],
+  ['matrixfunctionsf16_2ec',['MatrixFunctionsF16.c',['../MatrixFunctionsF16_8c.html',1,'']]]
 ];

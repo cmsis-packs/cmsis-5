@@ -3,6 +3,7 @@ var group__groupMath =
     [ "Vector Absolute Value", "group__BasicAbs.html", "group__BasicAbs" ],
     [ "Vector Addition", "group__BasicAdd.html", "group__BasicAdd" ],
     [ "Vector bitwise AND", "group__And.html", "group__And" ],
+    [ "Elementwise clipping", "group__BasicClip.html", "group__BasicClip" ],
     [ "Vector Dot Product", "group__BasicDotProd.html", "group__BasicDotProd" ],
     [ "Vector Multiplication", "group__BasicMult.html", "group__BasicMult" ],
     [ "Vector Negate", "group__BasicNegate.html", "group__BasicNegate" ],

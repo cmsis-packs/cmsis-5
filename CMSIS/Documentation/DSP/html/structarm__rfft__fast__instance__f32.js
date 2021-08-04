@@ -1,6 +1,6 @@
 var structarm__rfft__fast__instance__f32 =
 [
-    [ "fftLenRFFT", "structarm__rfft__fast__instance__f32.html#aef06ab665041ec36f5b25d464f0cab14", null ],
-    [ "pTwiddleRFFT", "structarm__rfft__fast__instance__f32.html#ad1a1bd8b12b49eae674115308d324622", null ],
-    [ "Sint", "structarm__rfft__fast__instance__f32.html#a37419ababdfb3151b1891ae6bcd21012", null ]
+    [ "fftLenRFFT", "structarm__rfft__fast__instance__f32.html#a174f8c72d545034e19ba4ced52b31353", null ],
+    [ "pTwiddleRFFT", "structarm__rfft__fast__instance__f32.html#ae701bffa723225a574f41989e62cff2e", null ],
+    [ "Sint", "structarm__rfft__fast__instance__f32.html#aa8a05a9fabc3852e5d476152a5067e53", null ]
 ];

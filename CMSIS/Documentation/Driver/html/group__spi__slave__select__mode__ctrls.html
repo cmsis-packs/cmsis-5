@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -185,7 +186,7 @@ Macros</h2></td></tr>
 </div><div class="memdoc">
 
 <p>SPI Slave Select when Master: Hardware controlled Output. </p>
-<p>Here, SS is configured as an output. It will be automatically activated/deactivated for the transfers by hardware (not controlled by <a class="el" href="group__spi__interface__gr.html#gad18d229992598d6677bec250015e5d1a">ARM_SPI_Control</a> (<a class="el" href="group__spi__misc__ctrls.html#ga5776272b82decff92da003568540c92f">ARM_SPI_CONTROL_SS</a>)). The activation/deactivation of the line is completely hardware dependent. Typically, the hardware will activate it before starting a transfer and deactivate it after a transfer completes. Some hardware will leave it activated as long as the SPI stays master. Due to different hardware behavior, this mode is typically not useful because certain devices require that the SS signal is strictly defined with regards to transfers. </p>
+<p>Here, SS is configured as an output. It will be automatically activated/deactivated for the transfers by hardware (not controlled by <a class="el" href="group__spi__interface__gr.html#gad18d229992598d6677bec250015e5d1a">ARM_SPI_Control</a> (<a class="el" href="group__spi__misc__ctrls.html#ga5776272b82decff92da003568540c92f">ARM_SPI_CONTROL_SS</a>)). The activation/deactivation of the line is completely hardware dependent. Typically, the hardware will activate it before starting a transfer and deactivate it after a transfer completes. Some hardware will keep the line active as long as the SPI stays master. Due to different hardware behavior, this mode is typically not useful because certain devices require that the SS signal is strictly defined with regards to transfers. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__spi__interface__gr.html#gad18d229992598d6677bec250015e5d1a" title="Control SPI Interface. ">ARM_SPI_Control</a> </dd></dl>
 
 </div>
@@ -243,12 +244,13 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:29 for CMSIS-Driver Version 2.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

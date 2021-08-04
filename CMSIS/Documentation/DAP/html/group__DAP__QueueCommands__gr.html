@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DAP
-   &#160;<span id="projectnumber">Version 2.0.0</span>
+   &#160;<span id="projectnumber">Version 2.1.0</span>
    </div>
    <div id="projectbrief">Interface Firmware for CoreSight Debug Access Port</div>
   </td>
@@ -158,17 +159,17 @@ Send <a class="el" href="group__DAP__SWJ__Pins.html">DAP_SWJ_Pins</a> in fourth 
 <div class="line">&gt; 0x7E | 0x02 | 0x10 | Pin Output | Pin Select | Pin Wait | 0x09 | Delay |</div>
 <div class="line">|******|******|******|************|************|**********|******|*******|</div>
 <div class="line">  Queue|NumCmd| DAP_SWJ_Pins                              | DAP_Delay    |</div>
-<div class="line">   </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE | BYTE | BYTE ******| BYTE ******| WORD ****|</div>
 <div class="line">&gt; 0x7E | 0x01 | 0x10 | Pin Output | Pin Select | Pin Wait |</div>
 <div class="line">|******|******|******|************|************|**********|</div>
 <div class="line">  Queue|NumCmd| DAP_SWJ_Pins                              |</div>
-<div class="line">   </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE | BYTE | SHORT |</div>
 <div class="line">&gt; 0x7E | 0x01 | 0x09 | Delay |</div>
 <div class="line">|******|******|******|*******|</div>
 <div class="line">  Queue|NumCmd| DAP_Delay    |</div>
-<div class="line">   </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE ******| BYTE ******| WORD ****|</div>
 <div class="line">&gt; 0x10 | Pin Output | Pin Select | Pin Wait |</div>
 <div class="line">|******|************|************|**********|</div>
@@ -178,17 +179,17 @@ Send <a class="el" href="group__DAP__SWJ__Pins.html">DAP_SWJ_Pins</a> in fourth 
 <div class="line">&lt; 0x7F | 0x02 | 0x10 | Pin Input | 0x09 | Status |</div>
 <div class="line">|******|******|******|***********|******|********|</div>
 <div class="line">       |NumCmd| DAP_SWJ_Pins     | DAP_Delay     |</div>
-<div class="line"> </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE | BYTE | BYTE *****|</div>
 <div class="line">&lt; 0x7F | 0x01 | 0x10 | Pin Input |</div>
 <div class="line">|******|******|******|***********|</div>
 <div class="line">       |NumCmd| DAP_SWJ_Pins     |</div>
-<div class="line">  </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE | BYTE | BYTE **|</div>
 <div class="line">&lt; 0x7F | 0x01 | 0x09 | Status |</div>
 <div class="line">|******|******|******|********|</div>
 <div class="line">       |NumCmd| DAP_Delay     |</div>
-<div class="line">  </div>
+<div class="line"></div>
 <div class="line">| BYTE | BYTE *****|</div>
 <div class="line">&lt; 0x10 | Pin Input |</div>
 <div class="line">|******|***********|</div>
@@ -198,12 +199,13 @@ Send <a class="el" href="group__DAP__SWJ__Pins.html">DAP_SWJ_Pins</a> in fourth 
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:25 for CMSIS-DAP Version 2.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

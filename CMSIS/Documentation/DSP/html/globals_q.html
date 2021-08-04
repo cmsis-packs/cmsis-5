@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -151,89 +152,121 @@ $(document).ready(function(){initNavTree('globals_q.html','');});
 <div class="textblock">Here is a list of all functions, variables, defines, enums, and typedefs with links to the files they belong to:</div>
 
 <h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
+<li>arm_q15_to_f16()
+: <a class="el" href="group__q15__to__x.html#ga42f8a8b9e0fc22509d464b3aeacf649a">support_functions_f16.h</a>
+, <a class="el" href="group__q15__to__x.html#ga42f8a8b9e0fc22509d464b3aeacf649a">arm_q15_to_f16.c</a>
+</li>
 <li>arm_q15_to_float()
-: <a class="el" href="group__q15__to__x.html#ga5a75381e7d63ea3a3a315344615281cf">arm_math.h</a>
+: <a class="el" href="group__q15__to__x.html#ga5a75381e7d63ea3a3a315344615281cf">support_functions.h</a>
 , <a class="el" href="group__q15__to__x.html#ga5a75381e7d63ea3a3a315344615281cf">arm_q15_to_float.c</a>
 </li>
 <li>arm_q15_to_q31()
-: <a class="el" href="group__q15__to__x.html#ga39647b2109a5c64a067b776302c4a083">arm_math.h</a>
+: <a class="el" href="group__q15__to__x.html#ga39647b2109a5c64a067b776302c4a083">support_functions.h</a>
 , <a class="el" href="group__q15__to__x.html#ga39647b2109a5c64a067b776302c4a083">arm_q15_to_q31.c</a>
 </li>
 <li>arm_q15_to_q7()
-: <a class="el" href="group__q15__to__x.html#ga837ce281d0e2d5fc445c48334307db19">arm_math.h</a>
+: <a class="el" href="group__q15__to__x.html#ga837ce281d0e2d5fc445c48334307db19">support_functions.h</a>
 , <a class="el" href="group__q15__to__x.html#ga837ce281d0e2d5fc445c48334307db19">arm_q15_to_q7.c</a>
 </li>
 <li>arm_q31_to_float()
-: <a class="el" href="group__q31__to__x.html#ga19a9d023aca1f99abd5da6f13a42b6cf">arm_math.h</a>
+: <a class="el" href="group__q31__to__x.html#ga19a9d023aca1f99abd5da6f13a42b6cf">support_functions.h</a>
 , <a class="el" href="group__q31__to__x.html#ga19a9d023aca1f99abd5da6f13a42b6cf">arm_q31_to_float.c</a>
 </li>
 <li>arm_q31_to_q15()
-: <a class="el" href="group__q31__to__x.html#ga775f3a1996f00a8048c4b7acba2e0828">arm_math.h</a>
+: <a class="el" href="group__q31__to__x.html#ga775f3a1996f00a8048c4b7acba2e0828">support_functions.h</a>
 , <a class="el" href="group__q31__to__x.html#ga775f3a1996f00a8048c4b7acba2e0828">arm_q31_to_q15.c</a>
 </li>
 <li>arm_q31_to_q7()
-: <a class="el" href="group__q31__to__x.html#gabef5357eb3348b3b5b38915fffce8f3d">arm_math.h</a>
+: <a class="el" href="group__q31__to__x.html#gabef5357eb3348b3b5b38915fffce8f3d">support_functions.h</a>
 , <a class="el" href="group__q31__to__x.html#gabef5357eb3348b3b5b38915fffce8f3d">arm_q31_to_q7.c</a>
 </li>
 <li>arm_q7_to_float()
-: <a class="el" href="group__q7__to__x.html#ga840d8a0e8499d02a54f459bb29f5d63c">arm_math.h</a>
-, <a class="el" href="group__q7__to__x.html#ga840d8a0e8499d02a54f459bb29f5d63c">arm_q7_to_float.c</a>
+: <a class="el" href="group__q7__to__x.html#ga840d8a0e8499d02a54f459bb29f5d63c">arm_q7_to_float.c</a>
+, <a class="el" href="group__q7__to__x.html#ga840d8a0e8499d02a54f459bb29f5d63c">support_functions.h</a>
 </li>
 <li>arm_q7_to_q15()
-: <a class="el" href="group__q7__to__x.html#ga1023c3832ca6be3a6d17ef338cafa28b">arm_q7_to_q15.c</a>
-, <a class="el" href="group__q7__to__x.html#ga1023c3832ca6be3a6d17ef338cafa28b">arm_math.h</a>
+: <a class="el" href="group__q7__to__x.html#ga1023c3832ca6be3a6d17ef338cafa28b">support_functions.h</a>
+, <a class="el" href="group__q7__to__x.html#ga1023c3832ca6be3a6d17ef338cafa28b">arm_q7_to_q15.c</a>
 </li>
 <li>arm_q7_to_q31()
-: <a class="el" href="group__q7__to__x.html#ga3c73bfb98fc5a1b4f612264662d0549c">arm_math.h</a>
+: <a class="el" href="group__q7__to__x.html#ga3c73bfb98fc5a1b4f612264662d0549c">support_functions.h</a>
 , <a class="el" href="group__q7__to__x.html#ga3c73bfb98fc5a1b4f612264662d0549c">arm_q7_to_q31.c</a>
 </li>
+<li>arm_quaternion2rotation_f32()
+: <a class="el" href="group__QuatRot.html#ga452ea33f74a02599424d71b4de26b0ba">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatRot.html#ga452ea33f74a02599424d71b4de26b0ba">arm_quaternion2rotation_f32.c</a>
+</li>
+<li>arm_quaternion_conjugate_f32()
+: <a class="el" href="group__QuatConjugate.html#ga066689b29d6cba11ea87645241deb09b">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatConjugate.html#ga066689b29d6cba11ea87645241deb09b">arm_quaternion_conjugate_f32.c</a>
+</li>
+<li>arm_quaternion_inverse_f32()
+: <a class="el" href="group__QuatInverse.html#ga31e853884e1a3e8ca4482f65ff818032">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatInverse.html#ga31e853884e1a3e8ca4482f65ff818032">arm_quaternion_inverse_f32.c</a>
+</li>
+<li>arm_quaternion_norm_f32()
+: <a class="el" href="group__QuatNorm.html#ga49a1e25e3a6147aecfecb6f4074e41d4">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatNorm.html#ga49a1e25e3a6147aecfecb6f4074e41d4">arm_quaternion_norm_f32.c</a>
+</li>
+<li>arm_quaternion_normalize_f32()
+: <a class="el" href="group__QuatNormalized.html#gaa25451f519ec348fae068ca9f8128038">arm_quaternion_normalize_f32.c</a>
+, <a class="el" href="group__QuatNormalized.html#gaa25451f519ec348fae068ca9f8128038">quaternion_math_functions.h</a>
+</li>
+<li>arm_quaternion_product_f32()
+: <a class="el" href="group__QuatProdVect.html#ga8d25a6adf6d3fb12a6311b1ddfc2c8c1">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatProdVect.html#ga8d25a6adf6d3fb12a6311b1ddfc2c8c1">arm_quaternion_product_f32.c</a>
+</li>
+<li>arm_quaternion_product_single_f32()
+: <a class="el" href="group__QuatProdSingle.html#ga93269654e1b26482c90d89c7904b3039">quaternion_math_functions.h</a>
+, <a class="el" href="group__QuatProdSingle.html#ga93269654e1b26482c90d89c7904b3039">arm_quaternion_product_single_f32.c</a>
+</li>
 <li>Q15_ABSMAX
-: <a class="el" href="arm__math_8h.html#aaa2166e8debedfbdb729cf6183d3e18b">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#aaa2166e8debedfbdb729cf6183d3e18b">arm_math_types.h</a>
 </li>
 <li>Q15_ABSMIN
-: <a class="el" href="arm__math_8h.html#a79ef9d10fc976018e1362b48ee245660">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a79ef9d10fc976018e1362b48ee245660">arm_math_types.h</a>
 </li>
 <li>Q15_MAX
-: <a class="el" href="arm__math_8h.html#adabd7fb7c7917aed16729b365c3f900b">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#adabd7fb7c7917aed16729b365c3f900b">arm_math_types.h</a>
 </li>
 <li>Q15_MIN
-: <a class="el" href="arm__math_8h.html#a06d92afdf46c994f9f6143d49c40532c">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a06d92afdf46c994f9f6143d49c40532c">arm_math_types.h</a>
 </li>
 <li>q15_t
-: <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">arm_math_types.h</a>
 </li>
 <li>Q31_ABSMAX
-: <a class="el" href="arm__math_8h.html#a091e2f8f50b02dcfef556446a69626ff">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a091e2f8f50b02dcfef556446a69626ff">arm_math_types.h</a>
 </li>
 <li>Q31_ABSMIN
-: <a class="el" href="arm__math_8h.html#ae4632cfdefcb6ec8f70717a28624ff25">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#ae4632cfdefcb6ec8f70717a28624ff25">arm_math_types.h</a>
 </li>
 <li>Q31_MAX
-: <a class="el" href="arm__math_8h.html#a468734b237f1c95a31715aa2b60a576e">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a468734b237f1c95a31715aa2b60a576e">arm_math_types.h</a>
 </li>
 <li>Q31_MIN
-: <a class="el" href="arm__math_8h.html#a1eb725c94dbb052aa24b62321be0445b">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a1eb725c94dbb052aa24b62321be0445b">arm_math_types.h</a>
 </li>
 <li>q31_t
-: <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">arm_math_types.h</a>
 </li>
 <li>q63_t
-: <a class="el" href="arm__math_8h.html#a5aea1cb12fc02d9d44c8abf217eaa5c6">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a5aea1cb12fc02d9d44c8abf217eaa5c6">arm_math_types.h</a>
 </li>
 <li>Q7_ABSMAX
-: <a class="el" href="arm__math_8h.html#a864f22c769f2277a0f96a64d335c04e4">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a864f22c769f2277a0f96a64d335c04e4">arm_math_types.h</a>
 </li>
 <li>Q7_ABSMIN
-: <a class="el" href="arm__math_8h.html#a4cc0044bcd91505d603ee01ab6d599ba">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a4cc0044bcd91505d603ee01ab6d599ba">arm_math_types.h</a>
 </li>
 <li>Q7_MAX
-: <a class="el" href="arm__math_8h.html#a2e60902f1be5c3bf4311c9a001444f93">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a2e60902f1be5c3bf4311c9a001444f93">arm_math_types.h</a>
 </li>
 <li>Q7_MIN
-: <a class="el" href="arm__math_8h.html#a892cb409018ffd25e2526d6cc6bea30b">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#a892cb409018ffd25e2526d6cc6bea30b">arm_math_types.h</a>
 </li>
 <li>q7_t
-: <a class="el" href="arm__math_8h.html#ae541b6f232c305361e9b416fc9eed263">arm_math.h</a>
+: <a class="el" href="arm__math__types_8h.html#ae541b6f232c305361e9b416fc9eed263">arm_math_types.h</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -241,12 +274,13 @@ $(document).ready(function(){initNavTree('globals_q.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

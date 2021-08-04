@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vec_5fdim',['vec_dim',['../namespacepara__gen.html#ad97bcbf0472c82d537ee41c0196e3b2a',1,'para_gen']]]
+  ['output_5factivation',['output_activation',['../structcmsis__nn__svdf__params.html#aab0d36ffecc3ccc296e3dd6149c8f37b',1,'cmsis_nn_svdf_params']]],
+  ['output_5foffset',['output_offset',['../structcmsis__nn__conv__params.html#aa917be27492df19f6382df8d1d78870a',1,'cmsis_nn_conv_params::output_offset()'],['../structcmsis__nn__dw__conv__params.html#a6058fcacc55ccf2f3e7049abcd26a7b2',1,'cmsis_nn_dw_conv_params::output_offset()'],['../structcmsis__nn__fc__params.html#a9287b2e5770e0b6c72f88ebc3245f51a',1,'cmsis_nn_fc_params::output_offset()'],['../structcmsis__nn__svdf__params.html#a62b484efb24bae6a05be502a18168257',1,'cmsis_nn_svdf_params::output_offset()']]]
 ];

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DAP
-   &#160;<span id="projectnumber">Version 2.0.0</span>
+   &#160;<span id="projectnumber">Version 2.1.0</span>
    </div>
    <div id="projectbrief">Interface Firmware for CoreSight Debug Access Port</div>
   </td>
@@ -129,7 +130,7 @@ $(document).ready(function(){initNavTree('group__DAP__SWO__Baudrate.html','');})
 <div class="line">&lt; 0x19 | Baudrate |</div>
 <div class="line">|******|**********|</div>
 </div><!-- fragment --><ul>
-<li><b>Baudrate:</b> Actual baudrate or 0 (baudrate not configured) When requested baudrate is not achievable the closest configured baudrate can be returned or 0 which indicates that baudrate was not configured.</li>
+<li><b>Baudrate:</b> Actual baudrate or 0 (baudrate not configured). When requested baudrate is not achievable the closest configured baudrate can be returned or 0 which indicates that baudrate was not configured.</li>
 </ul>
 <dl class="section note"><dt>Note</dt><dd>When Manchester Mode is used and if decoder is implemented with clock recovery then baudrate is not required since clock is automatically decoded. However such decoders are harder to implement (especially for high frequencies) and the clock recovery might not be implemented. Therefore the baudrate should be provided also for Manchester mode. </dd></dl>
 </div><!-- contents -->
@@ -137,12 +138,13 @@ $(document).ready(function(){initNavTree('group__DAP__SWO__Baudrate.html','');})
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:25 for CMSIS-DAP Version 2.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

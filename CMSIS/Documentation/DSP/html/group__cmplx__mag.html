@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,13 +117,16 @@ $(document).ready(function(){initNavTree('group__cmplx__mag.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaba4e0eff7816fe80d01121fb4cf6c6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#gaba4e0eff7816fe80d01121fb4cf6c6bc">arm_cmplx_mag_f32</a> (const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t numSamples)</td></tr>
+<tr class="memitem:gacb4f95c8ee08c5d3bb62d9430cfabe22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#gacb4f95c8ee08c5d3bb62d9430cfabe22">arm_cmplx_mag_f16</a> (const float16_t *pSrc, float16_t *pDst, uint32_t numSamples)</td></tr>
+<tr class="memdesc:gacb4f95c8ee08c5d3bb62d9430cfabe22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point complex magnitude.  <a href="#gacb4f95c8ee08c5d3bb62d9430cfabe22">More...</a><br/></td></tr>
+<tr class="separator:gacb4f95c8ee08c5d3bb62d9430cfabe22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaba4e0eff7816fe80d01121fb4cf6c6bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#gaba4e0eff7816fe80d01121fb4cf6c6bc">arm_cmplx_mag_f32</a> (const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *pDst, uint32_t numSamples)</td></tr>
 <tr class="memdesc:gaba4e0eff7816fe80d01121fb4cf6c6bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Floating-point complex magnitude.  <a href="#gaba4e0eff7816fe80d01121fb4cf6c6bc">More...</a><br/></td></tr>
 <tr class="separator:gaba4e0eff7816fe80d01121fb4cf6c6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0488e185f4631ac029b02f1759b287cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#ga0488e185f4631ac029b02f1759b287cf">arm_cmplx_mag_q15</a> (const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t numSamples)</td></tr>
+<tr class="memitem:ga0488e185f4631ac029b02f1759b287cf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#ga0488e185f4631ac029b02f1759b287cf">arm_cmplx_mag_q15</a> (const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *pDst, uint32_t numSamples)</td></tr>
 <tr class="memdesc:ga0488e185f4631ac029b02f1759b287cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q15 complex magnitude.  <a href="#ga0488e185f4631ac029b02f1759b287cf">More...</a><br/></td></tr>
 <tr class="separator:ga0488e185f4631ac029b02f1759b287cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab69ad9237469565958cce6b4555bbb6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#gab69ad9237469565958cce6b4555bbb6e">arm_cmplx_mag_q31</a> (const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, uint32_t numSamples)</td></tr>
+<tr class="memitem:gab69ad9237469565958cce6b4555bbb6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmplx__mag.html#gab69ad9237469565958cce6b4555bbb6e">arm_cmplx_mag_q31</a> (const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pSrc, <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *pDst, uint32_t numSamples)</td></tr>
 <tr class="memdesc:gab69ad9237469565958cce6b4555bbb6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q31 complex magnitude.  <a href="#gab69ad9237469565958cce6b4555bbb6e">More...</a><br/></td></tr>
 <tr class="separator:gab69ad9237469565958cce6b4555bbb6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -136,6 +140,47 @@ for (n = 0; n &lt; numSamples; n++) {
 }
 </pre><p>There are separate functions for floating-point, Q15, and Q31 data types. </p>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="gacb4f95c8ee08c5d3bb62d9430cfabe22"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void arm_cmplx_mag_f16 </td>
+          <td>(</td>
+          <td class="paramtype">const float16_t *&#160;</td>
+          <td class="paramname"><em>pSrc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float16_t *&#160;</td>
+          <td class="paramname"><em>pDst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>numSamples</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pSrc</td><td>points to input vector </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pDst</td><td>points to output vector </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">numSamples</td><td>number of samples in each vector </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>none </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="gaba4e0eff7816fe80d01121fb4cf6c6bc"></a>
 <div class="memitem">
 <div class="memproto">
@@ -143,13 +188,13 @@ for (n = 0; n &lt; numSamples; n++) {
         <tr>
           <td class="memname">void arm_cmplx_mag_f32 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#a4611b605e45ab401f02cab15c5e38715">float32_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -184,13 +229,13 @@ for (n = 0; n &lt; numSamples; n++) {
         <tr>
           <td class="memname">void arm_cmplx_mag_q15 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#ab5a8fb21a5b3b983d5f54f31614052ea">q15_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -226,13 +271,13 @@ for (n = 0; n &lt; numSamples; n++) {
         <tr>
           <td class="memname">void arm_cmplx_mag_q31 </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pSrc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="arm__math_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="arm__math__types_8h.html#adc89a3547f5324b7b3b95adec3806bc0">q31_t</a> *&#160;</td>
           <td class="paramname"><em>pDst</em>, </td>
         </tr>
         <tr>
@@ -266,12 +311,13 @@ for (n = 0; n &lt; numSamples; n++) {
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:37 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

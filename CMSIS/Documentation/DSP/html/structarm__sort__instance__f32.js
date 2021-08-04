@@ -1,5 +1,5 @@
 var structarm__sort__instance__f32 =
 [
-    [ "alg", "structarm__sort__instance__f32.html#a8b4fc44cfeebdbd5b36dfdb90618299f", null ],
-    [ "dir", "structarm__sort__instance__f32.html#ab76adec37769943685c731d2f45fd50d", null ]
+    [ "alg", "structarm__sort__instance__f32.html#a0c7e20695ca4dff4a5bbb54d454b6ed7", null ],
+    [ "dir", "structarm__sort__instance__f32.html#ac6f3976ef6b482e4c2b4a865bb362518", null ]
 ];

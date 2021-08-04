@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['high_20precision_20q31_20biquad_20cascade_20filter',['High Precision Q31 Biquad Cascade Filter',['../group__BiquadCascadeDF1__32x64.html',1,'']]]
+  ['graphic_20audio_20equalizer_20example',['Graphic Audio Equalizer Example',['../group__GEQ5Band.html',1,'']]]
 ];

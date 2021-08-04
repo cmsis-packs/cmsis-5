@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -119,7 +120,7 @@ $(document).ready(function(){initNavTree('element_cprj.html','');});
 <tr>
 <td>&lt;created&gt; </td><td><a class="el" href="element_created.html">/cprj/created</a> </td><td>Information about the tool that had produced this file.  </td></tr>
 <tr>
-<td>&lt;info&gt; </td><td><a class="el" href="element_info.html">/cprj/info</a> </td><td>Information about the project: description, keywords, categories, license, download.  </td></tr>
+<td>&lt;info&gt; </td><td><a class="el" href="element_info.html">/cprj/info</a> </td><td>Information about the project: description, documentation, categories, license.  </td></tr>
 <tr>
 <td>&lt;layers&gt; </td><td><a class="el" href="element_layers.html">/cprj/layers</a> </td><td>Definition of the layer within the project or layer.  </td></tr>
 <tr>
@@ -143,22 +144,18 @@ $(document).ready(function(){initNavTree('element_cprj.html','');});
 <div class="line">  &lt;info isLayer=<span class="stringliteral">&quot;false&quot;</span> &gt;</div>
 <div class="line">    &lt;description&gt;BSD Client application on top of MCB4300 Basic I/O layer with Ethernet&lt;/description&gt;</div>
 <div class="line">    &lt;category&gt;Wired Network, BSD Client, Board IO&lt;/category&gt;</div>
-<div class="line">    &lt;keywords&gt;MCB4300, MDK-Middleware, Network&lt;/keywords&gt;</div>
 <div class="line">    &lt;license&gt;BSD-3-Clause&lt;/license&gt;</div>
-<div class="line">    &lt;url&gt;&lt;/url&gt;</div>
 <div class="line">  &lt;/info&gt;</div>
 <div class="line"> </div>
 <div class="line">  &lt;layers&gt;</div>
 <div class="line">    &lt;layer name=<span class="stringliteral">&quot;IO&quot;</span> hasTarget=<span class="stringliteral">&quot;1&quot;</span>&gt;</div>
 <div class="line">      &lt;description&gt;Basic I/O layer <span class="keywordflow">for</span> MCB4300 <span class="keywordflow">for</span> Ethernet applications&lt;/description&gt;</div>
 <div class="line">      &lt;category&gt;Board IO, Wired Network&lt;/category&gt;</div>
-<div class="line">      &lt;keywords&gt;MCB4300, Ethernet, LPC4300&lt;/keywords&gt;</div>
 <div class="line">      &lt;license&gt;BSD-3-Clause&lt;/license&gt;</div>
 <div class="line">    &lt;/layer&gt;</div>
 <div class="line">    &lt;layer name=<span class="stringliteral">&quot;APP&quot;</span> hasTarget=<span class="stringliteral">&quot;0&quot;</span>&gt;</div>
 <div class="line">      &lt;description&gt;BSD Client application <span class="keywordflow">for</span> Basic I/O layers with Ethernet&lt;/description&gt;</div>
 <div class="line">      &lt;category&gt;Board IO, Wired Network&lt;/category&gt;</div>
-<div class="line">      &lt;keywords&gt;BSD_Client, Ethernet&lt;/keywords&gt;</div>
 <div class="line">      &lt;license&gt;BSD-3-Clause&lt;/license&gt;</div>
 <div class="line">    &lt;/layer&gt;</div>
 <div class="line">  &lt;/layers&gt;</div>
@@ -176,7 +173,7 @@ $(document).ready(function(){initNavTree('element_cprj.html','');});
 <div class="line">  &lt;/compilers&gt;</div>
 <div class="line"> </div>
 <div class="line">  &lt;target Ddsp=&quot;NO_DSP&quot; Dendian=&quot;Little-endian&quot; Dfpu=&quot;NO_FPU&quot; Dmve=&quot;NO_MVE&quot; Dname=&quot;LPC4357&quot; Dtz=&quot;NO_TZ&quot; Dvendor=&quot;NXP:11&quot; Pname=&quot;Cortex-M4&quot;&gt;</div>
-<div class="line">    &lt;output list=&quot;./Debug/&quot; name=&quot;BSD_Client&quot; obj=&quot;./Debug/&quot; type=&quot;exe&quot;/&gt;</div>
+<div class="line">    &lt;output intdir=&quot;./Debug/&quot; name=&quot;BSD_Client&quot; outdir=&quot;./Debug/&quot; type=&quot;exe&quot;/&gt;</div>
 <div class="line">    &lt;ldflags compiler=&quot;AC5&quot; add=&quot;--entry=Reset_Handler --load_addr_map_info --map --strict&quot; file=&quot;BSD_Client.sct&quot;/&gt;</div>
 <div class="line">    &lt;cflags  compiler=&quot;AC5&quot; add=&quot;--c99 --omf_browse ./debug/main.crf -D__MICROLIB -O1&quot;/&gt;</div>
 <div class="line">    &lt;asflags compiler=&quot;AC5&quot; add=&quot;--pd __MICROLIB SETA 1 --xref&quot;/&gt;</div>
@@ -271,12 +268,13 @@ $(document).ready(function(){initNavTree('element_cprj.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="cprjFormat_pg.html">Project Description (*.cprj) Format</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

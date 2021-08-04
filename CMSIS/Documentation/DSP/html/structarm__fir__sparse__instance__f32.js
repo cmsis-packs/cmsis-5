@@ -1,9 +1,9 @@
 var structarm__fir__sparse__instance__f32 =
 [
-    [ "maxDelay", "structarm__fir__sparse__instance__f32.html#af8b8c775f4084c36774f06c082b4c078", null ],
-    [ "numTaps", "structarm__fir__sparse__instance__f32.html#a5e19e7f234ac30a3db843352bf2a8515", null ],
-    [ "pCoeffs", "structarm__fir__sparse__instance__f32.html#a4bc78b1761b6349e6842241e813d6446", null ],
-    [ "pState", "structarm__fir__sparse__instance__f32.html#a794af0916666d11cc564d6df08553555", null ],
-    [ "pTapDelay", "structarm__fir__sparse__instance__f32.html#aaa54ae67e5d10c6dd0d697945c638d31", null ],
-    [ "stateIndex", "structarm__fir__sparse__instance__f32.html#a57585aeca9dc8686e08df2865375a86d", null ]
+    [ "maxDelay", "structarm__fir__sparse__instance__f32.html#ab25f4ee7550e6d92acff77ada283733f", null ],
+    [ "numTaps", "structarm__fir__sparse__instance__f32.html#a751941891e47f522a7f5375fe8990aac", null ],
+    [ "pCoeffs", "structarm__fir__sparse__instance__f32.html#a39230f04a29d8321948e339633780442", null ],
+    [ "pState", "structarm__fir__sparse__instance__f32.html#a335c87e6fdc4b96601d95a5de8b9c463", null ],
+    [ "pTapDelay", "structarm__fir__sparse__instance__f32.html#adec00b3793ab4f08edfeb4ea6a9eb6e6", null ],
+    [ "stateIndex", "structarm__fir__sparse__instance__f32.html#a566a0cb53437e48b9a3bf18e5b03d8aa", null ]
 ];

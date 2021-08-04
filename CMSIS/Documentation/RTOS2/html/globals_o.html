@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -615,6 +616,9 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <li>osRtxErrorSemaphoreCountLimit
 : <a class="el" href="rtx__evr_8h.html#a4266d3dd5e7bbd2693dd53d00d80bc4c">rtx_evr.h</a>
 </li>
+<li>osRtxErrorStackOverflow
+: <a class="el" href="group__rtx5__specific__defines.html#ga0663254070f9f9cd402d735715aa1904">rtx_os.h</a>
+</li>
 <li>osRtxErrorStackUnderflow
 : <a class="el" href="group__rtx5__specific__defines.html#ga42206aa2524b8fab613d26bea0f73c44">rtx_os.h</a>
 </li>
@@ -686,6 +690,9 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 </li>
 <li>osRtxInfo
 : <a class="el" href="rtx__os_8h.html#ad2270125c4e4991c3231d752b6ee5f3f">rtx_os.h</a>
+</li>
+<li>osRtxKernelErrorNotify()
+: <a class="el" href="rtx__os_8h.html#a9515a943acedd616ce8be944544b177e">rtx_os.h</a>
 </li>
 <li>osRtxKernelId
 : <a class="el" href="rtx__os_8h.html#a47e0637d30eed2357b238cbb19dbb058">rtx_os.h</a>
@@ -996,12 +1003,13 @@ $(document).ready(function(){initNavTree('globals_o.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:08 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

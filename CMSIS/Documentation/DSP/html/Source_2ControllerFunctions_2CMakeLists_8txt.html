@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -116,13 +117,13 @@ $(document).ready(function(){initNavTree('Source_2ControllerFunctions_2CMakeList
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a49bb80f218148ad6e8f05b3e839c1663"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2ControllerFunctions_2CMakeLists_8txt.html#a49bb80f218148ad6e8f05b3e839c1663">cmake_minimum_required</a> (VERSION 3.6) project(CMSISDSPController) <a class="el" href="Source_2CMakeLists_8txt.html#a8c56daa36e3b43fd0585d6865c903480">include</a>(configLib) <a class="el" href="Source_2CMakeLists_8txt.html#a8c56daa36e3b43fd0585d6865c903480">include</a>(<a class="el" href="Source_2TransformFunctions_2CMakeLists_8txt.html#a0d12612fee2f3b704bd6da89e30f86da">configDsp</a>) add_library(CMSISDSPController STATIC) configLib(CMSISDSPController $</td></tr>
-<tr class="separator:a49bb80f218148ad6e8f05b3e839c1663"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61a5bd2b4dfc8b8dab64c235a9535547"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2ControllerFunctions_2CMakeLists_8txt.html#a61a5bd2b4dfc8b8dab64c235a9535547">configDsp</a> (CMSISDSPController ${ROOT}) <a class="el" href="Source_2CMakeLists_8txt.html#a8c56daa36e3b43fd0585d6865c903480">include</a>(interpol) interpol(CMSISDSPController) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(CONFIGTABLE AND ALLFAST) target_compile_definitions(CMSISDSPController PUBLIC ARM_ALL_FAST_TABLES) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() target_sources(CMSISDSPController PRIVATE arm_pid_init_f32.c) target_sources(CMSISDSPController PRIVATE arm_pid_init_q15.c) target_sources(CMSISDSPController PRIVATE arm_pid_init_q31.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_f32.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_q15.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_q31.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(NOT CONFIGTABLE OR ALLFAST OR ARM_SIN_COS_F32) target_sources(CMSISDSPController PRIVATE arm_sin_cos_f32.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(NOT CONFIGTABLE OR ALLFAST OR ARM_SIN_COS_Q31) target_sources(CMSISDSPController PRIVATE arm_sin_cos_q31.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() target_include_directories(CMSISDSPController PUBLIC&quot;$</td></tr>
+<tr class="memitem:a6a754419280c9920951079af6fd378ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2ControllerFunctions_2CMakeLists_8txt.html#a6a754419280c9920951079af6fd378ee">cmake_minimum_required</a> (VERSION 3.14) project(CMSISDSPController) <a class="el" href="Source_2CMakeLists_8txt.html#abe658af24e68335d143536fb31fa1158">include</a>(configLib) <a class="el" href="Source_2CMakeLists_8txt.html#abe658af24e68335d143536fb31fa1158">include</a>(<a class="el" href="Source_2TransformFunctions_2CMakeLists_8txt.html#ac32ee0604a14505ba8a92b6eeac0b9aa">configDsp</a>) add_library(CMSISDSPController STATIC) configLib(CMSISDSPController $</td></tr>
+<tr class="separator:a6a754419280c9920951079af6fd378ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61a5bd2b4dfc8b8dab64c235a9535547"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Source_2ControllerFunctions_2CMakeLists_8txt.html#a61a5bd2b4dfc8b8dab64c235a9535547">configDsp</a> (CMSISDSPController ${ROOT}) <a class="el" href="Source_2CMakeLists_8txt.html#abe658af24e68335d143536fb31fa1158">include</a>(interpol) interpol(CMSISDSPController) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(CONFIGTABLE AND ALLFAST) target_compile_definitions(CMSISDSPController PUBLIC ARM_ALL_FAST_TABLES) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() target_sources(CMSISDSPController PRIVATE arm_pid_init_f32.c) target_sources(CMSISDSPController PRIVATE arm_pid_init_q15.c) target_sources(CMSISDSPController PRIVATE arm_pid_init_q31.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_f32.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_q15.c) target_sources(CMSISDSPController PRIVATE arm_pid_reset_q31.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(NOT CONFIGTABLE OR ALLFAST OR ARM_SIN_COS_F32) target_sources(CMSISDSPController PRIVATE arm_sin_cos_f32.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a5d12404fe73258d7cfdcd0e7ac149b70">if</a>(NOT CONFIGTABLE OR ALLFAST OR ARM_SIN_COS_Q31) target_sources(CMSISDSPController PRIVATE arm_sin_cos_q31.c) <a class="el" href="Source_2CommonTables_2CMakeLists_8txt.html#a9bfe5507f01ede692c9058575b1728fc">endif</a>() target_include_directories(CMSISDSPController PUBLIC&quot;$</td></tr>
 <tr class="separator:a61a5bd2b4dfc8b8dab64c235a9535547"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a49bb80f218148ad6e8f05b3e839c1663"></a>
+<a class="anchor" id="a6a754419280c9920951079af6fd378ee"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -130,7 +131,7 @@ Functions</h2></td></tr>
           <td class="memname">cmake_minimum_required </td>
           <td>(</td>
           <td class="paramtype">VERSION 3.&#160;</td>
-          <td class="paramname"><em>6</em></td><td>)</td>
+          <td class="paramname"><em>14</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -160,12 +161,13 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="Source_2ControllerFunctions_2CMakeLists_8txt.html">CMakeLists.txt</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:36 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

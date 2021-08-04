@@ -1,24 +1,12 @@
 var searchData=
 [
-  ['complex_20fft_20tables',['Complex FFT Tables',['../group__CFFT__CIFFT.html',1,'']]],
-  ['class_20marks_20example',['Class Marks Example',['../group__ClassMarks.html',1,'']]],
-  ['complex_20conjugate',['Complex Conjugate',['../group__cmplx__conj.html',1,'']]],
-  ['complex_20dot_20product',['Complex Dot Product',['../group__cmplx__dot__prod.html',1,'']]],
-  ['complex_20magnitude',['Complex Magnitude',['../group__cmplx__mag.html',1,'']]],
-  ['complex_20magnitude_20squared',['Complex Magnitude Squared',['../group__cmplx__mag__squared.html',1,'']]],
-  ['complex_2dby_2dcomplex_20multiplication',['Complex-by-Complex Multiplication',['../group__CmplxByCmplxMult.html',1,'']]],
-  ['complex_2dby_2dreal_20multiplication',['Complex-by-Real Multiplication',['../group__CmplxByRealMult.html',1,'']]],
-  ['complex_20matrix_20multiplication',['Complex Matrix Multiplication',['../group__CmplxMatrixMult.html',1,'']]],
-  ['complex_20fft_20functions',['Complex FFT Functions',['../group__ComplexFFT.html',1,'']]],
-  ['convolution',['Convolution',['../group__Conv.html',1,'']]],
-  ['convolution_20example',['Convolution Example',['../group__ConvolutionExample.html',1,'']]],
-  ['correlation',['Correlation',['../group__Corr.html',1,'']]],
-  ['cosine',['Cosine',['../group__cos.html',1,'']]],
-  ['convert_2032_2dbit_20floating_20point_20value',['Convert 32-bit floating point value',['../group__float__to__x.html',1,'']]],
-  ['complex_20math_20functions',['Complex Math Functions',['../group__groupCmplxMath.html',1,'']]],
-  ['controller_20functions',['Controller Functions',['../group__groupController.html',1,'']]],
-  ['convert_2016_2dbit_20integer_20value',['Convert 16-bit Integer value',['../group__q15__to__x.html',1,'']]],
-  ['convert_2032_2dbit_20integer_20value',['Convert 32-bit Integer value',['../group__q31__to__x.html',1,'']]],
-  ['convert_208_2dbit_20integer_20value',['Convert 8-bit Integer value',['../group__q7__to__x.html',1,'']]],
-  ['cubic_20spline_20interpolation',['Cubic Spline Interpolation',['../group__SplineInterpolate.html',1,'']]]
+  ['barycenter',['Barycenter',['../group__barycenter.html',1,'']]],
+  ['bayes_20example',['Bayes Example',['../group__BayesExample.html',1,'']]],
+  ['bilinear_20interpolation',['Bilinear Interpolation',['../group__BilinearInterpolate.html',1,'']]],
+  ['biquad_20cascade_20iir_20filters_20using_20direct_20form_20i_20structure',['Biquad Cascade IIR Filters Using Direct Form I Structure',['../group__BiquadCascadeDF1.html',1,'']]],
+  ['biquad_20cascade_20iir_20filters_20using_20a_20direct_20form_20ii_20transposed_20structure',['Biquad Cascade IIR Filters Using a Direct Form II Transposed Structure',['../group__BiquadCascadeDF2T.html',1,'']]],
+  ['boolean_20distances',['Boolean Distances',['../group__BoolDist.html',1,'']]],
+  ['bray_2dcurtis_20distance',['Bray-Curtis distance',['../group__braycurtis.html',1,'']]],
+  ['bayesian_20estimators',['Bayesian estimators',['../group__groupBayes.html',1,'']]],
+  ['basic_20math_20functions',['Basic Math Functions',['../group__groupMath.html',1,'']]]
 ];

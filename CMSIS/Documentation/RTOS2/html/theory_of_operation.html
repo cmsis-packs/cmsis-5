@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -386,7 +387,7 @@ RTX5 Header File</h1>
 <p>Every implementation of the CMSIS-RTOS2 API can bring its own additional features. RTX5 adds a couple of <a class="el" href="group__rtx5__specific.html">functions</a> for the idle more, for error notifications, and special system timer functions. It also is using macros for control block and memory sizes.</p>
 <p>If you require some of the RTX specific functions in your application code, #include the header file <b>rtx_os.h</b>:</p>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
-<div class="line"><span class="comment"> * Copyright (c) 2013-2019 Arm Limited. All rights reserved.</span></div>
+<div class="line"><span class="comment"> * Copyright (c) 2013-2021 Arm Limited. All rights reserved.</span></div>
 <div class="line"><span class="comment"> *</span></div>
 <div class="line"><span class="comment"> * SPDX-License-Identifier: Apache-2.0</span></div>
 <div class="line"><span class="comment"> *</span></div>
@@ -416,6 +417,7 @@ RTX5 Header File</h1>
 <div class="line"><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stddef.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="cmsis__os2_8h.html">cmsis_os2.h</a>&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;rtx_def.h&quot;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#ifdef  __cplusplus</span></div>
 <div class="line"><span class="preprocessor"></span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span></div>
@@ -425,8 +427,8 @@ RTX5 Header File</h1>
 <div class="line"> <span class="comment"></span></div>
 <div class="line"><span class="comment">/// Kernel Information</span></div>
 <div class="line"><span class="comment"></span><span class="preprocessor">#define osRtxVersionAPI      20010003   </span><span class="comment">///&lt; API version (2.1.3)</span></div>
-<div class="line"><span class="comment"></span>#define osRtxVersionKernel   50050002   <span class="comment">///&lt; Kernel version (5.5.2)</span></div>
-<div class="line"><span class="comment"></span>#define osRtxKernelId     &quot;RTX V5.5.2&quot;  <span class="comment">///&lt; Kernel identification string</span></div>
+<div class="line"><span class="comment"></span>#define osRtxVersionKernel   50050003   <span class="comment">///&lt; Kernel version (5.5.3)</span></div>
+<div class="line"><span class="comment"></span>#define osRtxKernelId     &quot;RTX V5.5.3&quot;  <span class="comment">///&lt; Kernel identification string</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"> </div>
 <div class="line"><span class="comment">//  ==== Common definitions ====</span></div>
@@ -497,7 +499,7 @@ RTX5 Header File</h1>
 <div class="line"><span class="comment"></span>  <span class="keyword">struct </span>osRtxThread_s    *delay_next;  <span class="comment">///&lt; Link pointer to next Thread in Delay list</span></div>
 <div class="line"><span class="comment"></span>  <span class="keyword">struct </span>osRtxThread_s    *delay_prev;  <span class="comment">///&lt; Link pointer to previous Thread in Delay list</span></div>
 <div class="line"><span class="comment"></span>  <span class="keyword">struct </span>osRtxThread_s   *thread_join;  <span class="comment">///&lt; Thread waiting to Join</span></div>
-<div class="line"><span class="comment"></span>  uint32_t                      delay;  <span class="comment">///&lt; Delay Time</span></div>
+<div class="line"><span class="comment"></span>  uint32_t                      delay;  <span class="comment">///&lt; Delay Time/Round Robin Time Tick</span></div>
 <div class="line"><span class="comment"></span>  int8_t                     priority;  <span class="comment">///&lt; Thread Priority</span></div>
 <div class="line"><span class="comment"></span>  int8_t                priority_base;  <span class="comment">///&lt; Base Priority</span></div>
 <div class="line"><span class="comment"></span>  uint8_t                 stack_frame;  <span class="comment">///&lt; Stack Frame (EXC_RETURN[7..0])</span></div>
@@ -683,9 +685,9 @@ RTX5 Header File</h1>
 <div class="line"><span class="comment"></span>    <a class="code" href="rtx__os_8h.html#structosRtxThread__t">osRtxThread_t</a>         *delay_list;  <span class="comment">///&lt; Delay List</span></div>
 <div class="line"><span class="comment"></span>    <a class="code" href="rtx__os_8h.html#structosRtxThread__t">osRtxThread_t</a>          *wait_list;  <span class="comment">///&lt; Wait List (no Timeout)</span></div>
 <div class="line"><span class="comment"></span>    <a class="code" href="rtx__os_8h.html#structosRtxThread__t">osRtxThread_t</a>     *terminate_list;  <span class="comment">///&lt; Terminate Thread List</span></div>
-<div class="line"><span class="comment"></span>    <span class="keyword">struct </span>{                            <span class="comment">///&lt; Thread Round Robin Info</span></div>
+<div class="line"><span class="comment"></span>    uint32_t                 reserved;</div>
+<div class="line">    <span class="keyword">struct </span>{                            <span class="comment">///&lt; Thread Round Robin Info</span></div>
 <div class="line"><span class="comment"></span>      <a class="code" href="rtx__os_8h.html#structosRtxThread__t">osRtxThread_t</a>           *thread;  <span class="comment">///&lt; Round Robin Thread</span></div>
-<div class="line"><span class="comment"></span>      uint32_t                   tick;  <span class="comment">///&lt; Round Robin Time Tick</span></div>
 <div class="line"><span class="comment"></span>      uint32_t                timeout;  <span class="comment">///&lt; Round Robin Timeout</span></div>
 <div class="line"><span class="comment"></span>    } robin;</div>
 <div class="line">  } thread;</div>
@@ -779,7 +781,8 @@ RTX5 Header File</h1>
 <div class="line"><span class="comment">//  ==== OS External Functions ====</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// OS Error Codes</span></div>
-<div class="line"><span class="preprocessor">#define osRtxErrorStackUnderflow        1U  </span><span class="comment">///&lt; Stack overflow, i.e. stack pointer below its lower memory limit for descending stacks.</span></div>
+<div class="line"><span class="preprocessor">#define osRtxErrorStackUnderflow        1U  </span><span class="comment">///&lt; \deprecated Superseded by \ref osRtxErrorStackOverflow.</span></div>
+<div class="line"><span class="comment"></span>#define osRtxErrorStackOverflow         1U  <span class="comment">///&lt; Stack overflow, i.e. stack pointer below its lower memory limit for descending stacks.</span></div>
 <div class="line"><span class="comment"></span>#define osRtxErrorISRQueueOverflow      2U  <span class="comment">///&lt; ISR Queue overflow detected when inserting object.</span></div>
 <div class="line"><span class="comment"></span>#define osRtxErrorTimerQueueOverflow    3U  <span class="comment">///&lt; User Timer Callback Queue overflow detected for timer.</span></div>
 <div class="line"><span class="comment"></span>#define osRtxErrorClibSpace             4U  <span class="comment">///&lt; Standard C/C++ library libspace not available: increase \c OS_THREAD_LIBSPACE_NUM.</span></div>
@@ -787,6 +790,7 @@ RTX5 Header File</h1>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"><span class="comment">/// OS Error Callback function</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">extern</span> uint32_t <a class="code" href="group__rtx5__specific__functions.html#gaf1745a88f9cc60b609ab1c8076bd346d">osRtxErrorNotify</a> (uint32_t code, <span class="keywordtype">void</span> *object_id);</div>
+<div class="line"><span class="keyword">extern</span> uint32_t <a class="code" href="rtx__os_8h.html#a9515a943acedd616ce8be944544b177e">osRtxKernelErrorNotify</a> (uint32_t code, <span class="keywordtype">void</span> *object_id);</div>
 <div class="line"> <span class="comment"></span></div>
 <div class="line"><span class="comment">/// OS Idle Thread</span></div>
 <div class="line"><span class="comment"></span><span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="group__rtx5__specific__functions.html#ga074068b8efa7074cee68a71481d0b072">osRtxIdleThread</a> (<span class="keywordtype">void</span> *argument);</div>
@@ -840,16 +844,18 @@ RTX5 Header File</h1>
 <div class="line"><span class="comment"></span>    <a class="code" href="rtx__os_8h.html#structosRtxMpInfo__t">osRtxMpInfo_t</a>             *message_queue;   <span class="comment">///&lt; Message Queue Control Blocks</span></div>
 <div class="line"><span class="comment"></span>  } mpi;</div>
 <div class="line">  uint32_t                 thread_stack_size;   <span class="comment">///&lt; Default Thread Stack Size</span></div>
-<div class="line"><span class="comment"></span>  <span class="keyword">const</span> </div>
+<div class="line"><span class="comment"></span>  <span class="keyword">const</span></div>
 <div class="line">  <a class="code" href="group__CMSIS__RTOS__ThreadMgmt.html#structosThreadAttr__t">osThreadAttr_t</a>           *idle_thread_attr;   <span class="comment">///&lt; Idle Thread Attributes</span></div>
 <div class="line"><span class="comment"></span>  <span class="keyword">const</span></div>
 <div class="line">  <a class="code" href="group__CMSIS__RTOS__ThreadMgmt.html#structosThreadAttr__t">osThreadAttr_t</a>          *timer_thread_attr;   <span class="comment">///&lt; Timer Thread Attributes</span></div>
+<div class="line"><span class="comment"></span>  void               (*timer_thread)(<span class="keywordtype">void</span> *);   <span class="comment">///&lt; Timer Thread Function</span></div>
+<div class="line"><span class="comment"></span>  int32_t               (*timer_setup)(void);   <span class="comment">///&lt; Timer Setup Function</span></div>
 <div class="line"><span class="comment"></span>  <span class="keyword">const</span></div>
 <div class="line">  <a class="code" href="group__CMSIS__RTOS__Message.html#structosMessageQueueAttr__t">osMessageQueueAttr_t</a>        *timer_mq_attr;   <span class="comment">///&lt; Timer Message Queue Attributes</span></div>
 <div class="line"><span class="comment"></span>  uint32_t                     timer_mq_mcnt;   <span class="comment">///&lt; Timer Message Queue maximum Messages</span></div>
-<div class="line"><span class="comment"></span>} <a class="code" href="rtx__os_8h.html#structosRtxConfig__t">osRtxConfig_t</a>;</div>
+<div class="line"><span class="comment"></span>} <a class="code" href="structosRtxConfig__t.html">osRtxConfig_t</a>;</div>
 <div class="line"> </div>
-<div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="rtx__os_8h.html#structosRtxConfig__t">osRtxConfig_t</a> <a class="code" href="rtx__os_8h.html#a489fda965fa634809f401ae6458a6f45">osRtxConfig</a>;         <span class="comment">///&lt; OS Configuration</span></div>
+<div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code" href="structosRtxConfig__t.html">osRtxConfig_t</a> <a class="code" href="rtx__os_8h.html#a489fda965fa634809f401ae6458a6f45">osRtxConfig</a>;         <span class="comment">///&lt; OS Configuration</span></div>
 <div class="line"><span class="comment"></span> </div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#ifdef  __cplusplus</span></div>
@@ -884,6 +890,11 @@ Calls from Interrupt Service Routines</h1>
 <li><a class="el" href="group__CMSIS__RTOS__Message.html#gaa515fc8b956f721a8f72b2c505813bfc">osMessageQueuePut</a>, <a class="el" href="group__CMSIS__RTOS__Message.html#gad90d4959466a7a65105061da8256ab9e">osMessageQueueGet</a>, <a class="el" href="group__CMSIS__RTOS__Message.html#gac24f87d4f395e9e9c900c320e45ade8a">osMessageQueueGetCapacity</a>, <a class="el" href="group__CMSIS__RTOS__Message.html#ga96d3d84069b20359de48109e28a1a89e">osMessageQueueGetMsgSize</a>, <a class="el" href="group__CMSIS__RTOS__Message.html#ga6a32ac394fcff568b251c160cc3014b2">osMessageQueueGetCount</a>, <a class="el" href="group__CMSIS__RTOS__Message.html#gaddf0904427436dd3880d46263c2dc9fa">osMessageQueueGetSpace</a></li>
 </ul>
 <p>Functions that cannot be called from an ISR are verifying the interrupt status and return the status code <b>osErrorISR</b>, in case they are called from an ISR context. In some implementations, this condition might be caught using the HARD_FAULT vector.</p>
+<dl class="section note"><dt>Note</dt><dd><ul>
+<li>RTX does not disable interrupts during critical sections for Armv7-M and Armv8-M architecture based devices, but rather uses atomic operations.</li>
+<li>Therefore, there is no need to configure interrupt priorities of interrupt service routines that use RTOS functions.</li>
+</ul>
+</dd></dl>
 <h1><a class="anchor" id="CMSIS_RTOS_svcFunctions"></a>
 SVC Functions</h1>
 <p>Supervisor Calls (SVC) are exceptions targeted at software and operating systems for generating system function calls. They are sometimes called software interrupts. For example, instead of allowing user programs to directly access hardware, an operating system may provide access to hardware through an SVC. So when a user program wants to use certain hardware, it generates the exception using SVC instructions. The software exception handler in the operating system executes and provides the requested service to the user application. In this way, access to hardware is under the control of the OS, which can provide a more robust system by preventing the user applications from directly accessing the hardware.</p>
@@ -949,12 +960,13 @@ Arm C library multi-threading protection</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">index</a></li><li class="navelem"><a class="el" href="rtx5_impl.html">RTX v5 Implementation</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:07 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

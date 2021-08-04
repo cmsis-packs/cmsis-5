@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -115,7 +116,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 <p>The CMSIS Software Pack publishes the API Interface under the Component Class <b>CMSIS</b> <b>Driver</b> with header files and a documentation. These header files are the reference for the implementation of the standardized peripheral driver interfaces. These implementations are published typically in the Device Family Pack of a related microcontroller family under the Component Class <b>CMSIS</b> <b>Driver</b>. A Device Family Pack may contain additional interfaces in the Component Class <b>Device</b> to extend the standard Peripheral Drivers covered by this CMSIS-Driver specification with additional device specific interfaces for example for Memory BUS, GPIO, or DMA.</p>
 <p>The standard peripheral driver interfaces connect microcontroller peripherals for example with middleware that implements communication stacks, file systems, or graphic user interfaces. Each peripheral driver interface may provide multiple instances reflecting the multiple physical interfaces of the same type in a device. For example the two physical SPI interfaces are reflected with a separate <a class="el" href="theoryOperation.html#AccessStruct">Access Struct</a> for SPI1 and SPI2. The <a class="el" href="theoryOperation.html#AccessStruct">Access Struct</a> is the interface of a driver to the middleware component or the user application.</p>
 <div class="image">
-<img src="Driver.png" alt="Driver.png"/>
+<img src="driver.png" alt="driver.png"/>
 <div class="caption">
 Peripheral Driver Interfaces and Middleware</div></div>
 <p> The following CMSIS-Driver API groups are defined:</p>
@@ -134,6 +135,7 @@ Peripheral Driver Interfaces and Middleware</div></div>
 <li><a class="el" href="group__vio__interface__gr.html">VIO</a>: API for virtual I/Os (VIO).</li>
 <li><a class="el" href="group__wifi__interface__gr.html">WiFi</a>: Interface driver for wireless communication.</li>
 </ul>
+<dl class="section note"><dt>Note</dt><dd>Usually, WiFi chips and modules have their own networking stack incorporated. This means that payload data is sent via a serial interface (SPI or USART) to the WiFi chip/module and the Ethernet frames are assembled inside. If you intend to use a TCP/IP stack from a middleware component with a WiFi chip/module, make sure that the WiFi driver has a <a class="el" href="group__wifi__bypass__gr.html">WiFi Bypass Mode</a>. This allows to send the Ethernet frames assembled by the TCP/IP component transparently through the WiFi chip/module.</dd></dl>
 <hr/>
 <h2>CMSIS-Driver in ARM::CMSIS Pack </h2>
 <p>The following files relevant to CMSIS-Driver are present in the <b>ARM::CMSIS</b> Pack directories: </p>
@@ -153,12 +155,13 @@ Peripheral Driver Interfaces and Middleware</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:29 for CMSIS-Driver Version 2.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -114,6 +115,58 @@ $(document).ready(function(){initNavTree('ChangeLog_pg.html','');});
 <div class="textblock"><table  class="cmtable" summary="Revision History">
 <tr>
 <th>Version </th><th>Description  </th></tr>
+<tr>
+<td>V1.9.0 </td><td><p class="starttd">Re-organization of <a class="el" href="arm__math_8h.html">arm_math.h</a></p>
+<p>Re-organization of interpolation functions:</p>
+<ul>
+<li>New Interpolation folder</li>
+</ul>
+<p>New q7 functions:</p>
+<ul>
+<li><a class="el" href="arm__mat__mult__q7_8c.html">arm_mat_mult_q7.c</a></li>
+<li><a class="el" href="arm__mat__trans__q7_8c.html">arm_mat_trans_q7.c</a></li>
+</ul>
+<p>Matrix x vector multiply</p>
+<p>Complex Matrix Transpose</p>
+<p>Cholesky (LL^t and LDL^t decompositions)</p>
+<p>More support for f16 datatype:</p>
+<ul>
+<li><a class="el" href="arm__cfft__f16_8c.html">arm_cfft_f16.c</a></li>
+<li><a class="el" href="arm__rfft__fast__f16_8c.html">arm_rfft_fast_f16.c</a></li>
+<li>f16 basic Maths</li>
+<li>f16 complex Maths</li>
+<li>f16 filtering (FIR and BiQuad and correlate)</li>
+<li>f16 matrix</li>
+<li>f16 interpolation</li>
+<li>f16 statistics</li>
+<li>f16 support functions</li>
+<li>f16 svm</li>
+<li>f16 distances</li>
+<li>f16 bayes</li>
+</ul>
+<p>Support for Quaternions</p>
+<p>Levinson Durbin algorithm</p>
+<p>Q15 scalar division</p>
+<p>New absmax and absmin functions</p>
+<p>GCC issues: Some functions have build issues when building Helium code with gcc. So they are replaced with a less efficient scalar version when built with gcc.</p>
+<ul>
+<li>Scalar version of <a class="el" href="arm__mat__cmplx__mult__f16_8c.html">arm_mat_cmplx_mult_f16.c</a></li>
+<li>Scalar version of <a class="el" href="arm__biquad__cascade__stereo__df2T__f16_8c.html">arm_biquad_cascade_stereo_df2T_f16.c</a></li>
+<li>Scalar version of <a class="el" href="arm__levinson__durbin__f32_8c.html">arm_levinson_durbin_f32.c</a></li>
+<li>Scalar version of <a class="el" href="arm__levinson__durbin__f16_8c.html">arm_levinson_durbin_f16.c</a></li>
+<li>Scalar version of <a class="el" href="arm__levinson__durbin__q31_8c.html">arm_levinson_durbin_q31.c</a></li>
+<li>Scalar version of <a class="el" href="arm__float__to__f16_8c.html">arm_float_to_f16.c</a></li>
+<li>Scalar version of <a class="el" href="arm__f16__to__float_8c.html">arm_f16_to_float.c</a></li>
+</ul>
+<p>Important:</p>
+<ul>
+<li>Initialization of FIRs has changed for the Helium version (state and coefs). Read the corresponding documentations.</li>
+<li>Initialization of float biquad DF1 has changed for the Helium version (two init functions are required). Read the corresponding documentations.</li>
+<li>The states of the vectorized filters are different from their scalar versions (which may break some algorithms which are working on the state of a filter like Goertzel)</li>
+<li>For performance reasons, some vectorized algorithms may read one vector after the end of buffer (but the data read is not used). If the buffer is close to the end of a memory zone, it is advised to leave some free memory area between the end of the buffer and the end of the memory zone.</li>
+</ul>
+<p class="endtd"></p>
+</td></tr>
 <tr>
 <td>V1.8.0 </td><td><p class="starttd">Helium implementation of lots of functions in the CMSIS-DSP. More will be added in future releases.</p>
 <ul>
@@ -217,16 +270,16 @@ $(document).ready(function(){initNavTree('ChangeLog_pg.html','');});
 </ul>
 <p class="endtd">Modified source files (because of new <a class="el" href="arm__math_8h.html">arm_math.h</a>)</p>
 <ul>
-<li><a class="el" href="arm__biquad__cascade__df2T__f32_8c.html">FilteringFunctions\arm_biquad_cascade_df2T_f32.c</a></li>
-<li><a class="el" href="arm__biquad__cascade__df2T__f64_8c.html">FilteringFunctions\arm_biquad_cascade_df2T_f64.c</a></li>
-<li><a class="el" href="arm__biquad__cascade__stereo__df2T__f32_8c.html">FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c</a></li>
-<li><a class="el" href="arm__conv__partial__q15_8c.html">FilteringFunctions\arm_conv_partial_q15.c</a></li>
-<li><a class="el" href="arm__correlate__q15_8c.html">FilteringFunctions\arm_correlate_q15.c</a></li>
-<li><a class="el" href="arm__fir__f32_8c.html">FilteringFunctions\arm_fir_f32.c</a></li>
-<li><a class="el" href="arm__mat__scale__q31_8c.html">MatrixFunctions\arm_mat_scale_q31.c</a></li>
-<li><a class="el" href="arm__rms__q31_8c.html">StatisticsFunctions\arm_rms_q31.c</a></li>
+<li>FilteringFunctions\arm_biquad_cascade_df2T_f32.c</li>
+<li>FilteringFunctions\arm_biquad_cascade_df2T_f64.c</li>
+<li>FilteringFunctions\arm_biquad_cascade_stereo_df2T_f32.c</li>
+<li>FilteringFunctions\arm_conv_partial_q15.c</li>
+<li>FilteringFunctions\arm_correlate_q15.c</li>
+<li>FilteringFunctions\arm_fir_f32.c</li>
+<li>MatrixFunctions\arm_mat_scale_q31.c</li>
+<li>StatisticsFunctions\arm_rms_q31.c</li>
 <li>TransformFunctions\arm_bitreversal2.S</li>
-<li><a class="el" href="arm__cfft__radix4__q31_8c.html">TransformFunctions\arm_cfft_radix4_q31.c</a> Reworked DSP_Lib_TestSuite   </li>
+<li>TransformFunctions\arm_cfft_radix4_q31.c Reworked DSP_Lib_TestSuite   </li>
 </ul>
 </td></tr>
 <tr>
@@ -535,12 +588,13 @@ Documentation
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:36 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

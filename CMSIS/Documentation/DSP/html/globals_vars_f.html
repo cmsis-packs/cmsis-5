@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -152,7 +153,7 @@ $(document).ready(function(){initNavTree('globals_vars_f.html','');});
 , <a class="el" href="arm__signal__converge__example__f32_8c.html#aede8780f021b7f5c33df0c5ee2183ee6">arm_signal_converge_example_f32.c</a>
 </li>
 <li>firCoeffs32
-: <a class="el" href="arm__fir__example__f32_8c.html#ae070afd14f437ad1ae0a947e4403dd0e">arm_fir_example_f32.c</a>
+: <a class="el" href="arm__fir__example__f32_8c.html#ac6106184a48e7c487033547c7bb47ceb">arm_fir_example_f32.c</a>
 </li>
 <li>firStateF32
 : <a class="el" href="arm__signal__converge__example__f32_8c.html#a358ec4e79689e6d3787b89fe78bdb772">arm_signal_converge_example_f32.c</a>
@@ -163,12 +164,13 @@ $(document).ready(function(){initNavTree('globals_vars_f.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

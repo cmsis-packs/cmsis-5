@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Zone
-   &#160;<span id="projectnumber">Version 1.0.0</span>
+   &#160;<span id="projectnumber">Version 1.1.0</span>
    </div>
    <div id="projectbrief">System Resource Management</div>
   </td>
@@ -117,7 +118,7 @@ Overview</h1>
 <li>SAU (Secure Attribute Unit) to create a secure execution partition with controlled access from a non-secure execution partition.</li>
 <li>MPC (Memory Protection Controller) to control the system-wide access permissions to memory.</li>
 <li>PPC (Peripheral Protection Controller) to control the system-wide access permissions to peripherals.</li>
-<li>MPU (Memory Protection Controller) to create execution compartments and protect other system parts from illegal access.</li>
+<li>MPU (Memory Protection Unit) to create execution compartments and protect other system parts from illegal access.</li>
 </ul>
 <p>Embedded systems may also integrate multiple processors that share system resources (memory and peripherals). In an AMP (Asymmetric Multiprocessor System) it is required to assign or partition the available resources to various processors that execute independent parts of the application software.</p>
 <p><b>CMSIS-Zone</b> helps you to manage this complexity and allows to partition an embedded system into <b>project zones</b> and/or <b>execution zones</b>.</p>
@@ -165,20 +166,21 @@ Introduction Video</h1>
 <p>This video show how to use the <a class="el" href="zoneToolUsage.html">CMSIS-Zone Utility</a> :</p>
  
 <video preload="none" controls="" poster="https://community.arm.com/cfs-file/__key/telligent-evolution-videotranscoding-securefilestorage/communityserver-blogs-components-weblogfiles-00-00-00-21-12/Nuvoton_5F00_Zone.mp4.jpg" width="880" height="495">
-                        <source type="video/mp4" src="https://community.arm.com/cfs-file/__key/telligent-evolution-videotranscoding-securefilestorage/communityserver-blogs-components-weblogfiles-00-00-00-21-12/Nuvoton_5F00_Zone.mp4.mp4">
-                        <source type="video/webm" src="https://community.arm.com/cfs-file/__key/telligent-evolution-videotranscoding-securefilestorage/communityserver-blogs-components-weblogfiles-00-00-00-21-12/Nuvoton_5F00_Zone.mp4.webm">
-        </video>
+      <source type="video/mp4" src="https://community.arm.com/cfs-file/__key/telligent-evolution-videotranscoding-securefilestorage/communityserver-blogs-components-weblogfiles-00-00-00-21-12/Nuvoton_5F00_Zone.mp4.mp4">
+      <source type="video/webm" src="https://community.arm.com/cfs-file/__key/telligent-evolution-videotranscoding-securefilestorage/communityserver-blogs-components-weblogfiles-00-00-00-21-12/Nuvoton_5F00_Zone.mp4.webm">
+  </video>
  </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:11 for CMSIS-Zone Version 1.0.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

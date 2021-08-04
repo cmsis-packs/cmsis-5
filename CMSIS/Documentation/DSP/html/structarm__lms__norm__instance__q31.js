@@ -1,11 +1,11 @@
 var structarm__lms__norm__instance__q31 =
 [
-    [ "energy", "structarm__lms__norm__instance__q31.html#a3c0ae42869afec8555dc8e3a7ef9b386", null ],
-    [ "mu", "structarm__lms__norm__instance__q31.html#ad3dd2a2406e02fdaa7782ba6c3940a64", null ],
-    [ "numTaps", "structarm__lms__norm__instance__q31.html#a28e4c085af69c9c3e2e95dacf8004c3e", null ],
-    [ "pCoeffs", "structarm__lms__norm__instance__q31.html#a57a64c1ff102d033c1bd05043f1d9955", null ],
-    [ "postShift", "structarm__lms__norm__instance__q31.html#a28d7b9e437817f83397e081967e90f3c", null ],
-    [ "pState", "structarm__lms__norm__instance__q31.html#a6b25c96cf048b77078d62f4252a01ec4", null ],
-    [ "recipTable", "structarm__lms__norm__instance__q31.html#adb1c356b4f9d6d1a9838577bc990e8eb", null ],
-    [ "x0", "structarm__lms__norm__instance__q31.html#a47c4466d644e0d8ba407995adfa9b917", null ]
+    [ "energy", "structarm__lms__norm__instance__q31.html#a012fee0f71095d2557bb633e73ef7355", null ],
+    [ "mu", "structarm__lms__norm__instance__q31.html#a21ab4237a726ea7751f5026d89d2e577", null ],
+    [ "numTaps", "structarm__lms__norm__instance__q31.html#a751941891e47f522a7f5375fe8990aac", null ],
+    [ "pCoeffs", "structarm__lms__norm__instance__q31.html#a68888e36167d81cb7836db10367a1682", null ],
+    [ "postShift", "structarm__lms__norm__instance__q31.html#a74050e9f36542bd56f4052381a82ae8f", null ],
+    [ "pState", "structarm__lms__norm__instance__q31.html#adee4ba3ee8869865af7d8fa08ca913d6", null ],
+    [ "recipTable", "structarm__lms__norm__instance__q31.html#ac2e860f11b18d416a6b9aeb4660694dc", null ],
+    [ "x0", "structarm__lms__norm__instance__q31.html#a973b8350a0c7b113a5f002bc0b86bf76", null ]
 ];

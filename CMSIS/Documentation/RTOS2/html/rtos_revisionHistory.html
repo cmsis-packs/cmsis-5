@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -180,6 +181,21 @@ CMSIS-RTOS RTX Version 5</h1>
 <tr>
 <th>Version </th><th>Description  </th></tr>
 <tr>
+<td>V5.5.3 </td><td><ul>
+<li>CVE-2021-27431 vulnerability mitigation.</li>
+<li>Added OS Initialization for IAR.</li>
+<li>Fixed osDelay/osDelayUntil error handling.</li>
+<li>Fixed Round-Robin (timeout value is not reset when switching to higher priority threads).</li>
+<li>Fixed osThreadJoin (when terminating thread which is waiting to be joined).</li>
+<li>Fixed Message Queue Data allocation size when using object specific memory allocation.</li>
+<li>Fixed Mutex priority inversion (when mixing mutexes with and without priority inherit).</li>
+<li>Enhanced stack overrun checking.</li>
+<li>Updated osKernelResume handling (processing past sleep ticks).</li>
+<li>Updated configuration (Event Recorder).</li>
+<li>Reorganized and optimized IRQ modules.   </li>
+</ul>
+</td></tr>
+<tr>
 <td>V5.5.2 </td><td><ul>
 <li>Added support for Cortex-M55.</li>
 <li>Fixed thread priority restore on mutex acquire timeout (when priority inherit is used).</li>
@@ -275,12 +291,13 @@ CMSIS-RTOS RTX Version 5</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="index.html">index</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:06:07 for CMSIS-RTOS2 Version 2.1.3 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

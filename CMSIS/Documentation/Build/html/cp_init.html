@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Build
-   &#160;<span id="projectnumber">Version 0.9.0 (beta)</span>
+   &#160;<span id="projectnumber">Version 0.10.0 (beta)</span>
    </div>
    <div id="projectbrief">Tools, software frameworks, and work flows for productivity with CMSIS based projects</div>
   </td>
@@ -110,16 +111,18 @@ $(document).ready(function(){initNavTree('cp_init.html','');});
 <div class="title">cp_init.sh: Setup Pack Directory </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The <a class="el" href="cp_init.html">cp_init.sh</a> script is used to setup a build environment from scratch. It is called from the <b>Bash</b> command line with the following syntax:</p>
+<div class="textblock"><p>The <b>cp_init.sh</b> script is used to setup a build environment from scratch. It downloads the public <a href="https://www.keil.com/pack/index.pidx" target="_blank">CMSIS-Pack index file</a> and stores this catalog file in the pack directory under ./Web. This file is used by <a class="el" href="cbuildgen.html">cbuildgen</a> to find the latest version of the public software packs.</p>
+<h1><a class="anchor" id="cp_init_invocation"></a>
+Invocation</h1>
+<p>It is called from the <b>Bash</b> command line with the following syntax:</p>
 <div class="fragment"><div class="line">cp_init.sh [&lt;pack-directory&gt;]</div>
 </div><!-- fragment --><p><b>Where:</b> </p>
 <p><code>cp_init.sh</code> is the name of the script.</p>
-<p>&lt;<code>pack-directory&gt;</code> specifies the directory where software packs should be stored. If not specified, the $CMSIS_PACK_ROOT directory is used.</p>
-<p>The <b>cp_init.sp</b> script downloads the public CMSIS-Pack index file from <a href="https://www.keil.com/pack/index/pidx">https://www.keil.com/pack/index/pidx</a> and stores this catalog file in pack directory under ./Web. This file is used by <a class="el" href="cbuildgen.html">cbuildgen: Build Process Manager</a> to find the latest version of the public software packs.</p>
+<p>&lt;<code>pack-directory&gt;</code> specifies the directory where software packs should be stored. If not specified, the <code>$CMSIS_PACK_ROOT</code> directory is used.</p>
 <h1><a class="anchor" id="cp_init_example"></a>
 Usage Example</h1>
 <pre class="fragment">$ cp_init.sh ./packrepo
-(cp_init.sh): Setup Pack Directory 0.9.0 (C) 2020 ARM
+(cp_init.sh): Setup Pack Directory 0.10.0 (C) 2020 ARM
 info: reading directory: ./packrepo
 downloading package index file from
 ######################################################################## 100.0%
@@ -152,12 +155,13 @@ Error Messages</h1>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="CmdLineBuild.html">Command Line Build</a></li>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:20 for CMSIS-Build Version 0.9.0 (beta) by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

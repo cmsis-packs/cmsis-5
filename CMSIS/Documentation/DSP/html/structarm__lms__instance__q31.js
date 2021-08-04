@@ -1,8 +1,8 @@
 var structarm__lms__instance__q31 =
 [
-    [ "mu", "structarm__lms__instance__q31.html#acb6ca9996b3c5f740d5d6c8e9f4f1d46", null ],
-    [ "numTaps", "structarm__lms__instance__q31.html#ac0d84f7d054555931ef8a62511fbcb8a", null ],
-    [ "pCoeffs", "structarm__lms__instance__q31.html#a4afe56e991a5416adfd462aa88bda500", null ],
-    [ "postShift", "structarm__lms__instance__q31.html#a4705a8f0011bb9166e09bf5bd51e595e", null ],
-    [ "pState", "structarm__lms__instance__q31.html#a206d47b49de6f357f933ebe61520753c", null ]
+    [ "mu", "structarm__lms__instance__q31.html#a21ab4237a726ea7751f5026d89d2e577", null ],
+    [ "numTaps", "structarm__lms__instance__q31.html#a751941891e47f522a7f5375fe8990aac", null ],
+    [ "pCoeffs", "structarm__lms__instance__q31.html#a68888e36167d81cb7836db10367a1682", null ],
+    [ "postShift", "structarm__lms__instance__q31.html#aa2cacddfc5e1d86905d7d31a18b1979b", null ],
+    [ "pState", "structarm__lms__instance__q31.html#adee4ba3ee8869865af7d8fa08ca913d6", null ]
 ];

@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -150,73 +151,96 @@ $(document).ready(function(){initNavTree('globals_func_l.html','');});
 &#160;
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>arm_levinson_durbin_f16()
+: <a class="el" href="group__LD.html#gaf618515678cfaf554d29d78cb770e4d6">filtering_functions_f16.h</a>
+, <a class="el" href="group__LD.html#gaf618515678cfaf554d29d78cb770e4d6">arm_levinson_durbin_f16.c</a>
+</li>
+<li>arm_levinson_durbin_f32()
+: <a class="el" href="group__LD.html#ga2ea8733ba29641f2f081251da672dabf">arm_levinson_durbin_f32.c</a>
+, <a class="el" href="group__LD.html#ga2ea8733ba29641f2f081251da672dabf">filtering_functions.h</a>
+</li>
+<li>arm_levinson_durbin_q31()
+: <a class="el" href="group__LD.html#ga62b3cbd165b27673f5c17a6e72697e76">filtering_functions.h</a>
+, <a class="el" href="group__LD.html#ga62b3cbd165b27673f5c17a6e72697e76">arm_levinson_durbin_q31.c</a>
+</li>
+<li>arm_linear_interp_f16()
+: <a class="el" href="group__LinearInterpolate.html#gaa20337e0f054738623b29d5eb7cc7470">interpolation_functions_f16.h</a>
+</li>
 <li>arm_linear_interp_f32()
-: <a class="el" href="group__LinearInterpolate.html#ga5335f60532bab8cee1e7c22f76a41805">arm_math.h</a>
+: <a class="el" href="group__LinearInterpolate.html#ga7d0a7f29f5048aa5c5d68fa26d39eda4">interpolation_functions.h</a>
 </li>
 <li>arm_linear_interp_q15()
-: <a class="el" href="group__LinearInterpolate.html#ga9a308a0de4d4e4fe4a262a99b17121cd">arm_math.h</a>
+: <a class="el" href="group__LinearInterpolate.html#ga821bee92f9dc7391b2878209063c3504">interpolation_functions.h</a>
 </li>
 <li>arm_linear_interp_q31()
-: <a class="el" href="group__LinearInterpolate.html#gaeaf31289367ac36c4727939e1ea73312">arm_math.h</a>
+: <a class="el" href="group__LinearInterpolate.html#ga668198494b16a160f1b434455f2bdb83">interpolation_functions.h</a>
 </li>
 <li>arm_linear_interp_q7()
-: <a class="el" href="group__LinearInterpolate.html#gafabd4124a8724055329b5c484419f936">arm_math.h</a>
+: <a class="el" href="group__LinearInterpolate.html#ga0b1075e45832b1dd532be57e00d4ccc3">interpolation_functions.h</a>
 </li>
 <li>arm_lms_f32()
-: <a class="el" href="group__LMS.html#gac518f7acd1778a8ee90e81c421cfbb90">arm_math.h</a>
+: <a class="el" href="group__LMS.html#gac518f7acd1778a8ee90e81c421cfbb90">filtering_functions.h</a>
 , <a class="el" href="group__LMS.html#gac518f7acd1778a8ee90e81c421cfbb90">arm_lms_f32.c</a>
 </li>
 <li>arm_lms_init_f32()
-: <a class="el" href="group__LMS.html#ga9fc7adca0966ff2cec1746fca8364cee">arm_math.h</a>
-, <a class="el" href="group__LMS.html#ga9fc7adca0966ff2cec1746fca8364cee">arm_lms_init_f32.c</a>
+: <a class="el" href="group__LMS.html#ga9fc7adca0966ff2cec1746fca8364cee">arm_lms_init_f32.c</a>
+, <a class="el" href="group__LMS.html#ga9fc7adca0966ff2cec1746fca8364cee">filtering_functions.h</a>
 </li>
 <li>arm_lms_init_q15()
-: <a class="el" href="group__LMS.html#ga9544cc26f18cd4465cfbed371be822b3">arm_math.h</a>
+: <a class="el" href="group__LMS.html#ga9544cc26f18cd4465cfbed371be822b3">filtering_functions.h</a>
 , <a class="el" href="group__LMS.html#ga9544cc26f18cd4465cfbed371be822b3">arm_lms_init_q15.c</a>
 </li>
 <li>arm_lms_init_q31()
-: <a class="el" href="group__LMS.html#ga8d4bc251169f4b102355097a9f7530d6">arm_math.h</a>
+: <a class="el" href="group__LMS.html#ga8d4bc251169f4b102355097a9f7530d6">filtering_functions.h</a>
 , <a class="el" href="group__LMS.html#ga8d4bc251169f4b102355097a9f7530d6">arm_lms_init_q31.c</a>
 </li>
 <li>arm_lms_norm_f32()
-: <a class="el" href="group__LMS__NORM.html#ga72b3755ed1cf97622851cbbeff83c69e">arm_math.h</a>
+: <a class="el" href="group__LMS__NORM.html#ga72b3755ed1cf97622851cbbeff83c69e">filtering_functions.h</a>
 , <a class="el" href="group__LMS__NORM.html#ga72b3755ed1cf97622851cbbeff83c69e">arm_lms_norm_f32.c</a>
 </li>
 <li>arm_lms_norm_init_f32()
-: <a class="el" href="group__LMS__NORM.html#gac7ccbaea863882056eee815456464670">arm_math.h</a>
+: <a class="el" href="group__LMS__NORM.html#gac7ccbaea863882056eee815456464670">filtering_functions.h</a>
 , <a class="el" href="group__LMS__NORM.html#gac7ccbaea863882056eee815456464670">arm_lms_norm_init_f32.c</a>
 </li>
 <li>arm_lms_norm_init_q15()
-: <a class="el" href="group__LMS__NORM.html#ga213ab1ee2e154cc2fa30d667b1994b89">arm_math.h</a>
+: <a class="el" href="group__LMS__NORM.html#ga213ab1ee2e154cc2fa30d667b1994b89">filtering_functions.h</a>
 , <a class="el" href="group__LMS__NORM.html#ga213ab1ee2e154cc2fa30d667b1994b89">arm_lms_norm_init_q15.c</a>
 </li>
 <li>arm_lms_norm_init_q31()
-: <a class="el" href="group__LMS__NORM.html#ga1d9659dbbea4c89a7a9d14d5fc0dd490">arm_math.h</a>
+: <a class="el" href="group__LMS__NORM.html#ga1d9659dbbea4c89a7a9d14d5fc0dd490">filtering_functions.h</a>
 , <a class="el" href="group__LMS__NORM.html#ga1d9659dbbea4c89a7a9d14d5fc0dd490">arm_lms_norm_init_q31.c</a>
 </li>
 <li>arm_lms_norm_q15()
-: <a class="el" href="group__LMS__NORM.html#gaf03debfeb77ec5a9934e1b23f1ff6c48">arm_math.h</a>
+: <a class="el" href="group__LMS__NORM.html#gaf03debfeb77ec5a9934e1b23f1ff6c48">filtering_functions.h</a>
 , <a class="el" href="group__LMS__NORM.html#gaf03debfeb77ec5a9934e1b23f1ff6c48">arm_lms_norm_q15.c</a>
 </li>
 <li>arm_lms_norm_q31()
 : <a class="el" href="group__LMS__NORM.html#gae12fc16232c8087345e5910fcb840be9">arm_lms_norm_q31.c</a>
-, <a class="el" href="group__LMS__NORM.html#gae12fc16232c8087345e5910fcb840be9">arm_math.h</a>
+, <a class="el" href="group__LMS__NORM.html#gae12fc16232c8087345e5910fcb840be9">filtering_functions.h</a>
 </li>
 <li>arm_lms_q15()
-: <a class="el" href="group__LMS.html#ga12fd93f61401b365789cdfd5dca07e5b">arm_math.h</a>
+: <a class="el" href="group__LMS.html#ga12fd93f61401b365789cdfd5dca07e5b">filtering_functions.h</a>
 , <a class="el" href="group__LMS.html#ga12fd93f61401b365789cdfd5dca07e5b">arm_lms_q15.c</a>
 </li>
 <li>arm_lms_q31()
-: <a class="el" href="group__LMS.html#ga69c9c64338c067f1fb4990dcdc8c143f">arm_math.h</a>
+: <a class="el" href="group__LMS.html#ga69c9c64338c067f1fb4990dcdc8c143f">filtering_functions.h</a>
 , <a class="el" href="group__LMS.html#ga69c9c64338c067f1fb4990dcdc8c143f">arm_lms_q31.c</a>
 </li>
+<li>arm_logsumexp_dot_prod_f16()
+: <a class="el" href="group__LogSumExp.html#ga9fb5b24efffc928fcb601dca7f1abcc3">statistics_functions_f16.h</a>
+, <a class="el" href="group__LogSumExp.html#ga9fb5b24efffc928fcb601dca7f1abcc3">arm_logsumexp_dot_prod_f16.c</a>
+</li>
 <li>arm_logsumexp_dot_prod_f32()
-: <a class="el" href="group__groupStats.html#gafc0c0beeb5962c95ad3afd3739602254">arm_math.h</a>
-, <a class="el" href="group__groupStats.html#gafc0c0beeb5962c95ad3afd3739602254">arm_logsumexp_dot_prod_f32.c</a>
+: <a class="el" href="group__LogSumExp.html#gafc0c0beeb5962c95ad3afd3739602254">arm_logsumexp_dot_prod_f32.c</a>
+, <a class="el" href="group__LogSumExp.html#gafc0c0beeb5962c95ad3afd3739602254">statistics_functions.h</a>
+</li>
+<li>arm_logsumexp_f16()
+: <a class="el" href="group__LogSumExp.html#gaa4da6151e57549ed9797c4093d662472">statistics_functions_f16.h</a>
+, <a class="el" href="group__LogSumExp.html#gaa4da6151e57549ed9797c4093d662472">arm_logsumexp_f16.c</a>
 </li>
 <li>arm_logsumexp_f32()
-: <a class="el" href="group__groupStats.html#gaa66d25e7fc685c86e400567b4585857e">arm_logsumexp_f32.c</a>
-, <a class="el" href="group__groupStats.html#gaa66d25e7fc685c86e400567b4585857e">arm_math.h</a>
+: <a class="el" href="group__LogSumExp.html#gaa66d25e7fc685c86e400567b4585857e">arm_logsumexp_f32.c</a>
+, <a class="el" href="group__LogSumExp.html#gaa66d25e7fc685c86e400567b4585857e">statistics_functions.h</a>
 </li>
 <li>list()
 : <a class="el" href="Source_2CMakeLists_8txt.html#a831b7fa3ecb78efc7660397695c2a386">Source/CMakeLists.txt</a>
@@ -227,12 +251,13 @@ $(document).ready(function(){initNavTree('globals_func_l.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

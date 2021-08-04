@@ -1,7 +1,7 @@
 var structarm__cfft__instance__f32 =
 [
-    [ "bitRevLength", "structarm__cfft__instance__f32.html#a3ba329ed153d182746376208e773d648", null ],
-    [ "fftLen", "structarm__cfft__instance__f32.html#acd8f9e9540e3dd348212726e5d6aaa95", null ],
-    [ "pBitRevTable", "structarm__cfft__instance__f32.html#a21ceaf59a1bb8440af57c28d2dd9bbab", null ],
-    [ "pTwiddle", "structarm__cfft__instance__f32.html#a59cc6f753f1498716e1444ac054c06de", null ]
+    [ "bitRevLength", "structarm__cfft__instance__f32.html#a65e1b3e327b8fab9404287ed8f347cc8", null ],
+    [ "fftLen", "structarm__cfft__instance__f32.html#ab8db3bbe7c61e6bb8ca2a55e3446e11a", null ],
+    [ "pBitRevTable", "structarm__cfft__instance__f32.html#a3b229432d381b0a511a9cdbe3aa74e78", null ],
+    [ "pTwiddle", "structarm__cfft__instance__f32.html#a8292d9775f5c5472f59915649fe3b378", null ]
 ];

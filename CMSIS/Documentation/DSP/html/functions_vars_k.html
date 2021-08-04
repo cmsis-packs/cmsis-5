@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,19 +148,19 @@ $(document).ready(function(){initNavTree('functions_vars_k.html','');});
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
 <li>Kd
-: <a class="el" href="structarm__pid__instance__f32.html#ad5b68fbf84d16188ae4747ff91f6f088">arm_pid_instance_f32</a>
-, <a class="el" href="structarm__pid__instance__q15.html#af5d4b53091f19eff7536636b7cc43111">arm_pid_instance_q15</a>
-, <a class="el" href="structarm__pid__instance__q31.html#aab4ff371d14441df501f1169f71cbd17">arm_pid_instance_q31</a>
+: <a class="el" href="structarm__pid__instance__f32.html#ace6b9e405a991cbaf6b4c137ca0d51a3">arm_pid_instance_f32</a>
+, <a class="el" href="structarm__pid__instance__q15.html#abf38d18de1e16bc6d86846fedf8534fe">arm_pid_instance_q15</a>
+, <a class="el" href="structarm__pid__instance__q31.html#a213bbf14da7ea536998f611977173552">arm_pid_instance_q31</a>
 </li>
 <li>Ki
-: <a class="el" href="structarm__pid__instance__f32.html#ac0feffde05fe391eeab3bf78e953830a">arm_pid_instance_f32</a>
-, <a class="el" href="structarm__pid__instance__q15.html#a0dcc19d5c8f7bc401acea9e8318cd777">arm_pid_instance_q15</a>
-, <a class="el" href="structarm__pid__instance__q31.html#aa861d69fd398f29aa0b4b455a823ed72">arm_pid_instance_q31</a>
+: <a class="el" href="structarm__pid__instance__f32.html#ad1a1aa1c10a2dca201a3422f82198777">arm_pid_instance_f32</a>
+, <a class="el" href="structarm__pid__instance__q15.html#a19d5059baf06dd52266260d096702d0a">arm_pid_instance_q15</a>
+, <a class="el" href="structarm__pid__instance__q31.html#a84a6c05c16369c905193da0d5fc9a7b0">arm_pid_instance_q31</a>
 </li>
 <li>Kp
-: <a class="el" href="structarm__pid__instance__f32.html#aa9b9aa9e413c6cec376a9dddc9f01ebe">arm_pid_instance_f32</a>
-, <a class="el" href="structarm__pid__instance__q15.html#ad228aae24a1b6d855c93a8b9bbc1c4f1">arm_pid_instance_q15</a>
-, <a class="el" href="structarm__pid__instance__q31.html#ac2410bf7f856d58dc1d773d4983cac8e">arm_pid_instance_q31</a>
+: <a class="el" href="structarm__pid__instance__f32.html#abe23f3e122ef5f55398fcf77c793c425">arm_pid_instance_f32</a>
+, <a class="el" href="structarm__pid__instance__q15.html#afef61fb3b64c73f2cd0c91d9dcf95679">arm_pid_instance_q15</a>
+, <a class="el" href="structarm__pid__instance__q31.html#a6ec4b37fe2246a7e017dd07578fe5bbd">arm_pid_instance_q31</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -167,12 +168,13 @@ $(document).ready(function(){initNavTree('functions_vars_k.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

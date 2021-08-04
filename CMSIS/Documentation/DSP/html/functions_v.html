@@ -10,6 +10,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-DSP
-   &#160;<span id="projectnumber">Version 1.8.0</span>
+   &#160;<span id="projectnumber">Version 1.9.0</span>
    </div>
    <div id="projectbrief">CMSIS DSP Software Library</div>
   </td>
@@ -147,11 +148,16 @@ $(document).ready(function(){initNavTree('functions_v.html','');});
 
 <h3><a class="anchor" id="index_v"></a>- v -</h3><ul>
 <li>vectorDimension
-: <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#a0e4e79474f031ec0e827fea331bfc7e1">arm_gaussian_naive_bayes_instance_f32</a>
-, <a class="el" href="structarm__svm__linear__instance__f32.html#a4d48caa5001b87cd3811c5254fc09227">arm_svm_linear_instance_f32</a>
-, <a class="el" href="structarm__svm__polynomial__instance__f32.html#a927422fe2a3cdfddfcae199bcc18c5e8">arm_svm_polynomial_instance_f32</a>
-, <a class="el" href="structarm__svm__rbf__instance__f32.html#a84c4e1abdb6b2de2817ffd8b16435bdf">arm_svm_rbf_instance_f32</a>
-, <a class="el" href="structarm__svm__sigmoid__instance__f32.html#a99cb0a8ac0cd5f0b5b4644e2e8dc7626">arm_svm_sigmoid_instance_f32</a>
+: <a class="el" href="structarm__gaussian__naive__bayes__instance__f16.html#ac0020a4e04df9d200969b1ba84799d88">arm_gaussian_naive_bayes_instance_f16</a>
+, <a class="el" href="structarm__gaussian__naive__bayes__instance__f32.html#ac0020a4e04df9d200969b1ba84799d88">arm_gaussian_naive_bayes_instance_f32</a>
+, <a class="el" href="structarm__svm__linear__instance__f16.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_linear_instance_f16</a>
+, <a class="el" href="structarm__svm__linear__instance__f32.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_linear_instance_f32</a>
+, <a class="el" href="structarm__svm__polynomial__instance__f16.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_polynomial_instance_f16</a>
+, <a class="el" href="structarm__svm__polynomial__instance__f32.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_polynomial_instance_f32</a>
+, <a class="el" href="structarm__svm__rbf__instance__f16.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_rbf_instance_f16</a>
+, <a class="el" href="structarm__svm__rbf__instance__f32.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_rbf_instance_f32</a>
+, <a class="el" href="structarm__svm__sigmoid__instance__f16.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_sigmoid_instance_f16</a>
+, <a class="el" href="structarm__svm__sigmoid__instance__f32.html#ac0020a4e04df9d200969b1ba84799d88">arm_svm_sigmoid_instance_f32</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -159,12 +165,13 @@ $(document).ready(function(){initNavTree('functions_v.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:38 for CMSIS-DSP Version 1.8.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>

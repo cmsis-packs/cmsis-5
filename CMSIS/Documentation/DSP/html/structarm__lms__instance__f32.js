@@ -1,7 +1,7 @@
 var structarm__lms__instance__f32 =
 [
-    [ "mu", "structarm__lms__instance__f32.html#ae2af43d74c93dba16b876e10c97a5b99", null ],
-    [ "numTaps", "structarm__lms__instance__f32.html#af73880d9009982f5d14529869494ec3d", null ],
-    [ "pCoeffs", "structarm__lms__instance__f32.html#a4795c6f7d3f17cec15c2fd09f66edd1a", null ],
-    [ "pState", "structarm__lms__instance__f32.html#aaf94285be2f99b5b9af40bea8dcb14b9", null ]
+    [ "mu", "structarm__lms__instance__f32.html#a11402afa7c9b9dac4cb953fa386e74d2", null ],
+    [ "numTaps", "structarm__lms__instance__f32.html#a751941891e47f522a7f5375fe8990aac", null ],
+    [ "pCoeffs", "structarm__lms__instance__f32.html#aacbb8dd8eeba4b21fc2bb40076405ee3", null ],
+    [ "pState", "structarm__lms__instance__f32.html#a335c87e6fdc4b96601d95a5de8b9c463", null ]
 ];

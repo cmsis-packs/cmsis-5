@@ -3,13 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Intrinsic Functions for SIMD Instructions [only Cortex-M4 and Cortex-M7]</title>
-<title>CMSIS-Core (Cortex-M): Intrinsic Functions for SIMD Instructions [only Cortex-M4 and Cortex-M7]</title>
+<title>Intrinsic Functions for SIMD Instructions</title>
+<title>CMSIS-Core (Cortex-M): Intrinsic Functions for SIMD Instructions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="cmsis.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="printComponentTabs.js"></script>
+<script type="text/javascript" src="cmsis_footer.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="resize.js"></script>
 <script type="text/javascript" src="navtree.js"></script>
@@ -32,7 +33,7 @@
   <td id="projectlogo"><img alt="Logo" src="CMSIS_Logo_Final.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">CMSIS-Core (Cortex-M)
-   &#160;<span id="projectnumber">Version 5.4.0</span>
+   &#160;<span id="projectnumber">Version 5.5.0</span>
    </div>
    <div id="projectbrief">CMSIS-Core support for Cortex-M processor-based devices</div>
   </td>
@@ -110,11 +111,11 @@ $(document).ready(function(){initNavTree('group__intrinsic__SIMD__gr.html','');}
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">Intrinsic Functions for SIMD Instructions [only Cortex-M4 and Cortex-M7]</div>  </div>
+<div class="title">Intrinsic Functions for SIMD Instructions</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Access to dedicated SIMD instructions.  
+<p>Access to dedicated SIMD instructions available on Armv7E-M (Cortex-M4/M7), Armv8-M Mainline (Cortex-M33/M35P), and Armv8.1-M (Cortex-M55).  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -254,6 +255,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gac540b4fc41d30778ba102d2a65db5589"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__intrinsic__SIMD__gr.html#gac540b4fc41d30778ba102d2a65db5589">__SXTAB16</a> (uint32_t val1, uint32_t val2)</td></tr>
 <tr class="memdesc:gac540b4fc41d30778ba102d2a65db5589"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dual extracted 8-bit to 16-bit signed addition.  <a href="#gac540b4fc41d30778ba102d2a65db5589">More...</a><br/></td></tr>
 <tr class="separator:gac540b4fc41d30778ba102d2a65db5589"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0029ec2b0decbff4df5bc6f4352bba4"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__intrinsic__SIMD__gr.html#gaf0029ec2b0decbff4df5bc6f4352bba4">__SXTAB16_RORn</a> (uint32_t val1, uint32_t val2, uint32_r rotate)</td></tr>
+<tr class="memdesc:gaf0029ec2b0decbff4df5bc6f4352bba4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate right, followed by sign extension of two 8-bits with add to 16-bits.  <a href="#gaf0029ec2b0decbff4df5bc6f4352bba4">More...</a><br/></td></tr>
+<tr class="separator:gaf0029ec2b0decbff4df5bc6f4352bba4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae326e368a1624d2dfb4b97c626939257"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__intrinsic__SIMD__gr.html#gae326e368a1624d2dfb4b97c626939257">__SMUAD</a> (uint32_t val1, uint32_t val2)</td></tr>
 <tr class="memdesc:gae326e368a1624d2dfb4b97c626939257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Q setting sum of dual 16-bit signed multiply.  <a href="#gae326e368a1624d2dfb4b97c626939257">More...</a><br/></td></tr>
 <tr class="separator:gae326e368a1624d2dfb4b97c626939257"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -310,7 +314,7 @@ Functions</h2></td></tr>
 <tr class="separator:gafd8fe4a6d87e947caa81a69ec36c1666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<p>Access to dedicated SIMD instructions. </p>
+<p>Access to dedicated SIMD instructions available on Armv7E-M (Cortex-M4/M7), Armv8-M Mainline (Cortex-M33/M35P), and Armv8.1-M (Cortex-M55). </p>
 <p><b>Single Instruction Multiple Data (SIMD)</b> extensions are provided <b>only for Cortex-M4 and Cortex-M7 cores</b> to simplify development of application software. SIMD extensions increase the processing capability without materially increasing the power consumption. The SIMD extensions are completely transparent to the operating system (OS), allowing existing OS ports to be used.</p>
 <p><b>SIMD Features:</b></p>
 <ul>
@@ -381,7 +385,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the combination of halfwords.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]</div>
-<div class="line">res[31:16] = val2[31:16]&lt;&lt;val3 </div>
+<div class="line">res[31:16] = val2[31:16]&lt;&lt;val3</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -428,7 +432,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the combination of halfwords.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val2[15:0]&gt;&gt;val3</div>
-<div class="line">res[31:16] = val1[31:16] </div>
+<div class="line">res[31:16] = val1[31:16]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -559,10 +563,10 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The returned results are saturated to the 16-bit signed integer range -2<sup>7</sup> &lt;= x &lt;= 2<sup>7</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0] </div>
-<div class="line">res[15:8]  = val1[15:8]  + val2[15:8] </div>
-<div class="line">res[23:16] = val1[23:16] + val2[23:16] </div>
-<div class="line">res[31:24] = val1[31:24] + val2[31:24]          </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0]</div>
+<div class="line">res[15:8]  = val1[15:8]  + val2[15:8]</div>
+<div class="line">res[23:16] = val1[23:16] + val2[23:16]</div>
+<div class="line">res[31:24] = val1[31:24] + val2[31:24]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -606,8 +610,8 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The returned results are saturated to the 16-bit signed integer range -2<sup>15</sup> &lt;= x &lt;= 2<sup>15</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]   </div>
-<div class="line">res[31:16] = val1[31:16] + val2[15:0]  </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]</div>
+<div class="line">res[31:16] = val1[31:16] + val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -652,7 +656,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The returned results are saturated to the 16-bit signed integer range -2<sup>15</sup> &lt;= x &lt;= 2<sup>15</sup> - 1.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] - val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] - val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -783,7 +787,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The returned results are saturated to the 8-bit signed integer range -2<sup>7</sup> &lt;= x &lt;= 2<sup>7</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   - val2[7:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   - val2[7:0]</div>
 <div class="line">res[15:8]  = val1[15:8]  - val2[15:8]</div>
 <div class="line">res[23:16] = val1[23:16] - val2[23:16]</div>
 <div class="line">res[31:24] = val1[31:24] - val2[31:24]</div>
@@ -890,10 +894,10 @@ Functions</h2></td></tr>
 <li>if res[31:24] &gt;= 0 then APSR.GE[3] = 1 else 0</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0] </div>
-<div class="line">res[15:8]  = val1[15:8]  + val2[15:8] </div>
-<div class="line">res[23:16] = val1[23:16] + val2[23:16] </div>
-<div class="line">res[31:24] = val1[31:24] + val2[31:24]          </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0]</div>
+<div class="line">res[15:8]  = val1[15:8]  + val2[15:8]</div>
+<div class="line">res[23:16] = val1[23:16] + val2[23:16]</div>
+<div class="line">res[31:24] = val1[31:24] + val2[31:24]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -943,8 +947,8 @@ Functions</h2></td></tr>
 <li>if res[31:16] &gt;= 0 then APSR.GE[3:2] = 11 else 00</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]   </div>
-<div class="line">res[31:16] = val1[31:16] + val2[15:0]  </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]</div>
+<div class="line">res[31:16] = val1[31:16] + val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -1079,7 +1083,7 @@ Functions</h2></td></tr>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0]  &gt;&gt; 1</div>
 <div class="line">res[15:8]  = val1[15:8]  + val2[15:8] &gt;&gt; 1</div>
 <div class="line">res[23:16] = val1[23:16] + val2[23:16] &gt;&gt; 1</div>
-<div class="line">res[31:24] = val1[31:24] + val2[31:24] &gt;&gt; 1         </div>
+<div class="line">res[31:24] = val1[31:24] + val2[31:24] &gt;&gt; 1</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -1119,11 +1123,11 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><ul>
 <li>the halved subtraction of the high halfword in the second operand from the low halfword in the first operand, in the low halfword of the return value. </li>
-<li>the halved subtraction of the low halfword in the second operand from the high halfword in the first operand, in the high halfword of the return value.</li>
+<li>the halved addition of the low halfword in the second operand and the high halfword in the first operand, in the high halfword of the return value.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = (val1[15:0]  - val2[31:16]) &gt;&gt; 1  </div>
-<div class="line">res[31:16] = (val1[31:16] - val2[15:0] ) &gt;&gt; 1</div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = (val1[15:0]  - val2[31:16]) &gt;&gt; 1</div>
+<div class="line">res[31:16] = (val1[31:16] + val2[15:0] ) &gt;&gt; 1</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -1960,7 +1964,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] - val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] - val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -2058,7 +2062,7 @@ Functions</h2></td></tr>
 <li>the subtraction of the fourth byte in the second operand from the fourth byte in the first operand, in the fourth byte of the return value.</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Each bit in APSR.GE is set or cleared for each byte in the return value, depending on </dt><dd>the results of the operation.</dd></dl>
+<dl class="section user"><dt>Each bit in APSR.GE is set or cleared for each byte in the return value, depending on</dt><dd>the results of the operation.</dd></dl>
 <dl class="section user"><dt></dt><dd>If <em>res</em> is the return value, then: <ul>
 <li>if res[8:0] &gt;= 0 then APSR.GE[0] = 1 else 0 </li>
 <li>if res[15:8] &gt;= 0 then APSR.GE[1] = 1 else 0 </li>
@@ -2066,7 +2070,7 @@ Functions</h2></td></tr>
 <li>if res[31:24] &gt;= 0 then APSR.GE[3] = 1 else 0</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   - val2[7:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   - val2[7:0]</div>
 <div class="line">res[15:8]  = val1[15:8]  - val2[15:8]</div>
 <div class="line">res[23:16] = val1[23:16] - val2[23:16]</div>
 <div class="line">res[31:24] = val1[31:24] - val2[31:24]</div>
@@ -2109,6 +2113,54 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the addition of <em>val1</em> and <em>val2</em>, where the 8-bit values in val2[7:0] and val2[23:16] have been extracted and sign-extended prior to the addition.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + SignExtended(val2[7:0])</div>
+<div class="line">res[31:16] = val1[31:16] + SignExtended(val2[23:16])</div>
+</div><!-- fragment --> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="gaf0029ec2b0decbff4df5bc6f4352bba4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t __SXTAB16_RORn </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>val1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>val2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_r&#160;</td>
+          <td class="paramname"><em>rotate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rotate right, followed by sign extension of two 8-bits with add to 16-bits. </p>
+<p>This function enables you to rotate the second operand by 8/16/24 bit as specified by the third operand, extract two 8-bit values from the rotated result (at bit positions [7:0] and [23:16]), sign-extend them to 16-bits each, and add the results to the first operand.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">val1</td><td>two 16-bit values in val1[15:0] and val1[31:16] </td></tr>
+    <tr><td class="paramname">val2</td><td>two 8-bit values in val[7:0] and val[23:16] to be sign-extended post rotation </td></tr>
+    <tr><td class="paramname">rotate</td><td>number of bits to rotate val2. Constant rotate value of 8, 16 and 24 can be optimally used with a single __SXTAB16 instruction. Any other valid constant rotate value will result in use of two instructions, __ROR and __SXTAB16</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the addition of <em>val1</em> and <em>val2</em>, where the rotated 8-bit values in val2[7:0] and val2[23:16] have been extracted and sign-extended prior to the addition.</dd></dl>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">val2       = Rotate(val2, rotate)</div>
+<div class="line">res[15:0]  = val1[15:0]  + SignExtended(val2[7:0])</div>
 <div class="line">res[31:16] = val1[31:16] + SignExtended(val2[23:16])</div>
 </div><!-- fragment --> </dd></dl>
 
@@ -2176,7 +2228,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">val</td><td>two 8-bit values in val[7:0] and val[23:16] to be sign-extended. </td></tr>
-    <tr><td class="paramname">rotate</td><td>number of bits to rotate val. Only 8,16 and 24 are accepted</td></tr>
+    <tr><td class="paramname">rotate</td><td>number of bits to rotate val. Constant rotate value of 8, 16 and 24 can be optimally used with a single __SXTB16 instruction. Any other valid constant rotate value will result in use of two instructions, __ROR and __SXTB16</td></tr>
   </table>
   </dd>
 </dl>
@@ -2237,7 +2289,7 @@ Functions</h2></td></tr>
 <li>if res[31:16] &gt;= 0x10000 then APSR.GE[1] = 11 else 00</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[15:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[15:0]</div>
 <div class="line">res[31:16] = val1[31:16] + val2[31:16]</div>
 </div><!-- fragment --> </dd></dl>
 
@@ -2291,7 +2343,7 @@ Functions</h2></td></tr>
 <li>if res[31:24] &gt;= 0x100 then APSR.GE[3] = 1 else 0</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0]</div>
 <div class="line">res[15:8]  = val1[15:8]  + val2[15:8]</div>
 <div class="line">res[23:16] = val1[23:16] + val2[23:16]</div>
 <div class="line">res[31:24] = val1[31:24] + val2[31:24]</div>
@@ -2345,7 +2397,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] + val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] + val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -2661,7 +2713,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The results are saturated to the 16-bit unsigned integer range 0 &lt; x &lt; 2<sup>16</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[15:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[15:0]</div>
 <div class="line">res[31:16] = val1[31:16] + val2[31:16]</div>
 </div><!-- fragment --> </dd></dl>
 
@@ -2708,7 +2760,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The results are saturated to the 8-bit unsigned integer range 0 &lt; x &lt; 2<sup>8</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0] </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[7:0]   = val1[7:0]   + val2[7:0]</div>
 <div class="line">res[15:8]  = val1[15:8]  + val2[15:8]</div>
 <div class="line">res[23:16] = val1[23:16] + val2[23:16]</div>
 <div class="line">res[31:24] = val1[31:24] + val2[31:24]</div>
@@ -2756,7 +2808,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The results are saturated to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2<sup>16</sup> - 1.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] + val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] + val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -2801,7 +2853,7 @@ Functions</h2></td></tr>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The results are saturated to the 16-bit unsigned integer range 0 &lt;= x &lt;= 2<sup>16</sup> - 1.</dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] - val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] - val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -2845,8 +2897,8 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt></dt><dd>The results are saturated to the 16-bit unsigned integer range 0 &lt; x &lt; 2<sup>16</sup> - 1.</dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[15:0]   </div>
-<div class="line">res[31:16] = val1[31:16] - val2[31:16]  </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[15:0]</div>
+<div class="line">res[31:16] = val1[31:16] - val2[31:16]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -3097,7 +3149,7 @@ Functions</h2></td></tr>
 </ul>
 </dd></dl>
 <dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  + val2[31:16]</div>
-<div class="line">res[31:16] = val1[31:16] - val2[15:0] </div>
+<div class="line">res[31:16] = val1[31:16] - val2[15:0]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -3147,8 +3199,8 @@ Functions</h2></td></tr>
 <li>if res[31:16] &gt;= 0 then APSR.GE[3:2] = 11 else 00</li>
 </ul>
 </dd></dl>
-<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[15:0]   </div>
-<div class="line">res[31:16] = val1[31:16] - val2[31:16]  </div>
+<dl class="section user"><dt>Operation:</dt><dd><div class="fragment"><div class="line">res[15:0]  = val1[15:0]  - val2[15:0]</div>
+<div class="line">res[31:16] = val1[31:16] - val2[31:16]</div>
 </div><!-- fragment --> </dd></dl>
 
 </div>
@@ -3287,12 +3339,13 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Apr 9 2020 16:05:22 for CMSIS-Core (Cortex-M) Version 5.4.0 by Arm Ltd. All rights reserved.
-	<!--
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 
-	-->
-	</li>
+    <li class="footer">
+      <script type="text/javascript">
+        <!--
+        writeFooter.call(this);
+        //-->
+      </script>    
+    </li>
   </ul>
 </div>
 </body>
